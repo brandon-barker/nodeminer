@@ -1,1 +1,44 @@
-
+<div ng-controller="MinerCtrl">
+  <div class="panel panel-default" ng-repeat="miner in miners">
+    <div class="panel-heading">{{miner.name}}</div>
+    <div class="panel-body">
+      <table class="table table-striped table-hover table-bordered">
+        <thead>
+        <tr>
+          <td>Enabled</td>
+          <td>Name</td>
+          <td>Coin</td>
+          <td>Pool</td>
+          <td>Temperature</td>
+          <td>Fan</td>
+          <td>Hashrate</td>
+          <td>Shares</td>
+          <td>Work Utility</td>
+          <td>Intensity</td>
+          <td>GPU Clock</td>
+          <td>Memory Clock</td>
+          <td>Voltage</td>
+        </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="device in miner.devices">
+            <td><span class="fa fa-check"></span> </td>
+            <td>{{device.name}}</td>
+            <td>{{device.coin}}</td>
+            <td>{{device.pool}}</td>
+            <td>{{device.temperature}}</td>
+            <td>{{device.fan}}</td>
+            <td>{{device.hashrate}}</td>
+            <td>{{device.shares}}</td>
+            <td>{{device.utility}}</td>
+            <td>{{device.intensity}}</td>
+            <td>{{device.gpuClock}}</td>
+            <td>{{device.gpuMemory}}</td>
+            <td>{{device.voltage}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="panel-footer">{{miner.totalHashrate}} Total Hashrate ({{miner.numberOfDevices}} Devices)</div>
+  </div>
+</div>

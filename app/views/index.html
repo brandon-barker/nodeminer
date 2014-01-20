@@ -19,7 +19,8 @@
     <!-- build:css({.tmp,app}) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700' rel='stylesheet' type='text/css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   </head>
   <body ng-app="nodeminerApp">
     <!--[if lt IE 7]>
@@ -29,7 +30,7 @@
     <div ng-include="'partials/navbar'"></div>
 
     <!-- Add your site or application content here -->
-    <div ng-view=""></div>
+    <div class="main" ng-view=""></div>
 
     <div ng-include="'partials/footer'"></div>
 
@@ -54,6 +55,8 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/navbar.js"></script>
+        <script src="scripts/controllers/miner.js"></script>
+        <script src="scripts/services/Miner.js"></script>
         <!-- endbuild -->
 </body>
 </html>
