@@ -1,23 +1,35 @@
 <div ng-controller="MinerCtrl">
   <div class="panel panel-default" ng-repeat="miner in miners">
-    <div class="panel-heading">{{miner.name}}</div>
+    <div class="panel-heading">
+      <strong>{{miner.name}}</strong>
+      <div class="pull-right">
+        <label for="change-coin-{{miner.name}}">Change coin: </label>
+        <select id="change-coin-{{miner.name}}">
+          <option>DogeCoin</option>
+          <option>LiteCoin</option>
+          <option>WorldCoin</option>
+          <option>LottoCoin</option>
+          <option>TagCoin</option>
+        </select>
+      </div>
+    </div>
     <div class="panel-body">
-      <table class="table table-striped table-hover table-bordered">
+      <table class="table table-striped table-hover">
         <thead>
         <tr>
-          <td>Enabled</td>
-          <td>Name</td>
-          <td>Coin</td>
-          <td>Pool</td>
-          <td>Temperature</td>
-          <td>Fan</td>
-          <td>Hashrate</td>
-          <td>Shares</td>
-          <td>Work Utility</td>
-          <td>Intensity</td>
-          <td>GPU Clock</td>
-          <td>Memory Clock</td>
-          <td>Voltage</td>
+          <th width="25px"></th>
+          <th>Name</th>
+          <th>Coin</th>
+          <th>Pool</th>
+          <th>Temperature</th>
+          <th>Fan</th>
+          <th>Hashrate</th>
+          <th>Shares</th>
+          <th>Work Utility</th>
+          <th>Intensity</th>
+          <th>GPU Clock</th>
+          <th>Memory Clock</th>
+          <th>Voltage</th>
         </tr>
         </thead>
         <tbody>
@@ -39,6 +51,6 @@
         </tbody>
       </table>
     </div>
-    <div class="panel-footer">{{miner.totalHashrate}} Total Hashrate ({{miner.numberOfDevices}} Devices)</div>
+    <div class="panel-footer"><small><strong>{{miner.totalHashrate}} Total Hashrate ({{miner.numberOfDevices}} Devices)</strong></small></div>
   </div>
 </div>
