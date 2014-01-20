@@ -11,7 +11,8 @@
     "angular-cookies": "1.2.6",
     "angular-sanitize": "1.2.6",
     "angular-route": "1.2.6",
-    "socket.io": "~0.9.15"
+    "socket.io": "~0.9.15",
+    "font-awesome": "~4.0.3"
   },
   "devDependencies": {
     "angular-mocks": "1.2.6",

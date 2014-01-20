@@ -26,4 +26,5 @@ app.listen(config.port, function () {
 });
 
 // Expose app
+var exports;
 exports = module.exports = app;

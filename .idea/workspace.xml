@@ -2,700 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1bd97cb-91a1-4099-b849-01ccf74786d2" name="Default" comment="First commit&#10;">
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\.idea\jsLibraryMappings.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\.idea\runConfigurations\app_js.xml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\app.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\.bin\jade" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\.bin\jade.cmd" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\README.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\Readme_zh-cn.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\bin\jade.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\component.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\index.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\jade-language.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\jade.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\jade.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\lib\compiler.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\lib\doctypes.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\lib\filters-client.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\lib\filters.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\lib\inline-tags.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\lib\jade.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\lib\lexer.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\lib\nodes\attrs.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\lib\nodes\block-comment.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\lib\nodes\block.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\lib\nodes\case.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\lib\nodes\code.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\lib\nodes\comment.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\lib\nodes\doctype.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\lib\nodes\each.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\lib\nodes\filter.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\lib\nodes\index.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\lib\nodes\literal.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\lib\nodes\mixin-block.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\lib\nodes\mixin.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\lib\nodes\node.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\lib\nodes\tag.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\lib\nodes\text.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\lib\parser.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\lib\runtime.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\lib\self-closing.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\lib\utils.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\character-parser\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\character-parser\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\character-parser\README.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\character-parser\index.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\character-parser\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\commander\Readme.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\commander\index.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\commander\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\.gitattributes" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\README.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\index.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\.bin\uglifyjs" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\.bin\uglifyjs.cmd" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\README.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\bin\uglifyjs" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\lib\ast.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\lib\compress.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\lib\mozilla-ast.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\lib\output.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\lib\parse.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\lib\scope.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\lib\sourcemap.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\lib\transform.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\lib\utils.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\async\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\async\README.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\async\component.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\async\lib\async.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\async\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\optimist\.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\optimist\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\optimist\example\bool.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\optimist\example\boolean_double.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\optimist\example\boolean_single.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\optimist\example\default_hash.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\optimist\example\default_singles.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\optimist\example\divide.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\optimist\example\line_count.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\optimist\example\line_count_options.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\optimist\example\line_count_wrap.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\optimist\example\nonopt.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\optimist\example\reflect.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\optimist\example\short.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\optimist\example\string.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\optimist\example\usage-options.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\optimist\example\xup.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\optimist\index.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\optimist\node_modules\wordwrap\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\optimist\node_modules\wordwrap\README.markdown" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\optimist\node_modules\wordwrap\example\center.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\optimist\node_modules\wordwrap\example\meat.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\optimist\node_modules\wordwrap\index.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\optimist\node_modules\wordwrap\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\optimist\node_modules\wordwrap\test\break.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\optimist\node_modules\wordwrap\test\idleness.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\optimist\node_modules\wordwrap\test\wrap.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\optimist\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\optimist\readme.markdown" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\optimist\test\_.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\optimist\test\_\argv.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\optimist\test\_\bin.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\optimist\test\parse.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\optimist\test\usage.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\source-map\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\source-map\.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\source-map\CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\source-map\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\source-map\Makefile.dryice.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\source-map\README.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\source-map\build\assert-shim.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\source-map\build\mini-require.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\source-map\build\prefix-source-map.jsm" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\source-map\build\prefix-utils.jsm" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\source-map\build\suffix-browser.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\source-map\build\suffix-source-map.jsm" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\source-map\build\suffix-utils.jsm" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\source-map\build\test-prefix.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\source-map\build\test-suffix.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\source-map\lib\source-map.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\source-map\lib\source-map\array-set.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\source-map\lib\source-map\base64-vlq.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\source-map\lib\source-map\base64.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\source-map\lib\source-map\binary-search.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\source-map\lib\source-map\source-map-consumer.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\source-map\lib\source-map\source-map-generator.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\source-map\lib\source-map\source-node.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\source-map\lib\source-map\util.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\source-map\node_modules\amdefine\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\source-map\node_modules\amdefine\README.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\source-map\node_modules\amdefine\amdefine.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\source-map\node_modules\amdefine\intercept.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\source-map\node_modules\amdefine\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\source-map\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\source-map\test\run-tests.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\source-map\test\source-map\test-api.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\source-map\test\source-map\test-array-set.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\source-map\test\source-map\test-base64-vlq.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\source-map\test\source-map\test-base64.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\source-map\test\source-map\test-binary-search.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\source-map\test\source-map\test-dog-fooding.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\source-map\test\source-map\test-source-map-consumer.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\source-map\test\source-map\test-source-map-generator.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\source-map\test\source-map\test-source-node.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\source-map\test\source-map\util.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\uglify-to-browserify\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\uglify-to-browserify\.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\uglify-to-browserify\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\uglify-to-browserify\README.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\uglify-to-browserify\index.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\uglify-to-browserify\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\node_modules\uglify-to-browserify\test\index.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\test\compress\arrays.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\test\compress\blocks.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\test\compress\concat-strings.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\test\compress\conditionals.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\test\compress\dead-code.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\test\compress\debugger.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\test\compress\drop-unused.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\test\compress\issue-105.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\test\compress\issue-12.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\test\compress\issue-126.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\test\compress\issue-143.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\test\compress\issue-22.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\test\compress\issue-267.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\test\compress\issue-269.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\test\compress\issue-44.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\test\compress\issue-59.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\test\compress\labels.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\test\compress\loops.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\test\compress\negate-iife.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\test\compress\properties.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\test\compress\sequences.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\test\compress\switch.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\test\compress\typeof.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\test\run-tests.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\node_modules\uglify-js\tools\node.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\constantinople\test\index.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\mkdirp\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\mkdirp\.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\mkdirp\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\mkdirp\examples\pow.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\mkdirp\index.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\mkdirp\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\mkdirp\readme.markdown" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\mkdirp\test\chmod.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\mkdirp\test\clobber.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\mkdirp\test\mkdirp.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\mkdirp\test\perm.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\mkdirp\test\perm_sync.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\mkdirp\test\race.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\mkdirp\test\rel.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\mkdirp\test\return.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\mkdirp\test\return_sync.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\mkdirp\test\root.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\mkdirp\test\sync.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\mkdirp\test\umask.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\mkdirp\test\umask_sync.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\README.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\monocle.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\README.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\Readme.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\callback-api.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\grep.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\LICENCE" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\examples\pretty.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\index.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\duplexer\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\duplexer\.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\duplexer\LICENCE" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\duplexer\Makefile" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\duplexer\README.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\duplexer\index.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\duplexer\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\duplexer\test.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\from\LICENSE.APACHE2" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\from\LICENSE.MIT" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\from\index.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\from\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\from\readme.markdown" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\from\test\index.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\map-stream\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\map-stream\.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\map-stream\LICENCE" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\map-stream\examples\pretty.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\map-stream\index.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\map-stream\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\map-stream\readme.markdown" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\map-stream\test\simple-map.asynct.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\optimist\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\optimist\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\optimist\README.markdown" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\optimist\examples\bool.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\optimist\examples\boolean_double.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\optimist\examples\boolean_single.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\optimist\examples\default_hash.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\optimist\examples\default_singles.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\optimist\examples\divide.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\optimist\examples\line_count.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\optimist\examples\line_count_options.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\optimist\examples\line_count_wrap.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\optimist\examples\nonopt.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\optimist\examples\reflect.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\optimist\examples\short.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\optimist\examples\string.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\optimist\examples\usage-options.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\optimist\examples\xup.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\optimist\index.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\optimist\node_modules\wordwrap\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\optimist\node_modules\wordwrap\README.markdown" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\optimist\node_modules\wordwrap\example\center.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\optimist\node_modules\wordwrap\example\meat.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\optimist\node_modules\wordwrap\index.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\optimist\node_modules\wordwrap\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\optimist\node_modules\wordwrap\test\break.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\optimist\node_modules\wordwrap\test\idleness.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\optimist\node_modules\wordwrap\test\wrap.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\optimist\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\optimist\test\_.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\optimist\test\_\argv.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\optimist\test\_\bin.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\optimist\test\parse.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\optimist\test\usage.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\pause-stream\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\pause-stream\index.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\pause-stream\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\pause-stream\readme.markdown" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\pause-stream\test\index.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\pause-stream\test\pause-end.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\split\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\split\.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\split\LICENCE" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\split\examples\pretty.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\split\index.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\split\node_modules\through\.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\split\node_modules\through\LICENSE.APACHE2" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\split\node_modules\through\LICENSE.MIT" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\split\node_modules\through\index.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\split\node_modules\through\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\split\node_modules\through\readme.markdown" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\split\node_modules\through\test\index.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\split\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\split\readme.markdown" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\split\test\split.asynct.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\through\.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\through\LICENSE.APACHE2" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\through\LICENSE.MIT" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\through\index.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\through\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\through\readme.markdown" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\through\test\buffering.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\through\test\end.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\node_modules\through\test\index.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\readme.markdown" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\test\connect.asynct.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\test\merge.asynct.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\test\pause.asynct.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\test\pipeline.asynct.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\test\readArray.asynct.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\test\readable.asynct.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\test\replace.asynct.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\test\simple-map.asynct.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\test\spec.asynct.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\test\split.asynct.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\test\stringify.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\event-stream\test\writeArray.asynct.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\tap-stream\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\tap-stream\.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\tap-stream\README.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\tap-stream\examples\tap-nested-objects.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\tap-stream\index.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\tap-stream\node_modules\through\.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\tap-stream\node_modules\through\LICENSE.APACHE2" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\tap-stream\node_modules\through\LICENSE.MIT" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\tap-stream\node_modules\through\index.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\tap-stream\node_modules\through\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\tap-stream\node_modules\through\readme.markdown" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\tap-stream\node_modules\through\test\buffering.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\tap-stream\node_modules\through\test\end.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\tap-stream\node_modules\through\test\index.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\tap-stream\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\node_modules\tap-stream\test\tap-stream.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\stream-api-pipe.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\examples\stream-api.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\node_modules\minimatch\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\node_modules\minimatch\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\node_modules\minimatch\README.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\node_modules\minimatch\minimatch.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\node_modules\minimatch\node_modules\lru-cache\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\node_modules\minimatch\node_modules\lru-cache\CONTRIBUTORS" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\node_modules\minimatch\node_modules\lru-cache\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\node_modules\minimatch\node_modules\lru-cache\README.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\node_modules\minimatch\node_modules\lru-cache\lib\lru-cache.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\node_modules\minimatch\node_modules\lru-cache\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\node_modules\minimatch\node_modules\lru-cache\test\basic.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\node_modules\minimatch\node_modules\lru-cache\test\foreach.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\node_modules\minimatch\node_modules\lru-cache\test\memory-leak.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\node_modules\minimatch\node_modules\sigmund\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\node_modules\minimatch\node_modules\sigmund\README.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\node_modules\minimatch\node_modules\sigmund\bench.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\node_modules\minimatch\node_modules\sigmund\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\node_modules\minimatch\node_modules\sigmund\sigmund.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\node_modules\minimatch\node_modules\sigmund\test\basic.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\node_modules\minimatch\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\node_modules\minimatch\test\basic.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\node_modules\minimatch\test\brace-expand.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\node_modules\minimatch\test\caching.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\node_modules\minimatch\test\defaults.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\node_modules\minimatch\test\extglob-ending-with-state-char.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\readdirp.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\stream-api.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\test\bed\root_dir1\root_dir1_file1.ext1" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\test\bed\root_dir1\root_dir1_file2.ext2" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\test\bed\root_dir1\root_dir1_file3.ext3" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\test\bed\root_dir1\root_dir1_subdir1\root1_dir1_subdir1_file1.ext1" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\test\bed\root_dir2\root_dir2_file1.ext1" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\test\bed\root_dir2\root_dir2_file2.ext2" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\test\bed\root_file1.ext1" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\test\bed\root_file2.ext2" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\test\bed\root_file3.ext3" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\test\readdirp-stream.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\node_modules\readdirp\test\readdirp.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\monocle\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\README.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\history.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\lib\shared.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\lib\transformers.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\.bin\uglifyjs" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\.bin\uglifyjs.cmd" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\css\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\css\History.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\css\Makefile" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\css\Readme.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\css\benchmark.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\css\component.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\css\index.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\css\node_modules\css-parse\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\css\node_modules\css-parse\History.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\css\node_modules\css-parse\Makefile" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\css\node_modules\css-parse\Readme.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\css\node_modules\css-parse\component.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\css\node_modules\css-parse\index.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\css\node_modules\css-parse\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\css\node_modules\css-stringify\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\css\node_modules\css-stringify\History.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\css\node_modules\css-stringify\Makefile" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\css\node_modules\css-stringify\Readme.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\css\node_modules\css-stringify\component.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\css\node_modules\css-stringify\index.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\css\node_modules\css-stringify\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\css\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\css\test.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\promise\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\promise\Readme.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\promise\index.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\promise\node_modules\is-promise\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\promise\node_modules\is-promise\index.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\promise\node_modules\is-promise\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\promise\node_modules\is-promise\readme.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\promise\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\README.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\bin\uglifyjs" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\lib\ast.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\lib\compress.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\lib\mozilla-ast.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\lib\output.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\lib\parse.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\lib\scope.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\lib\sourcemap.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\lib\transform.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\lib\utils.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\optimist\.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\optimist\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\optimist\example\bool.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\optimist\example\boolean_double.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\optimist\example\boolean_single.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\optimist\example\default_hash.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\optimist\example\default_singles.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\optimist\example\divide.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\optimist\example\line_count.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\optimist\example\line_count_options.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\optimist\example\line_count_wrap.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\optimist\example\nonopt.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\optimist\example\reflect.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\optimist\example\short.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\optimist\example\string.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\optimist\example\usage-options.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\optimist\example\xup.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\optimist\index.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\optimist\node_modules\wordwrap\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\optimist\node_modules\wordwrap\README.markdown" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\optimist\node_modules\wordwrap\example\center.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\optimist\node_modules\wordwrap\example\meat.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\optimist\node_modules\wordwrap\index.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\optimist\node_modules\wordwrap\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\optimist\node_modules\wordwrap\test\break.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\optimist\node_modules\wordwrap\test\idleness.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\optimist\node_modules\wordwrap\test\wrap.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\optimist\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\optimist\readme.markdown" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\optimist\test\_.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\optimist\test\_\argv.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\optimist\test\_\bin.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\optimist\test\parse.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\optimist\test\usage.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\source-map\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\source-map\.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\source-map\CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\source-map\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\source-map\Makefile.dryice.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\source-map\README.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\source-map\build\assert-shim.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\source-map\build\mini-require.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\source-map\build\prefix-source-map.jsm" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\source-map\build\prefix-utils.jsm" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\source-map\build\suffix-browser.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\source-map\build\suffix-source-map.jsm" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\source-map\build\suffix-utils.jsm" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\source-map\build\test-prefix.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\source-map\build\test-suffix.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\source-map\lib\source-map.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\source-map\lib\source-map\array-set.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\source-map\lib\source-map\base64-vlq.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\source-map\lib\source-map\base64.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\source-map\lib\source-map\binary-search.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\source-map\lib\source-map\source-map-consumer.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\source-map\lib\source-map\source-map-generator.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\source-map\lib\source-map\source-node.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\source-map\lib\source-map\util.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\source-map\node_modules\amdefine\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\source-map\node_modules\amdefine\README.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\source-map\node_modules\amdefine\amdefine.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\source-map\node_modules\amdefine\intercept.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\source-map\node_modules\amdefine\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\source-map\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\source-map\test\run-tests.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\source-map\test\source-map\test-api.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\source-map\test\source-map\test-array-set.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\source-map\test\source-map\test-base64-vlq.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\source-map\test\source-map\test-base64.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\source-map\test\source-map\test-binary-search.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\source-map\test\source-map\test-dog-fooding.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\source-map\test\source-map\test-source-map-consumer.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\source-map\test\source-map\test-source-map-generator.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\source-map\test\source-map\test-source-node.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\node_modules\source-map\test\source-map\util.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\test\compress\arrays.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\test\compress\blocks.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\test\compress\conditionals.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\test\compress\dead-code.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\test\compress\debugger.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\test\compress\drop-unused.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\test\compress\issue-105.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\test\compress\issue-12.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\test\compress\issue-22.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\test\compress\issue-44.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\test\compress\issue-59.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\test\compress\labels.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\test\compress\loops.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\test\compress\properties.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\test\compress\sequences.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\test\compress\switch.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\test\run-tests.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\node_modules\uglify-js\tools\node.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\transformers\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\README.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\index.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\.bin\uglifyjs" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\.bin\uglifyjs.cmd" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\README.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\bin\uglifyjs" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\lib\ast.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\lib\compress.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\lib\mozilla-ast.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\lib\output.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\lib\parse.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\lib\scope.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\lib\sourcemap.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\lib\transform.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\lib\utils.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\async\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\async\README.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\async\component.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\async\lib\async.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\async\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\optimist\.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\optimist\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\optimist\example\bool.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\optimist\example\boolean_double.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\optimist\example\boolean_single.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\optimist\example\default_hash.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\optimist\example\default_singles.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\optimist\example\divide.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\optimist\example\line_count.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\optimist\example\line_count_options.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\optimist\example\line_count_wrap.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\optimist\example\nonopt.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\optimist\example\reflect.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\optimist\example\short.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\optimist\example\string.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\optimist\example\usage-options.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\optimist\example\xup.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\optimist\index.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\optimist\node_modules\wordwrap\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\optimist\node_modules\wordwrap\README.markdown" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\optimist\node_modules\wordwrap\example\center.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\optimist\node_modules\wordwrap\example\meat.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\optimist\node_modules\wordwrap\index.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\optimist\node_modules\wordwrap\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\optimist\node_modules\wordwrap\test\break.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\optimist\node_modules\wordwrap\test\idleness.txt" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\optimist\node_modules\wordwrap\test\wrap.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\optimist\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\optimist\readme.markdown" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\optimist\test\_.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\optimist\test\_\argv.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\optimist\test\_\bin.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\optimist\test\parse.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\optimist\test\usage.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\source-map\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\source-map\.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\source-map\CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\source-map\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\source-map\Makefile.dryice.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\source-map\README.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\source-map\build\assert-shim.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\source-map\build\mini-require.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\source-map\build\prefix-source-map.jsm" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\source-map\build\prefix-utils.jsm" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\source-map\build\suffix-browser.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\source-map\build\suffix-source-map.jsm" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\source-map\build\suffix-utils.jsm" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\source-map\build\test-prefix.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\source-map\build\test-suffix.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\source-map\lib\source-map.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\source-map\lib\source-map\array-set.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\source-map\lib\source-map\base64-vlq.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\source-map\lib\source-map\base64.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\source-map\lib\source-map\binary-search.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\source-map\lib\source-map\source-map-consumer.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\source-map\lib\source-map\source-map-generator.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\source-map\lib\source-map\source-node.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\source-map\lib\source-map\util.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\source-map\node_modules\amdefine\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\source-map\node_modules\amdefine\README.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\source-map\node_modules\amdefine\amdefine.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\source-map\node_modules\amdefine\intercept.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\source-map\node_modules\amdefine\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\source-map\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\source-map\test\run-tests.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\source-map\test\source-map\test-api.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\source-map\test\source-map\test-array-set.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\source-map\test\source-map\test-base64-vlq.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\source-map\test\source-map\test-base64.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\source-map\test\source-map\test-binary-search.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\source-map\test\source-map\test-dog-fooding.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\source-map\test\source-map\test-source-map-consumer.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\source-map\test\source-map\test-source-map-generator.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\source-map\test\source-map\test-source-node.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\source-map\test\source-map\util.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\uglify-to-browserify\.npmignore" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\uglify-to-browserify\.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\uglify-to-browserify\LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\uglify-to-browserify\README.md" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\uglify-to-browserify\index.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\uglify-to-browserify\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\node_modules\uglify-to-browserify\test\index.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\test\compress\arrays.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\test\compress\blocks.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\test\compress\conditionals.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\test\compress\dead-code.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\test\compress\debugger.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\test\compress\drop-unused.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\test\compress\issue-105.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\test\compress\issue-12.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\test\compress\issue-143.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\test\compress\issue-22.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\test\compress\issue-44.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\test\compress\issue-59.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\test\compress\labels.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\test\compress\loops.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\test\compress\negate-iife.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\test\compress\properties.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\test\compress\sequences.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\test\compress\switch.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\test\compress\typeof.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\test\run-tests.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\node_modules\uglify-js\tools\node.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\node_modules\with\vars.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\package.json" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\node_modules\jade\runtime.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\public\stylesheets\style.css" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\routes\index.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\routes\user.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\views\index.jade" afterPath="" />
-      <change type="DELETED" beforePath="D:\Dev\trunk\nodeminer\views\layout.jade" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/nodeminer.iml" afterPath="$PROJECT_DIR$/.idea/nodeminer.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/package.json" afterPath="$PROJECT_DIR$/node_modules/express/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/buffer-crc32/package.json" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/buffer-crc32/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/commander/package.json" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/commander/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/connect/package.json" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/connect/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/connect/node_modules/batch/package.json" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/connect/node_modules/batch/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/connect/node_modules/bytes/package.json" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/connect/node_modules/bytes/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/connect/node_modules/multiparty/package.json" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/connect/node_modules/multiparty/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/connect/node_modules/multiparty/node_modules/readable-stream/package.json" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/connect/node_modules/multiparty/node_modules/readable-stream/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/connect/node_modules/multiparty/node_modules/readable-stream/node_modules/core-util-is/package.json" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/connect/node_modules/multiparty/node_modules/readable-stream/node_modules/core-util-is/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/connect/node_modules/multiparty/node_modules/readable-stream/node_modules/debuglog/package.json" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/connect/node_modules/multiparty/node_modules/readable-stream/node_modules/debuglog/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/connect/node_modules/multiparty/node_modules/stream-counter/package.json" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/connect/node_modules/multiparty/node_modules/stream-counter/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/connect/node_modules/negotiator/package.json" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/connect/node_modules/negotiator/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/connect/node_modules/pause/package.json" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/connect/node_modules/pause/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/connect/node_modules/qs/package.json" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/connect/node_modules/qs/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/connect/node_modules/raw-body/package.json" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/connect/node_modules/raw-body/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/connect/node_modules/uid2/package.json" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/connect/node_modules/uid2/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/cookie/package.json" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/cookie/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/cookie-signature/package.json" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/cookie-signature/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/debug/package.json" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/debug/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/fresh/package.json" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/fresh/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/merge-descriptors/package.json" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/merge-descriptors/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/methods/package.json" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/methods/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/mkdirp/package.json" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/mkdirp/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/range-parser/package.json" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/range-parser/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/send/package.json" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/send/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/express/node_modules/send/node_modules/mime/package.json" afterPath="$PROJECT_DIR$/node_modules/express/node_modules/send/node_modules/mime/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/partials/footer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/controllers/api.js" afterPath="$PROJECT_DIR$/lib/controllers/api.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/index.html" afterPath="$PROJECT_DIR$/app/views/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/main.css" afterPath="$PROJECT_DIR$/app/styles/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partials/main.html" afterPath="$PROJECT_DIR$/app/views/partials/main.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/main.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partials/navbar.html" afterPath="$PROJECT_DIR$/app/views/partials/navbar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/navbar.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/navbar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="nodeminer.iws" />
@@ -722,52 +38,61 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="75" selection-start="2553" selection-end="2553" vertical-scroll-proportion="-23.423077" vertical-offset="309" max-vertical-offset="1207">
+            <state line="33" column="40" selection-start="1485" selection-end="1485" vertical-scroll-proportion="-14.923077" vertical-offset="173" max-vertical-offset="1105">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
+      <file leaf-file-name="footer.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/partials/footer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+            <state line="2" column="9" selection-start="124" selection-end="124" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="136">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="api.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/controllers/api.js">
+      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/scripts/controllers/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
+            <state line="3" column="52" selection-start="98" selection-end="98" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/routes.js">
+      <file leaf-file-name="navbar.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/partials/navbar.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="2" selection-start="378" selection-end="378" vertical-scroll-proportion="0.31277058" vertical-offset="0" max-vertical-offset="924">
+            <state line="16" column="60" selection-start="848" selection-end="848" vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="442">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="server.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server.js">
+      <file leaf-file-name="navbar.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/scripts/controllers/navbar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="3" selection-start="532" selection-end="532" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
+            <state line="8" column="38" selection-start="204" selection-end="222" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/controllers/index.js">
+      <file leaf-file-name="main.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/partials/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="119">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/styles/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="12" selection-start="42" selection-end="42" vertical-scroll-proportion="0.018398268" vertical-offset="0" max-vertical-offset="1105">
               <folding />
             </state>
           </provider>
@@ -786,7 +111,16 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+        <option value="$PROJECT_DIR$/server.js" />
+        <option value="$PROJECT_DIR$/lib/controllers/api.js" />
         <option value="$PROJECT_DIR$/lib/routes.js" />
+        <option value="$PROJECT_DIR$/app/scripts/controllers/navbar.js" />
+        <option value="$PROJECT_DIR$/app/views/partials/navbar.html" />
+        <option value="$PROJECT_DIR$/app/scripts/controllers/main.js" />
+        <option value="$PROJECT_DIR$/app/views/partials/main.html" />
+        <option value="$PROJECT_DIR$/app/views/index.html" />
+        <option value="$PROJECT_DIR$/app/views/partials/footer.html" />
+        <option value="$PROJECT_DIR$/app/styles/main.css" />
       </list>
     </option>
   </component>
@@ -872,19 +206,182 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nodeminer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nodeminer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nodeminer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nodeminer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nodeminer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nodeminer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="partials" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nodeminer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nodeminer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="styles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nodeminer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nodeminer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nodeminer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nodeminer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nodeminer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nodeminer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value=".tmp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="styles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="options.lastSelected" value="appearance" />
+    <property name="options.lastSelected" value="preferences.sourceCode.HTML" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="Html5" />
   </component>
   <component name="RunManager">
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="name" value="Dart" />
+      <option name="saveOutputToFile" value="false" />
+      <option name="showConsoleOnStdErr" value="false" />
+      <option name="showConsoleOnStdOut" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
+      <setting name="configLocationType" value="CONFIG_FILE" />
+      <setting name="settingsFile" value="" />
+      <setting name="serverType" value="INTERNAL" />
+      <setting name="preferredDebugBrowser" value="CHROME" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
     <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
       <browser start="false" url="" with-js-debugger="false" />
       <method />
@@ -892,6 +389,23 @@
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="c1bd97cb-91a1-4099-b849-01ccf74786d2" name="Default" comment="" />
@@ -911,7 +425,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947367" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -947,20 +461,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="75" selection-start="2553" selection-end="2553" vertical-scroll-proportion="-23.423077" vertical-offset="309" max-vertical-offset="1207">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="924">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/config/express.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="924">
@@ -984,28 +484,112 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="3" selection-start="532" selection-end="532" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
+        <state line="28" column="12" selection-start="560" selection-end="560" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="924">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/controllers/api.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="924">
+        <state line="26" column="25" selection-start="834" selection-end="834" vertical-scroll-proportion="0.478355" vertical-offset="0" max-vertical-offset="924">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/controllers/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="924">
+        <state line="7" column="8" selection-start="104" selection-end="104" vertical-scroll-proportion="0.12878788" vertical-offset="0" max-vertical-offset="924">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/routes.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="2" selection-start="378" selection-end="378" vertical-scroll-proportion="0.31277058" vertical-offset="0" max-vertical-offset="924">
+        <state line="15" column="34" selection-start="338" selection-end="338" vertical-scroll-proportion="0.27597404" vertical-offset="0" max-vertical-offset="924">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/404.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.5902004" vertical-offset="1428" max-vertical-offset="2771">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/.buildignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="924">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="924">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/bower_components/bootstrap/dist/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="4" selection-start="289" selection-end="289" vertical-scroll-proportion="-0.07464325" vertical-offset="357" max-vertical-offset="121091">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/navbar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="60" selection-start="848" selection-end="848" vertical-scroll-proportion="-10.461538" vertical-offset="0" max-vertical-offset="442">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/navbar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="38" selection-start="204" selection-end="222" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/scripts/controllers/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="52" selection-start="98" selection-end="98" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="898">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="40" selection-start="1485" selection-end="1485" vertical-scroll-proportion="-14.923077" vertical-offset="173" max-vertical-offset="1105">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="9" selection-start="124" selection-end="124" vertical-scroll-proportion="-1.3076923" vertical-offset="0" max-vertical-offset="136">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="12" selection-start="42" selection-end="42" vertical-scroll-proportion="0.018398268" vertical-offset="0" max-vertical-offset="1105">
           <folding />
         </state>
       </provider>
