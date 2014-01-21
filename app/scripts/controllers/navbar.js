@@ -6,19 +6,22 @@ angular.module('nodeminerApp')
       {
         'title': 'Dashboard',
         'link': '/',
-        'fa-icon': 'fa fa-camera-retro'
+        'icon': 'fa fa-dashboard'
       },
       {
-        'title': 'Coin Configuration',
-        'link': '/coins'
+        'title': 'Miners',
+        'link': '/miners',
+        'icon': 'fa fa-gavel'
+      },
+      {
+        'title': 'Coins',
+        'link': '/coins',
+        'icon': 'fa fa-btc'
       },
       {
         'title': 'Settings',
-        'link': '/settings'
-      },
-      {
-        'title': 'Donate',
-        'link': '/donate'
+        'link': '/settings',
+        'icon': 'fa fa-gear'
       }
     ]
     

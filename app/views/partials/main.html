@@ -1,19 +1,35 @@
 <div ng-controller="MinerCtrl">
   <div class="panel panel-default" ng-repeat="miner in miners">
     <div class="panel-heading">
-      <strong>{{miner.name}}</strong>
-      <div class="pull-right">
-        <label for="change-coin-{{miner.name}}">Change coin: </label>
-        <select id="change-coin-{{miner.name}}">
-          <option>DogeCoin</option>
-          <option>LiteCoin</option>
-          <option>WorldCoin</option>
-          <option>LottoCoin</option>
-          <option>TagCoin</option>
-        </select>
-      </div>
+        <strong>{{miner.name}}</strong>
+        &nbsp;&nbsp;
+      <button type="button" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i>&nbsp;Edit</button>
+      <button type="button" class="btn btn-default btn-xs"><i class="fa fa-trash-o"></i>&nbsp; Delete</button>
+        <div class="btn-group btn-group-xs pull-right">
+          <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+            <i class="fa fa-btc"></i>&nbsp; Change Coin <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">DogeCoin</a></li>
+            <li><a href="#">WorldCoin</a></li>
+            <li><a href="#">LottoCoin</a></li>
+            <li><a href="#">NetCoin</a></li>
+            <li><a href="#">Coino</a></li>
+            <li><a href="#">DigitalCoin</a></li>
+          </ul>
+        </div>
+
+        <div class="btn-group btn-group-xs pull-right">
+          <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+            <i class="fa fa-wrench"></i>&nbsp; Actions <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Restart</a></li>
+            <li><a href="#">Shutdown</a></li>
+          </ul>
+        </div>
     </div>
-    <div class="panel-body">
+    <div>
       <table class="table table-striped table-hover">
         <thead>
         <tr>
@@ -51,6 +67,15 @@
         </tbody>
       </table>
     </div>
-    <div class="panel-footer"><small><strong>{{miner.totalHashrate}} Total Hashrate ({{miner.numberOfDevices}} Devices)</strong></small></div>
+    <div class="panel-footer">
+      <div class="row">
+        <div class="col-sm-6">
+          <span class="label label-primary">{{miner.totalHashrate}} Total Hashrate</span>
+        </div>
+        <div class="col-sm-6" style="text-align: right;">
+          <span class="label label-primary">{{miner.numberOfDevices}} devices</span>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

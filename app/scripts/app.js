@@ -8,6 +8,18 @@ angular.module('nodeminerApp', [
 ])
   .config(function ($routeProvider, $locationProvider) {
     $routeProvider
+      .when('/miners', {
+        templateUrl: 'partials/settings',
+        controller: 'MainCtrl'
+      })
+      .when('/settings', {
+        templateUrl: 'partials/settings',
+        controller: 'MainCtrl'
+      })
+      .when('/coins', {
+        templateUrl: 'partials/coins',
+        controller: 'MainCtrl'
+      })
       .when('/', {
         templateUrl: 'partials/main',
         controller: 'MainCtrl'

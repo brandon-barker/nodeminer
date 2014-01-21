@@ -8,6 +8,11 @@ body, html {
     font-family: 'Open Sans', sans-serif !important;
 }
 
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+    border-bottom: 5px solid #8cc84b;
+    margin-bottom: -2px;
+}
+
 /* Custom page footer */
 .footer {
     padding-top: 20px;
