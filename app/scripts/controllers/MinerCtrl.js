@@ -92,7 +92,7 @@ angular.module('nodeminerApp')
             {
                 name: 'Miner #2',
                 numberOfDevices: '5',
-                totalHashrate: '4.41 Mh/s',
+                totalHashrate: '4.31 Mh/s',
                 devices: [
                     {
                         'enabled': true,
@@ -171,7 +171,7 @@ angular.module('nodeminerApp')
                     }
                 ],
                 notifications: {
-                    count: 1,
+                    count: 0,
                     list: []
                 }
             }
