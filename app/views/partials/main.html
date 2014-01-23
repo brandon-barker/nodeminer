@@ -5,9 +5,14 @@
             &nbsp;&nbsp;
             <button type="button" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i>&nbsp;Edit</button>
             <button type="button" class="btn btn-default btn-xs"><i class="fa fa-trash-o"></i>&nbsp; Delete</button>
-            <div id="notifications" class="pull-right">
-                &nbsp;&nbsp;&nbsp;<i class="fa fa-bell" style="font-size: 1.5em;"></i>
+            <div id="notifications" class="fa-stack notification-bell pull-right" title="Notifications">
+                &nbsp;&nbsp;&nbsp;
+                <i class="fa fa-bell-o fa-stack-2x notification-bell-icon"></i>
+                <i class="fa fa-stack fa-stack-1x notification-bell-badge" ng-show="miner.notifications.count > 0">
+                    <span class="label label-danger">{{miner.notifications.count}}</span>
+                </i>
             </div>
+
             <div id="change-coin" class="btn-group btn-group-xs pull-right">
                 <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
                     <i class="fa fa-btc"></i>&nbsp; Change Coin <span class="caret"></span>
