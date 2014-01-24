@@ -4,8 +4,38 @@ body, html {
 }
 
 .main {
-    padding: 20px;
+    padding: 3px 20px;
     font-family: 'Open Sans', sans-serif !important;
+}
+
+.handicon {
+    cursor: pointer !important;
+}
+
+.notification-bell {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.notification-bell > .notification-bell-icon {
+    font-size: 1.75em !important;
+}
+
+.notification-bell > .notification-bell-badge {
+    margin-top: -13px !important;
+    margin-left: 7px !important;
+}
+
+.notification-bell > .notification-bell-badge > span {
+    font-size: 0.7em !important;
+}
+
+.miner-dropdown {
+    margin: 0 2px 0 2px;
+}
+
+.control-label {
+    text-align: left !important;
 }
 
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
@@ -23,48 +53,52 @@ body, html {
 
 /* Customize container */
 @media (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
+    .container {
+        max-width: 730px;
+    }
 }
 
 .container-narrow > hr {
-  margin: 30px 0;
+    margin: 30px 0;
 }
 
 /* Main marketing message and sign up button */
 .jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
 }
+
 .jumbotron .btn {
-  font-size: 21px;
-  padding: 14px 24px;
+    font-size: 21px;
+    padding: 14px 24px;
 }
 
 /* Supporting marketing content */
 .marketing {
-  margin: 40px 0;
+    margin: 40px 0;
 }
+
 .marketing p + h4 {
-  margin-top: 28px;
+    margin-top: 28px;
 }
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
+    /* Remove the padding we set earlier */
+    .header,
+    .marketing,
+    .footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Space out the masthead */
+    .header {
+        margin-bottom: 30px;
+    }
+
+    /* Remove the bottom border on the jumbotron for visual effect */
+    .jumbotron {
+        border-bottom: 0;
+    }
 }

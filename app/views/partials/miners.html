@@ -1,0 +1,89 @@
+<div ng-controller="MinerCtrl">
+    <h2>Miners <small>Configure Mining Rigs</small></h2>
+    <hr />
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="panel panel-default">
+                <div class="panel-heading"><strong>Add a Mining Rig</strong></div>
+                <div class="panel-body">
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label for="name" class="col-lg-3 control-label">Name</label>
+                            <div class="col-lg-9">
+                                <input type="text" class="form-control" id="name" placeholder="" ng-model="miner.name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="ipAddress" class="col-lg-3 control-label">IP Address</label>
+                            <div class="col-lg-9">
+                                <input type="text" class="form-control" id="ipAddress" placeholder="" ng-model="miner.ipAddress">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="rpcPort" class="col-lg-3 control-label">RPC Port</label>
+                            <div class="col-lg-9">
+                                <input type="text" class="form-control" id="rpcPort" placeholder="" ng-model="miner.rpcPort">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="miner" class="col-lg-3 control-label">Miner</label>
+                            <div class="col-lg-9">
+                                <select id="miner" class="form-control">
+                                    <option>bfgminer</option>
+                                    <option>cgminer</option>
+                                    <option>sgminer</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-lg-offset-3 col-lg-9">
+                                <button type="submit" class="btn btn-success">Add Miner</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="panel-footer"></div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="panel panel-default">
+                <div class="panel-heading"><strong>Existing Mining Rigs</strong></div>
+                <div class="panel-body">
+
+                    <div class="panel panel-default" ng-repeat="miner in miners">
+                        <div class="panel-heading">
+                            <span class="handicon" ng-click="toggleMinerDetails(miner)"><i class="fa" ng-class="{'fa-chevron-up':miner.showDetails == true, 'fa-chevron-down':miner.showDetails == false}"></i>&nbsp;<strong>{{miner.name}}</strong></span>
+
+                            <div class="pull-right">
+                                <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i>&nbsp;Edit</button>
+                                <button class="btn btn-default btn-xs"><i class="fa fa-minus-circle"></i>&nbsp;Delete</button>
+                            </div>
+                        </div>
+
+                        <table class="table table-striped table-hover" ng-show="miner.showDetails">
+                            <tbody>
+                                <tr>
+                                    <td><strong>Name</strong></td>
+                                    <td>{{miner.name}}</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>IP Address</strong></td>
+                                    <td>{{miner.ipAddress}}</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>RPC Port</strong></td>
+                                    <td>{{miner.rpcPort}}</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Miner</strong></td>
+                                    <td>{{miner.miner}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="panel-footer"></div>
+            </div>
+        </div>
+    </div>
+</div>
