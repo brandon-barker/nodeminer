@@ -1,0 +1,51 @@
+[
+  {
+    "name": "Coino",
+    "symbol": "CON",
+    "arguments": "-u Skinty.1 -p x",
+    "pools": [],
+    "showDetails": false
+  },
+  {
+    "name": "DigitalCoin",
+    "symbol": "DGC",
+    "arguments": "-u Skinty.1 -p x",
+    "pools": [],
+    "showDetails": false
+  },
+  {
+    "name": "DogeCoin",
+    "symbol": "DOGE",
+    "arguments": "-u Skinty.1 -p x",
+    "pools": [],
+    "showDetails": false
+  },
+  {
+    "name": "LottoCoin",
+    "symbol": "LOT",
+    "arguments": "-u Skinty.1 -p x",
+    "pools": [],
+    "showDetails": false
+  },
+  {
+    "name": "LuckyCoin",
+    "symbol": "LKY",
+    "arguments": "-u Skinty.1 -p x",
+    "pools": [],
+    "showDetails": false
+  },
+  {
+    "name": "NetCoin",
+    "symbol": "NET",
+    "arguments": "-u Skinty.1 -p x",
+    "pools": [],
+    "showDetails": false
+  },
+  {
+    "name": "WorldCoin",
+    "symbol": "WDC",
+    "arguments": "-u Skinty.1 -p x",
+    "pools": [],
+    "showDetails": false
+  }
+]

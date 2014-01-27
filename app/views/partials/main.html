@@ -1,6 +1,81 @@
 <div ng-controller="MinerCtrl">
-    <h2>Dashboard <small>2 Miners / 10 GPUs / 8.51 Mh/s Total Hashrate</small></h2>
+    <h2>Dashboard</h2>
+  <!--<small>{{calculateDashboardSummary().miners}} Miners / {{calculateDashboardSummary().devices}} GPUs / 8.51 Mh/s Total Hashrate</small>-->
+
+    <div class="panel panel-default">
+        <div class="panel-heading handicon" ng-click="toggleSummary()">
+            <i class="fa" ng-class="{'fa-chevron-up':showSummary == true, 'fa-chevron-down':showSummary == false}"></i>&nbsp;<strong>Overview</strong>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <table class="table" ng-show="showSummary">
+                    <tbody>
+                        <tr>
+                            <td><strong>Current Hashrate</strong></td>
+                            <td>4.35 Mh/s</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Accepted Shares</strong></td>
+                            <td>4391 Total Accepted Shares</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Rejected Shares</strong></td>
+                            <td>127 Total Rejected Shares</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Reject Ratio</strong></td>
+                            <td>0.12%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-4">
+                <table class="table" ng-show="showSummary">
+                    <tbody>
+                        <tr>
+                            <td><strong>Average Hashrate</strong></td>
+                            <td>3.7 Mh/s</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Average Temperature</strong></td>
+                            <td>79C</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Average Fan Speed</strong></td>
+                            <td>95%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-sm-4">
+                <table class="table" ng-show="showSummary">
+                    <tbody>
+                        <tr>
+                            <td><strong>Total GPUs</strong></td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Healthy GPUs</strong></td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sick GPUs</strong></td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Active Pools</strong></td>
+                            <td>1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
     <hr />
+
     <div class="panel panel-default" ng-repeat="miner in miners">
         <div class="panel-heading">
             <strong>{{miner.name}}</strong>
@@ -20,8 +95,7 @@
                     <i class="fa fa-cloud"></i>&nbsp; Change Pool <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Hashco.ws</a></li>
-                    <li><a href="#">Middlecoin</a></li>
+                    <li ng-repeat="pool in pools"><a href="#"><i class="fa fa-users fa-fw"></i>&nbsp; {{pool.name}} ({{pool.url}})</a></li>
                 </ul>
             </div>
 
@@ -30,12 +104,7 @@
                     <i class="fa fa-btc"></i>&nbsp; Change Coin <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Coino</a></li>
-                    <li><a href="#">DigitalCoin</a></li>
-                    <li><a href="#">DogeCoin</a></li>
-                    <li><a href="#">LottoCoin</a></li>
-                    <li><a href="#">NetCoin</a></li>
-                    <li><a href="#">WorldCoin</a></li>
+                    <li ng-repeat="coin in coins"><a href="#"><i class="fa fa-user fa-fw"></i>&nbsp; {{coin.name}} ({{coin.symbol}})</a></li>
                 </ul>
             </div>
 
@@ -44,10 +113,6 @@
                     <i class="fa fa-wrench"></i>&nbsp; Actions <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" role="menu">
-                    <li><a href="#"><i class="fa fa-clock-o fa-fw"></i>&nbsp;History</a></li>
-                    <li><a href="#"><i class="fa fa-cog fa-fw"></i>&nbsp;Process Log</a></li>
-                    <li><a href="#"><i class="fa fa-eye fa-fw"></i>&nbsp;API Monitor</a></li>
-                    <li class="divider"></li>
                     <li><a href="#"><i class="fa fa-repeat fa-fw"></i>&nbsp;Restart</a></li>
                     <li><a href="#"><i class="fa fa-power-off fa-fw"></i>&nbsp;Shutdown</a></li>
                 </ul>
@@ -59,7 +124,6 @@
                 <tr>
                     <th width="25px"></th>
                     <th>Name</th>
-                    <th>Coin</th>
                     <th>Pool</th>
                     <th>Temp</th>
                     <th>Fan</th>
@@ -74,19 +138,18 @@
                 </thead>
                 <tbody>
                 <tr ng-repeat="device in miner.devices">
-                    <td><span class="fa fa-check"></span></td>
-                    <td>{{device.name}}</td>
-                    <td>{{device.coin}}</td>
-                    <td>{{device.pool}}</td>
-                    <td>{{device.temperature}}</td>
-                    <td>{{device.fan}}</td>
-                    <td>{{device.hashrate}}</td>
-                    <td><span class="label label-success">A:{{device.shares.accepted}}</span> / <span class="label label-danger">R:{{device.shares.rejected}}</span></td>
-                    <td>{{device.utility}}</td>
-                    <td>{{device.intensity}}</td>
-                    <td>{{device.gpuClock}}</td>
-                    <td>{{device.gpuMemory}}</td>
-                    <td>{{device.voltage}}</td>
+                    <td><span class="fa fa-fw handicon" ng-class="{'fa-check':device.Enabled == 'Y','fa-times':device.Enabled == 'N'}" ng-click="toggleGpu(device)"></span></td>
+                    <td>{{device.Model}}</td>
+                    <td>{{miner.pool['Stratum URL']}}</td>
+                    <td>{{device.Temperature}}º</td>
+                    <td>{{device['Fan Percent']}}%</td>
+                    <td>{{device['MHS 5s'] * 1000}} Kh/s</td>
+                    <td><span class="label label-success">A:{{device.Accepted}}</span> / <span class="label label-danger">R:{{device.Rejected}}</span></td>
+                    <td>{{device['Work Utility']}}</td>
+                    <td>{{device['Intensity']}}</td>
+                    <td>{{device['GPU Clock']}}</td>
+                    <td>{{device['Memory Clock']}}</td>
+                    <td>{{device['GPU Voltage']}}v</td>
                 </tr>
                 </tbody>
             </table>

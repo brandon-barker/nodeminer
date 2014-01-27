@@ -1,0 +1,26 @@
+[
+  {
+    "name": "HashCows",
+    "url": "hashco.ws",
+    "workerName": "Skinty.1",
+    "workerPassword": "x",
+    "arguments": null,
+    "showDetails": false
+  },
+  {
+    "name": "MiddleCoin",
+    "url": "middlecoin.com",
+    "workerName": "Skinty.1",
+    "workerPassword": "x",
+    "arguments": null,
+    "showDetails": false
+  },
+  {
+    "name": "Multipool",
+    "url": "multipool.us",
+    "workerName": "Skinty.1",
+    "workerPassword": "x",
+    "arguments": null,
+    "showDetails": false
+  }
+]

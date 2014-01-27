@@ -1,0 +1,34 @@
+[
+  {
+    "name": "BRANDON-PC",
+    "numberOfDevices": "5",
+    "totalHashrate": "4.2 Mh/s",
+    "host": "192.168.0.100",
+    "port": 4028,
+    "miner": "bfgminer",
+    "devices": [],
+    "pool": {},
+    "notifications": {
+      "count": 0,
+      "list": []
+    },
+    "showDetails": false,
+    "interval": 5000
+  },
+  {
+    "name": "HTPC",
+    "numberOfDevices": "1",
+    "totalHashrate": "720 Kh/s",
+    "host": "192.168.0.200",
+    "port": 4028,
+    "miner": "bfgminer",
+    "devices": [],
+    "pool": {},
+    "notifications": {
+      "count": 0,
+      "list": []
+    },
+    "showDetails": false,
+    "interval": 5000
+  }
+]

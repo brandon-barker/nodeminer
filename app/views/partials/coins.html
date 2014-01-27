@@ -1,4 +1,102 @@
-<div ng-controller="MinerCtrl">
-    <h2>Coins <small>Setup Custom Coin Configuration</small></h2>
-    <hr />
+<div ng-controller="CoinsCtrl">
+    <h2>Coins
+        <small>Setup Custom Coin Configuration</small>
+    </h2>
+    <hr/>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="panel panel-default">
+                <div class="panel-heading"><strong>Add a Coin</strong></div>
+                <div class="panel-body">
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label for="name" class="col-lg-3 control-label">Name</label>
+
+                            <div class="col-lg-9">
+                                <input type="text" class="form-control" id="name" placeholder="eg DogeCoin"
+                                       ng-model="coin.name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="symbol" class="col-lg-3 control-label">Symbol</label>
+
+                            <div class="col-lg-9">
+                                <input type="text" class="form-control" id="symbol" placeholder="eg DOGE"
+                                       ng-model="coin.symbol">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="arguments" class="col-lg-3 control-label">Coin Arguments</label>
+
+                            <div class="col-lg-9">
+                                <input type="text" class="form-control" id="arguments"
+                                       placeholder="(optional) arguments to pass through to your miner"
+                                       ng-model="coin.arguments">
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <strong>Pools</strong>
+
+                                <button id="add-pool" type="button" class="btn btn-default btn-xs pull-right">
+                                    <i class="fa fa-plus"></i>&nbsp; Add Pool
+                                </button>
+                            </div>
+                            <div class="panel-body">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-lg-offset-3 col-lg-9">
+                                <button type="submit" class="btn btn-success">Add Coin</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="panel-footer"></div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="panel panel-default">
+                <div class="panel-heading"><strong>Existing Coins</strong></div>
+                <div class="panel-body">
+
+                    <div class="panel panel-default" ng-repeat="coin in coins">
+                        <div class="panel-heading">
+                            <span class="handicon" ng-click="toggleCoinDetails(coin)"><i class="fa"
+                                                                                         ng-class="{'fa-chevron-up':coin.showDetails == true, 'fa-chevron-down':coin.showDetails == false}"></i>&nbsp;<strong>{{coin.name}}</strong></span>
+
+                            <div class="pull-right">
+                                <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i>&nbsp;Edit</button>
+                                <button class="btn btn-default btn-xs"><i class="fa fa-minus-circle"></i>&nbsp;Delete
+                                </button>
+                            </div>
+                        </div>
+
+                        <table class="table table-striped table-hover" ng-show="coin.showDetails">
+                            <tbody>
+                            <tr>
+                                <td><strong>Name</strong></td>
+                                <td>{{coin.name}}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Symbol</strong></td>
+                                <td>{{coin.symbol}}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Arguments</strong></td>
+                                <td>{{coin.arguments}}</td>
+                            </tr>
+                            <tr>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="panel-footer"></div>
+            </div>
+        </div>
+    </div>
 </div>

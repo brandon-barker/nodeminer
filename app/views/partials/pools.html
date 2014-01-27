@@ -1,4 +1,95 @@
-<div ng-controller="MinerCtrl">
+<div ng-controller="PoolsCtrl">
     <h2>Pools <small>Configure Your Mining Pools</small></h2>
     <hr />
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="panel panel-default">
+                <div class="panel-heading"><strong>Add a Pool</strong></div>
+                <div class="panel-body">
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label for="name" class="col-lg-3 control-label">Name</label>
+                            <div class="col-lg-9">
+                                <input type="text" class="form-control" id="name" placeholder="" ng-model="pool.name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="url" class="col-lg-3 control-label">URL</label>
+                            <div class="col-lg-9">
+                                <input type="text" class="form-control" id="url" placeholder="" ng-model="pool.url">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="workerName" class="col-lg-3 control-label">Username</label>
+                            <div class="col-lg-9">
+                                <input type="text" class="form-control" id="workerName" placeholder="" ng-model="pool.workerName">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="workerPassword" class="col-lg-3 control-label">Password</label>
+                            <div class="col-lg-9">
+                                <input type="text" class="form-control" id="workerPassword" placeholder="" ng-model="pool.workerPassword">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="arguments" class="col-lg-3 control-label">Arguments</label>
+                            <div class="col-lg-9">
+                                <input type="text" class="form-control" id="arguments" placeholder="" ng-model="pool.arguments">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-lg-offset-3 col-lg-9">
+                                <button type="submit" class="btn btn-success">Add Pool</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="panel-footer"></div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="panel panel-default">
+                <div class="panel-heading"><strong>Existing Pools</strong></div>
+                <div class="panel-body">
+
+                    <div class="panel panel-default" ng-repeat="pool in pools">
+                        <div class="panel-heading">
+                            <span class="handicon" ng-click="togglePoolDetails(pool)"><i class="fa" ng-class="{'fa-chevron-up':pool.showDetails == true, 'fa-chevron-down':pool.showDetails == false}"></i>&nbsp;<strong>{{pool.name}}</strong></span>
+
+                            <div class="pull-right">
+                                <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i>&nbsp;Edit</button>
+                                <button class="btn btn-default btn-xs"><i class="fa fa-minus-circle"></i>&nbsp;Delete</button>
+                            </div>
+                        </div>
+
+                        <table class="table table-striped table-hover" ng-show="pool.showDetails">
+                            <tbody>
+                            <tr>
+                                <td><strong>Name</strong></td>
+                                <td>{{pool.name}}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>URL</strong></td>
+                                <td>{{pool.url}}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Worker Name</strong></td>
+                                <td>{{pool.workerName}}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Worker Password</strong></td>
+                                <td>{{pool.workerPassword}}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Arguments</strong></td>
+                                <td>{{pool.arguments}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="panel-footer"></div>
+            </div>
+        </div>
+    </div>
 </div>

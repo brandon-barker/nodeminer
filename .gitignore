@@ -6,3 +6,10 @@ app/bower_components
 heroku
 /views
 dist
+/.idea
+/node_modules
+express
+.bin
+.idea
+/node_modules/express
+/node_modules/.bin
