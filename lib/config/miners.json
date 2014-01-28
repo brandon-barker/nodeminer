@@ -13,7 +13,7 @@
       "list": []
     },
     "showDetails": false,
-    "interval": 5000
+    "interval": 10000
   },
   {
     "name": "HTPC",
@@ -29,6 +29,6 @@
       "list": []
     },
     "showDetails": false,
-    "interval": 5000
+    "interval": 10000
   }
 ]

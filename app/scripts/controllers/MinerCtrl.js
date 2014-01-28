@@ -1,5 +1,13 @@
 'use strict';
 
+Object.size = function(obj) {
+  var size = 0, key;
+  for (key in obj) {
+    if (obj.hasOwnProperty(key)) size++;
+  }
+  return size;
+};
+
 angular.module('nodeminerApp')
   .controller('MinerCtrl', function ($scope, socket) {
     $scope.showSummary = true;
@@ -16,11 +24,24 @@ angular.module('nodeminerApp')
       }
     }
 
-    $scope.calculateDashboardSummary = function () {
-      return {
-        miners: $scope.miners.length,
-        devices: $scope.miners.devices.length
-      }
+    $scope.calculateDashboardOverview = function () {
+      var overview = {
+        miners: ($scope.miners && $scope.miners.length > 0) ? $scope.miners.length : 0,
+        devices: 0,
+        hashrate: 0
+      };
+
+      $($scope.miners).each(function (index, miner) {
+        overview.devices += Object.size(miner.devices);
+
+        $(miner.devices).each(function (i, devices) {
+          for (var i = 0; i < Object.size(devices); i++) {
+            overview.hashrate += devices[i]['MHS 5s'] * 1000;
+          }
+        })
+      });
+
+      return overview;
     }
 
     $scope.toggleMinerDetails = function (miner) {
@@ -49,7 +70,6 @@ angular.module('nodeminerApp')
       }
     });
 
-    console.log($scope.miners);
     socket.emit('init:miners', function () {
     });
   });
