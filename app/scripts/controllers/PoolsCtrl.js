@@ -14,4 +14,8 @@ angular.module('nodeminerApp')
 
     socket.emit('init:pools', function () {
     });
+
+    $scope.$on('$destroy', function (event) {
+      socket.removeAllListeners('init:pools');
+    });
   });

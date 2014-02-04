@@ -1,5 +1,5 @@
 angular.module('nodeminerApp').factory('socket', function ($rootScope) {
-  var socket = io.connect('http://localhost');
+  var socket = io.connect('http://brandonbarker.net:6895');
   return {
     on: function (eventName, callback) {
       socket.on(eventName, function () {
@@ -18,6 +18,16 @@ angular.module('nodeminerApp').factory('socket', function ($rootScope) {
           }
         });
       })
+    },
+    removeAllListeners: function (eventName, callback) {
+      socket.removeAllListeners(eventName, function () {
+        var args = arguments;
+        $rootScope.$apply(function () {
+          if (callback) {
+            callback.apply(socket, args);
+          }
+        })
+      });
     }
   };
 });

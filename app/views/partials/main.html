@@ -1,32 +1,35 @@
-<div ng-controller="MinerCtrl">
-  <h2>Dashboard <small>{{calculateDashboardOverview().miners}} Miners / {{calculateDashboardOverview().devices}} GPUs / {{calculateDashboardOverview().hashrate}} Kh/s Total Hashrate</small></h2>
+<div ng-controller="DashboardCtrl">
+  <h2>Dashboard
+    <small>{{overview.miners}} Miners / {{overview.devices}} GPUs / {{overview.hashrate | number:2}} Mh/s Total
+      Hashrate
+    </small>
+  </h2>
   <hr/>
 
   <div class="panel panel-default">
     <div class="panel-heading handicon" ng-click="toggleSummary()">
-      <i class="fa"
-         ng-class="{'fa-chevron-up':showSummary == true, 'fa-chevron-down':showSummary == false}"></i>&nbsp;<strong>Overview</strong>
+      <i class="fa" ng-class="{'fa-chevron-up':showSummary == true, 'fa-chevron-down':showSummary == false}"></i>&nbsp;<strong>Overview</strong>
     </div>
 
-    <div class="row">
+    <div class="row" ng-show="showSummary">
       <div class="col-sm-4">
-        <table class="table" ng-show="showSummary">
+        <table class="table">
           <tbody>
           <tr>
             <td><strong>Current Hashrate</strong></td>
-            <td>4.35 Mh/s</td>
+            <td>{{overview.hashrate | number:2}} Mh/s</td>
           </tr>
           <tr>
             <td><strong>Accepted Shares</strong></td>
-            <td>4391 Total Accepted Shares</td>
+            <td>{{overview.totalAccepted}} Total Accepted Shares</td>
           </tr>
           <tr>
             <td><strong>Rejected Shares</strong></td>
-            <td>127 Total Rejected Shares</td>
+            <td>{{overview.totalRejected}} Total Rejected Shares</td>
           </tr>
           <tr>
             <td><strong>Reject Ratio</strong></td>
-            <td>0.12%</td>
+            <td>{{overview.rejectRatio | number:2}}%</td>
           </tr>
           </tbody>
         </table>
@@ -36,15 +39,15 @@
           <tbody>
           <tr>
             <td><strong>Average Hashrate</strong></td>
-            <td>3.7 Mh/s</td>
+            <td>{{overview.averageHashrate | number:2}} Mh/s</td>
           </tr>
           <tr>
             <td><strong>Average Temperature</strong></td>
-            <td>79C</td>
+            <td>{{overview.averageTemperature | number:0}}C</td>
           </tr>
           <tr>
             <td><strong>Average Fan Speed</strong></td>
-            <td>95%</td>
+            <td>{{overview.averageFanSpeed | number:0}}%</td>
           </tr>
           </tbody>
         </table>
@@ -54,19 +57,19 @@
           <tbody>
           <tr>
             <td><strong>Total GPUs</strong></td>
-            <td>5</td>
+            <td>{{overview.devices}}</td>
+          </tr>
+          <tr>
+            <td><strong>Active GPUs</strong></td>
+            <td>{{overview.activeDevices}}</td>
           </tr>
           <tr>
             <td><strong>Healthy GPUs</strong></td>
-            <td>5</td>
+            <td>{{overview.healthyDevices}}</td>
           </tr>
           <tr>
             <td><strong>Sick GPUs</strong></td>
-            <td>0</td>
-          </tr>
-          <tr>
-            <td><strong>Active Pools</strong></td>
-            <td>1</td>
+            <td>{{overview.sickDevices}}</td>
           </tr>
           </tbody>
         </table>
@@ -76,10 +79,7 @@
 
   <div class="panel panel-default" ng-repeat="miner in miners">
     <div class="panel-heading">
-      <strong>{{miner.name}}</strong>
-      &nbsp;&nbsp;
-      <span class="label label-primary">{{miner.numberOfDevices}} devices</span>
-      <span class="label label-primary">{{miner.totalHashrate}}</span>
+      <span class="handicon" ng-click="toggleMinerSummary(miner)"><i class="fa" ng-class="{'fa-chevron-up':miner.collapsed == false, 'fa-chevron-down':miner.collapsed == true}"></i>&nbsp;<strong>{{miner.name}}</strong></span>
 
       <div id="notifications" class="fa-stack notification-bell pull-right" title="Notifications">
         <i class="fa fa-bell-o fa-stack-2x notification-bell-icon"></i>
@@ -88,31 +88,39 @@
         </i>
       </div>
 
-      <div id="change-pool" class="btn-group btn-group-xs pull-right miner-dropdown">
+      <div id="change-pool" class="btn-group btn-group-xs miner-dropdown pull-right">
         <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
-          <i class="fa fa-cloud"></i>&nbsp; Change Pool <span class="caret"></span>
+          <i class="fa fa-users"></i>&nbsp; Change Pool <span class="caret"></span>
         </button>
         <ul class="dropdown-menu" role="menu">
-          <li ng-repeat="pool in pools"><a href="#"><i class="fa fa-users fa-fw"></i>&nbsp; {{pool.name}} ({{pool.url}})</a>
+          <li ng-repeat="pool in pools"><a href="#"><i class="fa fa-users fa-fw"></i>&nbsp; {{pool.name}}
+            ({{pool.url}})</a>
           </li>
         </ul>
       </div>
 
-      <div id="change-coin" class="btn-group btn-group-xs pull-right miner-dropdown">
+      <div id="change-coin" class="btn-group btn-group-xs miner-dropdown pull-right">
         <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
           <i class="fa fa-btc"></i>&nbsp; Change Coin <span class="caret"></span>
         </button>
         <ul class="dropdown-menu" role="menu">
-          <li ng-repeat="coin in coins"><a href="#"><i class="fa fa-user fa-fw"></i>&nbsp; {{coin.name}}
+          <li ng-repeat="coin in coins"><a href="#"><i class="fa fa-btc fa-fw"></i>&nbsp; {{coin.name}}
             ({{coin.symbol}})</a></li>
         </ul>
       </div>
 
-      <div id="actions" class="btn-group btn-group-xs pull-right miner-dropdown">
+      <div id="actions" class="btn-group btn-group-xs miner-dropdown pull-right">
         <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
           <i class="fa fa-wrench"></i>&nbsp; Actions <span class="caret"></span>
         </button>
         <ul class="dropdown-menu" role="menu">
+          <li><a href="#"><i class="fa fa-play fa-fw"></i>&nbsp;Start Mining</a></li>
+          <li><a href="#"><i class="fa fa-stop fa-fw"></i>&nbsp;Stop Mining</a></li>
+          <li><a href="#"><i class="fa fa-undo fa-fw"></i>&nbsp;Restart Mining</a></li>
+          <li class="divider"></li>
+          <li><a href="#"><i class="fa fa-edit fa-fw"></i>&nbsp;Edit</a></li>
+          <li><a href="#"><i class="fa fa-trash-o fa-fw"></i>&nbsp;Delete</a></li>
+          <li class="divider"></li>
           <li><a href="#"><i class="fa fa-repeat fa-fw"></i>&nbsp;Restart</a></li>
           <li><a href="#"><i class="fa fa-power-off fa-fw"></i>&nbsp;Shutdown</a></li>
         </ul>
@@ -123,39 +131,71 @@
         <thead>
         <tr>
           <th width="25px"></th>
-          <th>Name</th>
-          <th>Pool</th>
-          <th>Temp</th>
-          <th>Fan</th>
-          <th>Hashrate</th>
-          <th>Shares</th>
-          <th>Work Utility</th>
-          <th>Intensity</th>
-          <th>GPU Clock</th>
-          <th>Memory Clock</th>
-          <th>Voltage</th>
+          <th><i class="fa fa-tag"></i>&nbsp;Name</th>
+          <th><i class="fa fa-users"></i>&nbsp;Pool</th>
+          <th><i class="fa fa-signal"></i>&nbsp;Load</th>
+          <th><i class="fa fa-fire-extinguisher"></i>&nbsp;Temp</th>
+          <th><i class="fa fa-rss"></i>&nbsp;Fan</th>
+          <th><i class="fa fa-bar-chart-o"></i>&nbsp;Hashrate</th>
+          <th><i class="fa fa-exchange"></i>&nbsp;Shares</th>
+          <th><i class="fa fa-coffee"></i>&nbsp;Work Utility</th>
+          <th><i class="fa fa-fire"></i>&nbsp;Intensity</th>
+          <th><i class="fa fa-clock-o"></i>&nbsp;GPU Clock</th>
+          <th><i class="fa fa-clock-o"></i>&nbsp;Memory Clock</th>
+          <th><i class="fa fa-flash"></i>&nbsp;Voltage</th>
         </tr>
         </thead>
         <tbody>
-        <tr ng-repeat="device in miner.devices">
-          <td><span class="fa fa-fw handicon"
+          <tr ng-repeat="device in miner.devices" ng-show="!miner.collapsed">
+            <td>
+              <span class="fa fa-fw handicon"
                     ng-class="{'fa-check':device.Enabled == 'Y','fa-times':device.Enabled == 'N'}"
-                    ng-click="toggleGpu(device)"></span></td>
-          <td>{{device.Model}}</td>
-          <td>{{miner.pool['Stratum URL']}}</td>
-          <td>{{device.Temperature}}º</td>
-          <td>{{device['Fan Percent']}}%</td>
-          <td>{{device['MHS 5s'] * 1000}} Kh/s</td>
-          <td><span class="label label-success">A:{{device.Accepted}}</span> / <span class="label label-danger">R:{{device.Rejected}}</span>
-          </td>
-          <td>{{device['Work Utility']}}</td>
-          <td>{{device['Intensity']}}</td>
-          <td>{{device['GPU Clock']}}</td>
-          <td>{{device['Memory Clock']}}</td>
-          <td>{{device['GPU Voltage']}}v</td>
-        </tr>
+                    ng-click="toggleGpu(device)">
+              </span>
+            </td>
+            <td>{{device.Model}}</td>
+            <td>{{miner.pool['Stratum URL']}}</td>
+            <td>{{device['GPU Activity']}}%</td>
+            <td>{{device.Temperature}}ºc</td>
+            <td>{{device['Fan Percent']}}%</td>
+            <td>{{device['MHS 5s'] * 1000}} Kh/s</td>
+            <td><span class="label label-success">A:{{device.Accepted}}</span> / <span class="label label-danger">R:{{device.Rejected}}</span>
+            </td>
+            <td>{{device['Work Utility'] || device['Utility']}}</td>
+            <td>{{device['Intensity']}}</td>
+            <td>{{device['GPU Clock']}} Mhz</td>
+            <td>{{device['Memory Clock']}} Mhz</td>
+            <td>{{device['GPU Voltage']}}v</td>
+          </tr>
+          <tr ng-show="miner.collapsed">
+            <td></td>
+            <td>{{miner.numberOfDevices}} device(s)</td>
+            <td>{{miners[0].pool['Stratum URL']}}</td>
+            <td>{{miner.averageGpuActivity}}%</td>
+            <td>{{miner.averageTemperature}}ºc</td>
+            <td>{{miner.averageFanSpeed}}%</td>
+            <td>{{miner.totalHashrate | number:2}} Mh/s</td>
+            <td><span class="label label-success">A:{{miner.totalAcceptedShares}}</span> / <span class="label label-danger">R:{{miner.totalRejectedShares}}</span>
+            </td>
+            <td>{{miner.totalWorkUtility | number:2}}</td>
+            <td>{{miner.averageIntensity}}</td>
+            <td>{{miner.averageGpuEngine}} Mhz</td>
+            <td>{{miner.averageMemoryClock}} Mhz</td>
+            <td>{{miner.averageVoltage}}v</td>
+          </tr>
         </tbody>
       </table>
+    </div>
+    <div class="panel-footer">
+      <div class="row">
+        <div class="col-sm-4">
+          <span class="label label-primary pull-left">{{miner.totalHashrate | number:2}} Mh/s</span>
+        </div>
+
+        <div class="col-sm-8">
+          <span class="label label-primary pull-right">{{miner.numberOfDevices}} device(s)</span>
+        </div>
+      </div>
     </div>
   </div>
 </div>

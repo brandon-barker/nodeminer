@@ -52,7 +52,13 @@ div .down-arrow {
 }
 
 .miner-dropdown {
+    text-align: left;
     margin: 0 2px 0 2px;
+}
+
+.miner-title {
+    text-transform: uppercase;
+    margin-top: 4px;
 }
 
 .control-label {

@@ -21,7 +21,7 @@ angular.module('nodeminerApp')
             {
                 'title': 'Pools',
                 'link': '/pools',
-                'icon': 'fa fa-cloud'
+                'icon': 'fa fa-users'
             },
             {
                 'title': 'Settings',
