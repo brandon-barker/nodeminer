@@ -104,6 +104,8 @@ angular.module('nodeminerApp')
       $scope.overview.rejectRatio = ($scope.overview.totalRejected / $scope.overview.totalAccepted * 100);
       $scope.overview.averageTemperature = ($scope.overview.averageTemperature / $scope.overview.devices);
       $scope.overview.averageFanSpeed = ($scope.overview.averageFanSpeed / $scope.overview.devices);
+
+      document.title = 'nodeminer - ' + parseFloat($scope.overview.hashrate).toFixed(2) + ' Mh/s';
     }
 
     $scope.toggleSummary = function () {
