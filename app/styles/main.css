@@ -1,6 +1,7 @@
 /* Space out content a bit */
 body, html {
     font-family: 'Open Sans', sans-serif;
+    margin-bottom: 30px;
 }
 
 .main {
@@ -72,9 +73,10 @@ div .down-arrow {
 
 /* Custom page footer */
 .footer {
-    padding-top: 20px;
+    padding-top: 15px;
+    margin-top: -4px;
     color: #777;
-    border-top: 1px solid #e5e5e5;
+    border-top: 4px solid #8cc84b;
     text-align: center;
 }
 

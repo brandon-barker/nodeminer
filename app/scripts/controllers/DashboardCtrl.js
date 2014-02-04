@@ -9,9 +9,8 @@ Object.size = function (obj) {
 };
 
 angular.module('nodeminerApp')
-  .controller('DashboardCtrl', function ($scope, socket) {
+  .controller('DashboardCtrl', function ($scope, $rootScope, MinerSvc, socket) {
     $scope.showSummary = true;
-
     $scope.miners = [];
 
     $scope.toggleGpu = function (device) {
@@ -25,7 +24,7 @@ angular.module('nodeminerApp')
     }
 
     $scope.calculateMinerTotals = function () {
-      $($scope.miners).each(function (index, miner) {
+      $(MinerSvc.miners).each(function (index, miner) {
         miner.totalHashrate = 0;
         miner.totalAcceptedShares = 0;
         miner.totalRejectedShares = 0;
@@ -81,9 +80,9 @@ angular.module('nodeminerApp')
         sickDevices: 0
       };
 
-      $scope.overview.miners = ($scope.miners && $scope.miners.length > 0) ? $scope.miners.length : 0;
+      $scope.overview.miners = (MinerSvc.miners && MinerSvc.miners.length > 0) ? MinerSvc.miners.length : 0;
 
-      $($scope.miners).each(function (index, miner) {
+      $(MinerSvc.miners).each(function (index, miner) {
         $scope.overview.devices += Object.size(miner.devices);
 
         $(miner.devices).each(function (i, devices) {
@@ -115,18 +114,8 @@ angular.module('nodeminerApp')
       miner.collapsed = !miner.collapsed;
     }
 
-    socket.on('connect', function () {
-    });
-
-    socket.on('disconnect', function (socket) {
-    });
-
     socket.on('coins:init', function (coins) {
       $scope.coins = coins;
-    });
-
-    socket.on('miners:init', function (miners) {
-      $scope.miners = miners;
     });
 
     socket.on('pools:init', function (pools) {
@@ -138,15 +127,15 @@ angular.module('nodeminerApp')
     });
 
     socket.on('miner:config', function (data) {
-      if ($scope.miners && $scope.miners.length > 0) {
-        $($scope.miners).each(function (index, miner) {
+      if (MinerSvc.miners && MinerSvc.miners.length > 0) {
+        $(MinerSvc.miners).each(function (index, miner) {
           if (miner.name == data.name) {
-            $scope.miners[index].devices = data.devices;
+            MinerSvc.miners[index].devices = data.devices;
 
             if (data.POOLS && data.POOLS.length > 0) {
               for (var i = 0; i < Object.size(data.POOLS); i++) {
                 if (data.POOLS[i]['Stratum Active']) {
-                  $scope.miners[index].pool = data.POOLS[i];
+                  MinerSvc.miners[index].pool = data.POOLS[i];
                 }
               }
             }
@@ -156,9 +145,6 @@ angular.module('nodeminerApp')
         $scope.calculateDashboardOverview();
         $scope.calculateMinerTotals();
       }
-    });
-
-    socket.emit('init:miners', function () {
     });
 
     socket.emit('init:pools', function () {
@@ -173,4 +159,14 @@ angular.module('nodeminerApp')
       socket.removeAllListeners('init:coins');
       //socket.emit('destroy:socket', $scope.socketId);
     });
+
+    $scope.$on('init:miners', function (miners) {
+      $scope.miners = MinerSvc.miners;
+    });
+
+    if ($scope.miners.length == 0) {
+      $scope.miners = MinerSvc.miners;
+      $scope.calculateDashboardOverview();
+      $scope.calculateMinerTotals();
+    }
   });

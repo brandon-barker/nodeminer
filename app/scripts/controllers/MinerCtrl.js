@@ -1,21 +1,20 @@
 'use strict';
 
 angular.module('nodeminerApp')
-  .controller('MinerCtrl', function ($scope, socket) {
+  .controller('MinerCtrl', function ($scope, MinerSvc, socket) {
     $scope.miners = []
 
     $scope.toggleMinerDetails = function (miner) {
       miner.showDetails = !miner.showDetails;
     }
 
-    socket.on('miners:init', function (miners) {
-      $scope.miners = miners;
-    });
-
-    socket.emit('init:miners', function () {
-    });
-
     $scope.$on('$destroy', function (event) {
       socket.removeAllListeners('init:miners');
     });
+
+    $scope.$on('initMiners', function (miners) {
+      $scope.miners = MinerSvc.miners;
+    });
+
+    if ($scope.miners.length == 0) $scope.miners = MinerSvc.miners;
   });
