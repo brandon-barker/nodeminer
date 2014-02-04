@@ -115,11 +115,11 @@
         </button>
         <ul class="dropdown-menu" role="menu">
           <li><a href="#"><i class="fa fa-play fa-fw"></i>&nbsp;Start Mining</a></li>
-          <li><a href="#"><i class="fa fa-stop fa-fw"></i>&nbsp;Stop Mining</a></li>
+          <li><a href="#"><i class="fa fa-minus-circle fa-fw"></i>&nbsp;Stop Mining</a></li>
           <li><a href="#"><i class="fa fa-undo fa-fw"></i>&nbsp;Restart Mining</a></li>
           <li class="divider"></li>
-          <li><a href="#"><i class="fa fa-edit fa-fw"></i>&nbsp;Edit</a></li>
-          <li><a href="#"><i class="fa fa-trash-o fa-fw"></i>&nbsp;Delete</a></li>
+          <li><a href="#"><i class="fa fa-edit fa-fw"></i>&nbsp;Edit Miner</a></li>
+          <li><a href="#"><i class="fa fa-trash-o fa-fw"></i>&nbsp;Delete Miner</a></li>
           <li class="divider"></li>
           <li><a href="#"><i class="fa fa-repeat fa-fw"></i>&nbsp;Restart</a></li>
           <li><a href="#"><i class="fa fa-power-off fa-fw"></i>&nbsp;Shutdown</a></li>
@@ -136,7 +136,7 @@
           <th><i class="fa fa-signal"></i>&nbsp;Load</th>
           <th><i class="fa fa-fire-extinguisher"></i>&nbsp;Temp</th>
           <th><i class="fa fa-rss"></i>&nbsp;Fan</th>
-          <th><i class="fa fa-bar-chart-o"></i>&nbsp;Hashrate</th>
+          <th><i class="fa fa-bar-chart-o"></i>&nbsp;Hashrate (avg)</th>
           <th><i class="fa fa-exchange"></i>&nbsp;Shares</th>
           <th><i class="fa fa-coffee"></i>&nbsp;Work Utility</th>
           <th><i class="fa fa-fire"></i>&nbsp;Intensity</th>
@@ -158,7 +158,7 @@
             <td>{{device['GPU Activity']}}%</td>
             <td>{{device.Temperature}}ºc</td>
             <td>{{device['Fan Percent']}}%</td>
-            <td>{{device['MHS 5s'] * 1000}} Kh/s</td>
+            <td>{{device['MHS 5s'] * 1000}} Kh/s ({{device['MHS av'] * 1000}} Kh/s)</td>
             <td><span class="label label-success">A:{{device.Accepted}}</span> / <span class="label label-danger">R:{{device.Rejected}}</span>
             </td>
             <td>{{device['Work Utility'] || device['Utility']}}</td>
