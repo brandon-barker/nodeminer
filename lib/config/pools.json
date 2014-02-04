@@ -2,6 +2,7 @@
   {
     "name": "HashCows",
     "url": "hashco.ws",
+    "port": "8888",
     "workerName": "Skinty.1",
     "workerPassword": "x",
     "arguments": null,
@@ -10,6 +11,7 @@
   {
     "name": "MiddleCoin",
     "url": "middlecoin.com",
+    "port": "3333",
     "workerName": "Skinty.1",
     "workerPassword": "x",
     "arguments": null,
@@ -18,6 +20,7 @@
   {
     "name": "Multipool",
     "url": "multipool.us",
+    "port": "3334",
     "workerName": "Skinty.1",
     "workerPassword": "x",
     "arguments": null,
