@@ -13,3 +13,6 @@ express
 .idea
 /node_modules/express
 /node_modules/.bin
+/lib/config/pools.json
+/lib/config/coins.json
+/lib/config/miners.json
