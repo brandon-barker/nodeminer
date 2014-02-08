@@ -1,6 +1,6 @@
 {
   "name": "nodeminer",
-  "version": "0.0.1",
+  "version": "0.1",
   "description": "A node.js based Web UI for mining scrypt based cryptocurrencies.",
   "author": "Brandon Barker",
   "dependencies": {

@@ -1,7 +1,7 @@
 [
   {
     "name": "Miner 1",
-    "host": "192.168.0.108",
+    "host": "192.168.0.104",
     "port": 4028,
     "miner": "cgminer",
     "devices": [],
