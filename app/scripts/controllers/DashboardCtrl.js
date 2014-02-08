@@ -13,13 +13,13 @@ angular.module('nodeminerApp')
     $scope.showSummary = true;
     $scope.miners = [];
 
-    $scope.toggleGpu = function (device) {
+    $scope.toggleGpu = function (miner, device) {
       if (device.Enabled == 'Y') {
         console.log('Disabling ' + device.Model + ' (' + device.ID + ')');
-        socket.emit('gpu:disable', device);
+        socket.emit('gpu:disable', { miner:miner, device:device });
       } else {
         console.log('Enabling ' + device.Model + ' (' + device.ID + ')');
-        socket.emit('gpu:enable', device);
+        socket.emit('gpu:enable', { miner:miner, device:device });
       }
     }
 
@@ -147,6 +147,23 @@ angular.module('nodeminerApp')
         $scope.calculateDashboardOverview();
         $scope.calculateMinerTotals();
       }
+    });
+
+    socket.on('error:gpuenable', function (status) {
+      toastr.error('Error enabling GPU: ' + status.Msg);
+    });
+
+    socket.on('error:gpudisable', function (status) {
+      toastr.error('Error disabling GPU: ' + status.Msg);
+    });
+
+    socket.on('success:gpuenable', function (status) {
+      toastr.success('Successfully enabled GPU.');
+    });
+
+
+    socket.on('success:gpudisable', function (status) {
+      toastr.success('Successfully disabled GPU.');
     });
 
     socket.emit('init:pools', function () {

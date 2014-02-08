@@ -150,7 +150,7 @@
             <td>
               <span class="fa fa-fw handicon"
                     ng-class="{'fa-check':device.Enabled == 'Y','fa-times':device.Enabled == 'N'}"
-                    ng-click="toggleGpu(device)">
+                    ng-click="toggleGpu(miner, device)">
               </span>
             </td>
             <td>{{device.Model.replace('AMD Radeon', '')}}</td>
