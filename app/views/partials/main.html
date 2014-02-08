@@ -169,18 +169,18 @@
           </tr>
           <tr ng-show="miner.collapsed">
             <td></td>
-            <td>{{miner.numberOfDevices}} device(s)</td>
+            <td>{{miner.numberOfDevices | number:0}} device(s)</td>
             <td>{{miners[0].pool['Stratum URL']}}</td>
-            <td>{{miner.averageGpuActivity}}%</td>
+            <td>{{miner.averageGpuActivity | number:0}}%</td>
             <td>{{miner.averageTemperature | number:0}}ºc</td>
             <td>{{miner.averageFanSpeed | number:0}}%</td>
             <td>{{miner.totalHashrate | number:2}} Mh/s</td>
             <td><span class="label label-success">A:{{miner.totalAcceptedShares}}</span> / <span class="label label-danger">R:{{miner.totalRejectedShares}}</span>
             </td>
             <td>{{miner.totalWorkUtility | number:2}}</td>
-            <td>{{miner.averageIntensity}}</td>
-            <td>{{miner.averageGpuEngine}} Mhz</td>
-            <td>{{miner.averageMemoryClock}} Mhz</td>
+            <td>{{miner.averageIntensity | number:0}}</td>
+            <td>{{miner.averageGpuEngine | number:0}} Mhz</td>
+            <td>{{miner.averageMemoryClock | number:0}} Mhz</td>
             <td>{{miner.averageVoltage | number:2}}v</td>
           </tr>
         </tbody>
