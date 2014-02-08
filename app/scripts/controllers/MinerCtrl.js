@@ -26,6 +26,20 @@ angular.module('nodeminerApp')
       $scope.save($scope.miners);
     };
 
+    $scope.allowEdit = function (miner) {
+      miner.allowEdit = true;
+      miner.showDetails = true;
+    };
+
+    $scope.disableEdit = function (miner) {
+      miner.allowEdit = false;
+    };
+
+    $scope.saveEdit = function (miner) {
+      $scope.disableEdit(miner);
+      $scope.save($scope.miners);
+    };
+
     $scope.save = function (miners) {
       MinerSvc.save(miners);
     };
