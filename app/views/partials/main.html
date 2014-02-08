@@ -77,7 +77,7 @@
     </div>
   </div>
 
-  <div class="panel panel-default" ng-repeat="miner in miners">
+  <div class="panel panel-default" ng-repeat="miner in miners track by $index">
     <div class="panel-heading">
       <span class="handicon" ng-click="toggleMinerSummary(miner)"><i class="fa" ng-class="{'fa-chevron-up':miner.collapsed == false, 'fa-chevron-down':miner.collapsed == true}"></i>&nbsp;<strong>{{miner.name}}</strong></span>
 

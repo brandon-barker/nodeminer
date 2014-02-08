@@ -1,4 +1,6 @@
-angular.module('nodeminerApp').factory('MinerSvc', function ($rootScope, socket) {
+'use strict'
+
+angular.module('nodeminerApp').factory('MinerSvc', function ($rootScope, $route, socket) {
   var MinerSvc = {
     miners: [],
 
@@ -6,8 +8,17 @@ angular.module('nodeminerApp').factory('MinerSvc', function ($rootScope, socket)
       if (MinerSvc.miners.length == 0) {
         MinerSvc.miners = miners;
 
-        $rootScope.$broadcast('init:miners', MinerSvc.miners);
+        $rootScope.$broadcast('init:miners');
       }
+    },
+    save: function (miners) {
+      MinerSvc.miners = miners;
+      socket.emit('save:miners', miners);
+    },
+    delete: function (miner) {
+      _.remove(MinerSvc.miners, miner);
+
+      MinerSvc.save(MinerSvc.miners);
     }
   };
 
@@ -16,6 +27,10 @@ angular.module('nodeminerApp').factory('MinerSvc', function ($rootScope, socket)
 
   socket.on('miners:init', function (miners) {
     MinerSvc.initMiners(miners);
+  });
+
+  socket.on('saved:miners', function () {
+    $rootScope.$broadcast('saved:miners');
   });
 
   return MinerSvc;
