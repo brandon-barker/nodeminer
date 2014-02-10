@@ -23,6 +23,14 @@ angular.module('nodeminerApp')
       }
     }
 
+    $scope.zeroMinerStats = function (miner) {
+      socket.emit('zero:miner', miner);
+    }
+
+    $scope.zeroAllStats = function () {
+      socket.emit('zero:allminers');
+    }
+
     $scope.calculateMinerTotals = function () {
       $(MinerSvc.miners).each(function (index, miner) {
         miner.totalHashrate = 0;
@@ -157,13 +165,25 @@ angular.module('nodeminerApp')
       toastr.error('Error disabling GPU: ' + status.Msg);
     });
 
-    socket.on('success:gpuenable', function (status) {
+    socket.on('error:zerominer', function (data) {
+      var miner = data.miner;
+      var status = data.status;
+
+      toastr.error('Error zeroing "' + miner.name + '" stats: ' + status.Msg);
+    });
+
+    socket.on('success:gpuenable', function () {
       toastr.success('Successfully enabled GPU.');
     });
 
-
-    socket.on('success:gpudisable', function (status) {
+    socket.on('success:gpudisable', function () {
       toastr.success('Successfully disabled GPU.');
+    });
+
+    socket.on('success:zerominer', function (data) {
+      var miner = data.miner;
+
+      toastr.success('Successfully zeroed "' + miner.name + '" statistics.');
     });
 
     socket.emit('init:pools', function () {
