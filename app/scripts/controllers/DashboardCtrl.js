@@ -16,10 +16,10 @@ angular.module('nodeminerApp')
     $scope.toggleGpu = function (miner, device) {
       if (device.Enabled == 'Y') {
         console.log('Disabling ' + device.Model + ' (' + device.ID + ')');
-        socket.emit('gpu:disable', { miner:miner, device:device });
+        socket.emit('gpu:disable', { miner: miner, device: device });
       } else {
         console.log('Enabling ' + device.Model + ' (' + device.ID + ')');
-        socket.emit('gpu:enable', { miner:miner, device:device });
+        socket.emit('gpu:enable', { miner: miner, device: device });
       }
     }
 
@@ -137,9 +137,10 @@ angular.module('nodeminerApp')
     });
 
     socket.on('miner:config', function (data) {
-      if (MinerSvc.miners && MinerSvc.miners.length > 0) {
+      if (MinerSvc.miners && MinerSvc.miners.length > 0 && data) {
         $(MinerSvc.miners).each(function (index, miner) {
           if (miner.name == data.name) {
+            MinerSvc.miners[index].online = true;
             MinerSvc.miners[index].devices = data.devices;
 
             if (data.POOLS && data.POOLS.length > 0) {
@@ -154,6 +155,24 @@ angular.module('nodeminerApp')
 
         $scope.calculateDashboardOverview();
         $scope.calculateMinerTotals();
+      }
+    });
+
+    socket.on('error:miner', function (err) {
+      var miner = err.miner;
+      var error = err.error;
+
+      if (miner) {
+        if (error.code == 'ETIMEDOUT') {
+          MinerSvc.miners.forEach(function (m) {
+            if (m.name == miner.name) {
+              m.online = false;
+            }
+          });
+        } else {
+          toastr.error('An error occurred on ' + miner.name + '!');
+          console.log(error);
+        }
       }
     });
 

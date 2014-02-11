@@ -19,7 +19,8 @@ angular.module('nodeminerApp')
         "showDetails": false,
         "collapsed": false,
         "interval": 5000,
-        "intervalCount": 0
+        "intervalCount": 0,
+        "online": true
       };
 
       $scope.miners.push(_.merge(miner, _defaults));

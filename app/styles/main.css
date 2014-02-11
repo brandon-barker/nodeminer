@@ -155,3 +155,12 @@ div .down-arrow {
     color: #2a6496;
     text-decoration: underline;
 }
+
+.miner-offline {
+    text-align: center;
+    padding: 20px;
+    background-color: #d9534f;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px #000000;
+}

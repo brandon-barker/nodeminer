@@ -130,7 +130,10 @@
       </div>
     </div>
     <div>
-      <table class="table table-striped table-hover">
+      <div class="miner-offline" ng-show="!miner.online && !miner.collapsed">
+        Connection timed out when trying to connect to {{miner.name}}!
+      </div>
+      <table class="table table-striped table-hover" ng-show="miner.online == true">
         <thead>
         <tr>
           <th width="25px"></th>
