@@ -5,7 +5,12 @@ angular.module('nodeminerApp')
     $scope.pools = []
 
     $scope.add = function (pool) {
-      $scope.pools.push(pool);
+      var _defaults = {
+        "allowEdit": false,
+        "showDetails": false
+      };
+
+      $scope.pools.push(_.merge(pool, _defaults));
       $scope.save($scope.pools);
     };
 
@@ -46,6 +51,9 @@ angular.module('nodeminerApp')
     $scope.$on('saved:pools', function () {
       $scope.pools = PoolsSvc.pools;
       toastr.success('Pool configuration saved!');
+
+      // Reset our scope object
+      $scope.pool = {};
     });
 
     if ($scope.pools.length == 0) $scope.pools = PoolsSvc.pools;

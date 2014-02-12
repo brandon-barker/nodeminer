@@ -17,6 +17,7 @@ angular.module('nodeminerApp')
           "list": []
         },
         "showDetails": false,
+        "allowEdit": false,
         "collapsed": false,
         "interval": 5000,
         "intervalCount": 0,
@@ -60,6 +61,9 @@ angular.module('nodeminerApp')
     $scope.$on('saved:miners', function () {
       $scope.miners = MinerSvc.miners;
       toastr.success('Miner configuration saved!');
+
+      // Reset our scope object
+      $scope.miner = {};
     });
 
     if ($scope.miners.length == 0) $scope.miners = MinerSvc.miners;

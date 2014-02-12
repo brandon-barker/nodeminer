@@ -95,7 +95,7 @@
           <i class="fa fa-users"></i>&nbsp; Change Pool <span class="caret"></span>
         </button>
         <ul class="dropdown-menu" role="menu">
-          <li ng-repeat="pool in pools"><a href="#"><i class="fa fa-users fa-fw"></i>&nbsp; {{pool.name}}
+          <li ng-repeat="pool in pools track by pool.name"><a href="#"><i class="fa fa-users fa-fw"></i>&nbsp; {{pool.name}}
             ({{pool.url}})</a>
           </li>
         </ul>
@@ -106,7 +106,7 @@
           <i class="fa fa-btc"></i>&nbsp; Change Coin <span class="caret"></span>
         </button>
         <ul class="dropdown-menu" role="menu">
-          <li ng-repeat="coin in coins"><a href="#"><i class="fa fa-btc fa-fw"></i>&nbsp; {{coin.name}}
+          <li ng-repeat="coin in coins track by coin.name"><a href="#"><i class="fa fa-btc fa-fw"></i>&nbsp; {{coin.name}}
             ({{coin.symbol}})</a></li>
         </ul>
       </div>

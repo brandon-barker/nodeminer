@@ -60,10 +60,9 @@
         <div class="panel-heading"><strong>Existing Pools</strong></div>
         <div class="panel-body">
 
-          <div class="panel panel-default" ng-repeat="pool in pools track by pool.Name">
+          <div class="panel panel-default" ng-repeat="pool in pools track by pool.name">
             <div class="panel-heading">
-              <span class="handicon" ng-click="togglePoolDetails(pool)"><i class="fa"
-                                                                           ng-class="{'fa-chevron-up':pool.showDetails == true, 'fa-chevron-down':pool.showDetails == false}"></i>&nbsp;<strong>{{pool.name}}</strong></span>
+              <span class="handicon" ng-click="togglePoolDetails(pool)"><i class="fa" ng-class="{'fa-chevron-up':pool.showDetails == true, 'fa-chevron-down':pool.showDetails == false}"></i>&nbsp;<strong>{{pool.name}}</strong></span>
 
               <div class="pull-right">
                 <button class="btn btn-default btn-xs" ng-click="allowEdit(pool)"><i class="fa fa-pencil"></i>&nbsp;Edit
@@ -104,7 +103,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <td><strong>Worker Name</strong></td>
+                  <td><strong>Username</strong></td>
                   <td>
                     <div ng-show="!pool.allowEdit">{{pool.workerName}}</div>
                     <div ng-show="pool.allowEdit">
@@ -113,7 +112,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <td><strong>Worker Password</strong></td>
+                  <td><strong>Password</strong></td>
                   <td>
                     <div ng-show="!pool.allowEdit">{{pool.workerPassword}}</div>
                     <div ng-show="pool.allowEdit">

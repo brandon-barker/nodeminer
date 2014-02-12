@@ -9,7 +9,7 @@ Object.size = function (obj) {
 };
 
 angular.module('nodeminerApp')
-  .controller('DashboardCtrl', function ($scope, $rootScope, MinerSvc, socket) {
+  .controller('DashboardCtrl', function ($scope, $rootScope, MinerSvc, CoinsSvc, PoolsSvc, socket) {
     $scope.showSummary = true;
     $scope.miners = [];
 
@@ -124,14 +124,6 @@ angular.module('nodeminerApp')
       miner.collapsed = !miner.collapsed;
     }
 
-    socket.on('coins:init', function (coins) {
-      $scope.coins = coins;
-    });
-
-    socket.on('pools:init', function (pools) {
-      $scope.pools = pools;
-    });
-
     socket.on('socket:init', function (socketId) {
       $scope.socketId = socketId;
     });
@@ -205,12 +197,6 @@ angular.module('nodeminerApp')
       toastr.success('Successfully zeroed "' + miner.name + '" statistics.');
     });
 
-    socket.emit('init:pools', function () {
-    });
-
-    socket.emit('init:coins', function () {
-    });
-
     $scope.$on('$destroy', function (event) {
       socket.removeAllListeners('init:miners');
       socket.removeAllListeners('init:pools');
@@ -220,6 +206,14 @@ angular.module('nodeminerApp')
 
     $scope.$on('init:miners', function (miners) {
       $scope.miners = MinerSvc.miners;
+    });
+
+    $scope.$on('init:coins', function (coins) {
+      $scope.coins = CoinsSvc.coins;
+    });
+
+    $scope.$on('init:pools', function (pools) {
+      $scope.pools = PoolsSvc.pools;
     });
 
     if ($scope.miners.length == 0) {
