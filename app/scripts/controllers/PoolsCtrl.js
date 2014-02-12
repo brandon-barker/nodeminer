@@ -1,21 +1,52 @@
 'use strict';
 
 angular.module('nodeminerApp')
-  .controller('PoolsCtrl', function ($scope, socket) {
+  .controller('PoolsCtrl', function ($scope, PoolsSvc, socket) {
     $scope.pools = []
+
+    $scope.add = function (pool) {
+      $scope.pools.push(pool);
+      $scope.save($scope.pools);
+    };
 
     $scope.togglePoolDetails = function (pool) {
       pool.showDetails = !pool.showDetails;
-    }
+    };
 
-    socket.on('pools:init', function (pools) {
-      $scope.pools = pools;
-    });
+    $scope.allowEdit = function (pool) {
+      pool.allowEdit = true;
+      pool.showDetails = true;
+    };
 
-    socket.emit('init:pools', function () {
-    });
+    $scope.disableEdit = function (pool) {
+      pool.allowEdit = false;
+    };
+
+    $scope.saveEdit = function (pool) {
+      $scope.disableEdit(pool);
+      $scope.save($scope.pools);
+    };
+
+    $scope.save = function (pools) {
+      PoolsSvc.save(pools);
+    };
+
+    $scope.delete = function (pool) {
+      PoolsSvc.delete(pool);
+    };
 
     $scope.$on('$destroy', function (event) {
       socket.removeAllListeners('init:pools');
     });
+
+    $scope.$on('init:pools', function (pools) {
+      $scope.pools = PoolsSvc.pools;
+    });
+
+    $scope.$on('saved:pools', function () {
+      $scope.pools = PoolsSvc.pools;
+      toastr.success('Pool configuration saved!');
+    });
+
+    if ($scope.pools.length == 0) $scope.pools = PoolsSvc.pools;
   });
