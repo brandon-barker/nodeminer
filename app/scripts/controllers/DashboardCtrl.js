@@ -163,7 +163,7 @@ angular.module('nodeminerApp')
       var error = err.error;
 
       if (miner) {
-        if (error.code == 'ETIMEDOUT') {
+        if (error.code == 'ETIMEDOUT' || error.code == 'ECONNREFUSED') {
           MinerSvc.miners.forEach(function (m) {
             if (m.name == miner.name) {
               m.online = false;
