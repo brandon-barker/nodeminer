@@ -114,7 +114,7 @@
     <div class="panel-heading"><strong>Existing Coins</strong></div>
     <div class="panel-body">
 
-      <div class="panel panel-default" ng-repeat="coin in coins track by coin.name">
+      <div class="panel panel-default" ng-repeat="coin in coins track by $index">
         <div class="panel-heading">
                             <span class="handicon" ng-click="toggleCoinDetails(coin)"><i class="fa"
                                                                                          ng-class="{'fa-chevron-up':coin.showDetails == true, 'fa-chevron-down':coin.showDetails == false}"></i>&nbsp;<strong>{{coin.name}}</strong></span>

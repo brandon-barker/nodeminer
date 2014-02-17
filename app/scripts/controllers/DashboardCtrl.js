@@ -11,7 +11,9 @@ Object.size = function (obj) {
 angular.module('nodeminerApp')
   .controller('DashboardCtrl', function ($scope, $rootScope, MinerSvc, CoinsSvc, PoolsSvc, socket) {
     $scope.showSummary = true;
+    $scope.coins = [];
     $scope.miners = [];
+    $scope.pools = [];
 
     $scope.toggleGpu = function (miner, device) {
       if (device.Enabled == 'Y') {
@@ -220,5 +222,13 @@ angular.module('nodeminerApp')
       $scope.miners = MinerSvc.miners;
       $scope.calculateDashboardOverview();
       $scope.calculateMinerTotals();
+    }
+
+    if ($scope.coins.length == 0) {
+      $scope.coins = CoinsSvc.coins;
+    }
+
+    if ($scope.pools.length == 0) {
+      $scope.pools = PoolsSvc.pools;
     }
   });
