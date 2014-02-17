@@ -126,6 +126,10 @@ angular.module('nodeminerApp')
       miner.collapsed = !miner.collapsed;
     }
 
+    $scope.changePool = function (miner, pool) {
+      PoolsSvc.changePool(miner, pool);
+    };
+
     socket.on('socket:init', function (socketId) {
       $scope.socketId = socketId;
     });
@@ -206,16 +210,32 @@ angular.module('nodeminerApp')
       //socket.emit('destroy:socket', $scope.socketId);
     });
 
-    $scope.$on('init:miners', function (miners) {
+    $scope.$on('init:miners', function () {
       $scope.miners = MinerSvc.miners;
     });
 
-    $scope.$on('init:coins', function (coins) {
+    $scope.$on('init:coins', function () {
       $scope.coins = CoinsSvc.coins;
     });
 
-    $scope.$on('init:pools', function (pools) {
+    $scope.$on('init:pools', function () {
       $scope.pools = PoolsSvc.pools;
+    });
+
+    $scope.$on('error:changepool', function (event, data) {
+      var miner = data.miner;
+      var pool = data.pool;
+      var status = data.status;
+
+      console.log(status);
+      toastr.error('Error switching pool to "' + pool.url + '": ' + status);
+    });
+
+    $scope.$on('success:changepool', function (event, data) {
+      var miner = data.miner;
+      var pool = data.pool;
+
+      toastr.success('Successfully switched pool to "' + pool.name + '" on "' + miner.name + '"');
     });
 
     if ($scope.miners.length == 0) {
