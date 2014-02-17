@@ -4,6 +4,42 @@ body, html {
     margin-bottom: 30px;
 }
 
+html, body, .main { height: 100%; margin: 0; padding: 0; }
+body > .main { height: auto; min-height: 100%; }
+.content { padding-bottom: 3em; }
+
+#footer {
+    clear: both;
+    position: relative;
+    text-align: center;
+    height: 100%;
+    margin-top: -3em;
+    background-color: #101010;
+    padding-top: 15px;
+    color: #777;
+    border-top: 4px solid #8cc84b;
+    padding-bottom: 10px;
+}
+
+a.grey {
+    color: #777;
+    font-weight: bold;
+}
+
+#footer p {
+    padding: 2px !important;
+    margin: 0 0 1px 0 !important;
+}
+
+a:hover, a:focus {
+    color: #6bb61a;
+    text-decoration: none;
+}
+
+strong.green {
+    color: #8cc84b;
+}
+
 .main {
     padding: 3px 20px;
     font-family: 'Open Sans', sans-serif !important;
@@ -69,15 +105,6 @@ div .down-arrow {
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
     border-bottom: 5px solid #8cc84b;
     margin-bottom: -2px;
-}
-
-/* Custom page footer */
-.footer {
-    padding-top: 15px;
-    margin-top: -4px;
-    color: #777;
-    border-top: 4px solid #8cc84b;
-    text-align: center;
 }
 
 /* Customize container */

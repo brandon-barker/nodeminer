@@ -1,72 +1,75 @@
 <!doctype html>
 <html ng-app="nodeminerApp">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <base href="/">
-    <title>nodeminer</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css(app) styles/vendor.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="bower_components/toastr/toastr.css" />
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:css({.tmp,app}) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="bower_components/toastr/toastr.min.css">
-    <!-- endbuild -->
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700' rel='stylesheet' type='text/css">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-  </head>
-  <body>
-    <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <base href="/">
+  <title>nodeminer</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- build:css(app) styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="bower_components/toastr/toastr.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css({.tmp,app}) styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="bower_components/toastr/toastr.min.css">
+  <!-- endbuild -->
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700' rel='stylesheet' type='text/css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+</head>
+<body>
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+  your browser</a> to improve your experience.</p>
+<![endif]-->
 
-    <div ng-include="'partials/navbar'"></div>
+<div ng-include="'partials/navbar'"></div>
 
-    <!-- Add your site or application content here -->
-    <div class="main" ng-view=""></div>
+<div class="main">
+  <!-- Add your site or application content here -->
+  <div class="content" ng-view=""></div>
+</div>
 
-    <div ng-include="'partials/footer'"></div>
+<div ng-include="'partials/footer'"></div>
 
-    <!--[if lt IE 9]>
-    <script src="bower_components/es5-shim/es5-shim.js"></script>
-    <script src="bower_components/json3/lib/json3.min.js"></script>
-    <![endif]-->
+<!--[if lt IE 9]>
+<script src="bower_components/es5-shim/es5-shim.js"></script>
+<script src="bower_components/json3/lib/json3.min.js"></script>
+<![endif]-->
 
-    <!-- build:js(app) scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="bower_components/jquery/jquery.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="bower_components/angular-resource/angular-resource.js"></script>
-    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="bower_components/lodash/dist/lodash.compat.js"></script>
-    <!-- endbower -->
-    <!-- endbuild -->
+<!-- build:js(app) scripts/vendor.js -->
+<!-- bower:js -->
+<script src="bower_components/jquery/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/lodash/dist/lodash.compat.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
 
-    <script src="bower_components/lodash/dist/lodash.min.js"></script>
-    <script src="bower_components/toastr/toastr.js"></script>
-    <script src="/socket.io/socket.io.js"></script>
+<script src="bower_components/lodash/dist/lodash.min.js"></script>
+<script src="bower_components/toastr/toastr.js"></script>
+<script src="/socket.io/socket.io.js"></script>
 
-    <!-- build:js({.tmp,app}) scripts/scripts.js -->
-    <script src="scripts/app.js"></script>
-    <script src="scripts/services/MinerSvc.js"></script>
-    <script src="scripts/services/PoolsSvc.js"></script>
-    <script src="scripts/services/CoinsSvc.js"></script>
-    <script src="scripts/controllers/MainCtrl.js"></script>
-    <script src="scripts/controllers/DashboardCtrl.js"></script>
-    <script src="scripts/controllers/NavbarCtrl.js"></script>
-    <script src="scripts/controllers/MinerCtrl.js"></script>
-    <script src="scripts/controllers/CoinsCtrl.js"></script>
-    <script src="scripts/controllers/PoolsCtrl.js"></script>
-    <script src="scripts/services/socket.js"></script>
-    <!-- endbuild -->
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+<script src="scripts/app.js"></script>
+<script src="scripts/services/MinerSvc.js"></script>
+<script src="scripts/services/PoolsSvc.js"></script>
+<script src="scripts/services/CoinsSvc.js"></script>
+<script src="scripts/controllers/MainCtrl.js"></script>
+<script src="scripts/controllers/DashboardCtrl.js"></script>
+<script src="scripts/controllers/NavbarCtrl.js"></script>
+<script src="scripts/controllers/MinerCtrl.js"></script>
+<script src="scripts/controllers/CoinsCtrl.js"></script>
+<script src="scripts/controllers/PoolsCtrl.js"></script>
+<script src="scripts/services/socket.js"></script>
+<!-- endbuild -->
 </body>
 </html>
