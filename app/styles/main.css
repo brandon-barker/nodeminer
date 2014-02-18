@@ -20,6 +20,16 @@ body > .main { height: auto; min-height: 100%; }
     padding-bottom: 10px;
 }
 
+a {
+    color: #8cc84b;
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    color: #6bb61a;
+    text-decoration: none;
+}
+
 a.grey {
     color: #777;
     font-weight: bold;
@@ -28,11 +38,6 @@ a.grey {
 #footer p {
     padding: 2px !important;
     margin: 0 0 1px 0 !important;
-}
-
-a:hover, a:focus {
-    color: #6bb61a;
-    text-decoration: none;
 }
 
 strong.green {
