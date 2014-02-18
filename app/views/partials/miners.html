@@ -64,7 +64,7 @@
               <div class="pull-right">
                 <button class="btn btn-default btn-xs" ng-click="allowEdit(miner)"><i class="fa fa-pencil"></i>&nbsp;Edit
                 </button>
-                <button class="btn btn-default btn-xs" ng-click="delete(miner)"><i class="fa fa-minus-circle"></i>&nbsp;Delete
+                <button class="btn btn-default btn-xs" ng-popover-confirm="delete({{miner}})" data-title="Really delete this Miner?" data-placement="left"><i class="fa fa-minus-circle"></i>&nbsp;Delete
                 </button>
               </div>
             </div>

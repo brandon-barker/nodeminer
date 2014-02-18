@@ -67,7 +67,7 @@
               <div class="pull-right">
                 <button class="btn btn-default btn-xs" ng-click="allowEdit(pool)"><i class="fa fa-pencil"></i>&nbsp;Edit
                 </button>
-                <button class="btn btn-default btn-xs" ng-click="delete(pool)"><i class="fa fa-minus-circle"></i>&nbsp;Delete
+                <button class="btn btn-default btn-xs" ng-popover-confirm="delete({{pool}})" data-title="Really delete this Pool?" data-placement="left"><i class="fa fa-minus-circle"></i>&nbsp;Delete
                 </button>
               </div>
             </div>
