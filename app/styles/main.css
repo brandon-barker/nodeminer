@@ -3,9 +3,20 @@ body, html {
     margin-bottom: 30px;
 }
 
-html, body, .main { height: 100%; margin: 0; padding: 0; }
-body > .main { height: auto; min-height: 100%; }
-.content { padding-bottom: 3em; }
+html, body, .main {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body > .main {
+    height: auto;
+    min-height: 100%;
+}
+
+.content {
+    padding-bottom: 3em;
+}
 
 #footer {
     clear: both;
@@ -25,14 +36,14 @@ a {
     text-decoration: none;
 }
 
-a:hover, a:focus {
-    color: #6bb61a;
-    text-decoration: none;
-}
-
 a.grey {
     color: #777;
     font-weight: bold;
+}
+
+a:hover, a:focus {
+    color: #6bb61a;
+    text-decoration: none;
 }
 
 #footer p {
@@ -122,26 +133,6 @@ div .down-arrow {
     margin: 30px 0;
 }
 
-/* Main marketing message and sign up button */
-.jumbotron {
-    text-align: center;
-    border-bottom: 1px solid #e5e5e5;
-}
-
-.jumbotron .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-}
-
-/* Supporting marketing content */
-.marketing {
-    margin: 40px 0;
-}
-
-.marketing p + h4 {
-    margin-top: 28px;
-}
-
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     /* Remove the padding we set earlier */
@@ -165,10 +156,10 @@ div .down-arrow {
 
 /* Bootstrap Overrides */
 .btn-primary {
-      color: #ffffff;
-      background-color: #8cc84b;
-      border-color: #6ba42d;
-  }
+    color: #ffffff;
+    background-color: #8cc84b;
+    border-color: #6ba42d;
+}
 
 .btn-primary:hover {
     color: #ffffff;
@@ -201,4 +192,20 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-weight: 500;
     line-height: 1.1;
     color: inherit;
+}
+
+/* x-editable overrides */
+.editable-click,
+a.editable-click {
+    text-decoration: none;
+    color: #000 !important;
+    border-bottom: solid 2px #8cc84b !important;
+}
+
+.editable-click:hover,
+a.editable-click:hover {
+    text-decoration: none;
+    font-weight: bold;
+    color: #8cc84b !important;
+    border-bottom-color: #8cc84b !important;
 }

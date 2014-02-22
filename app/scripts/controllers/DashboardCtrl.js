@@ -132,6 +132,22 @@ angular.module('nodeminerApp')
       PoolsSvc.changePool(miner, pool);
     };
 
+    $scope.updateIntensity = function (miner, device, value) {
+      socket.emit('update:intensity', { miner:miner, device:device, value:value });
+    };
+
+    $scope.updateGpuEngine = function (miner, device, value) {
+      socket.emit('update:gpuengine', { miner:miner, device:device, value:value });
+    };
+
+    $scope.updateMemoryClock = function (miner, device, value) {
+      socket.emit('update:gpumemory', { miner:miner, device:device, value:value });
+    };
+
+    $scope.updateGpuVoltage = function (miner, device, value) {
+      socket.emit('update:gpuvoltage', { miner:miner, device:device, value:value });
+    };
+
     socket.on('socket:init', function (socketId) {
       $scope.socketId = socketId;
     });
@@ -189,6 +205,46 @@ angular.module('nodeminerApp')
       var status = data.status;
 
       toastr.error('Error zeroing "' + miner.name + '" stats: ' + status.Msg);
+    });
+
+    socket.on('error:intensity', function (data) {
+      var device = data.device;
+
+      toastr.error('Error updating GPU Intensity on "' + device.Model + '"');
+    });
+
+    socket.on('error:gpuengine', function (data) {
+      var device = data.device;
+
+      toastr.error('Error updating GPU Engine on "' + device.Model + '"');
+    });
+
+    socket.on('error:gpumemory', function (data) {
+      var device = data.device;
+
+      toastr.error('Error updating Memory Clock on "' + device.Model + '"');
+    });
+
+    socket.on('error:gpuvoltage', function (data) {
+      var device = data.device;
+
+      toastr.error('Error updating GPU Voltage on "' + device.Model + '"');
+    });
+
+    socket.on('success:intensity', function (device) {
+      toastr.success('Successfully updated GPU Intensity on "' + device.Model + '"');
+    });
+
+    socket.on('success:gpuengine', function (device) {
+      toastr.success('Successfully updated GPU Engine on "' + device.Model + '"');
+    });
+
+    socket.on('success:gpumemory', function (device) {
+      toastr.success('Successfully updated Memory Clock on "' + device.Model + '"');
+    });
+
+    socket.on('success:gpuvoltage', function (device) {
+      toastr.success('Successfully updated GPU Voltage on "' + device.Model + '"');
     });
 
     socket.on('success:gpuenable', function () {

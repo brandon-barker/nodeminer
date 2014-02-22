@@ -182,10 +182,26 @@
           <td><span class="label label-success">A:{{device.Accepted}}</span> / <span class="label label-danger">R:{{device.Rejected}}</span>
           </td>
           <td>{{device['Work Utility'] || device['Utility']}}</td>
-          <td>{{device['Intensity']}}</td>
-          <td>{{device['GPU Clock']}} Mhz</td>
-          <td>{{device['Memory Clock']}} Mhz</td>
-          <td>{{device['GPU Voltage']}}v</td>
+          <td>
+            <a href="" editable-text="device['Intensity']" onbeforesave="updateIntensity(miner, device, $data)">
+              {{ device['Intensity'] || 0 }}
+            </a>
+          </td>
+          <td>
+            <a href="" editable-text="device['GPU Clock']" onbeforesave="updateGpuEngine(miner, device, $data)">
+              {{ device['GPU Clock'] || 0 }} Mhz
+            </a>
+          </td>
+          <td>
+            <a href="" editable-text="device['Memory Clock']" onbeforesave="updateMemoryClock(miner, device, $data)">
+              {{ device['Memory Clock'] || 0 }} Mhz
+            </a>
+         </td>
+          <td>
+            <a href="" editable-text="device['GPU Voltage']" onbeforesave="updateGpuVoltage(miner, device, $data)">
+              {{ device['GPU Voltage'] || 0 }}v
+            </a>
+          </td>
         </tr>
         <tr ng-show="miner.collapsed">
           <td></td>

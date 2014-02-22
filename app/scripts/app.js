@@ -4,8 +4,12 @@ angular.module('nodeminerApp', [
     'ngCookies',
     'ngResource',
     'ngSanitize',
-    'ngRoute'
+    'ngRoute',
+    'xeditable'
   ])
+  .run(function (editableOptions) {
+    editableOptions.theme = 'bs3';
+  })
   .config(function ($routeProvider, $locationProvider) {
     $routeProvider
       .when('/miners', {
