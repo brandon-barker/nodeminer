@@ -93,22 +93,24 @@ angular.module('nodeminerApp')
       $scope.overview.miners = (MinerSvc.miners && MinerSvc.miners.length > 0) ? MinerSvc.miners.length : 0;
 
       $(MinerSvc.miners).each(function (index, miner) {
-        $scope.overview.devices += Object.size(miner.devices);
+        if (miner.online) {
+          $scope.overview.devices += Object.size(miner.devices);
 
-        $(miner.devices).each(function (i, devices) {
-          for (var i = 0; i < Object.size(devices); i++) {
-            $scope.overview.hashrate += devices[i]['MHS 5s'];
-            $scope.overview.averageHashrate += devices[i]['MHS av'];
-            $scope.overview.totalAccepted += devices[i]['Accepted'];
-            $scope.overview.totalRejected += devices[i]['Rejected'];
-            $scope.overview.averageTemperature += devices[i]['Temperature'];
-            $scope.overview.averageFanSpeed += devices[i]['Fan Percent'];
+          $(miner.devices).each(function (i, devices) {
+            for (var i = 0; i < Object.size(devices); i++) {
+              $scope.overview.hashrate += devices[i]['MHS 5s'];
+              $scope.overview.averageHashrate += devices[i]['MHS av'];
+              $scope.overview.totalAccepted += devices[i]['Accepted'];
+              $scope.overview.totalRejected += devices[i]['Rejected'];
+              $scope.overview.averageTemperature += devices[i]['Temperature'];
+              $scope.overview.averageFanSpeed += devices[i]['Fan Percent'];
 
-            if (devices[i].Enabled == 'Y') $scope.overview.activeDevices += 1;
-            if (devices[i].Status == 'Alive') $scope.overview.healthyDevices += 1;
-            if (devices[i].Status == 'Sick' || devices[i].Status == 'Dead') $scope.overview.sickDevices += 1;
-          }
-        })
+              if (devices[i].Enabled == 'Y') $scope.overview.activeDevices += 1;
+              if (devices[i].Status == 'Alive') $scope.overview.healthyDevices += 1;
+              if (devices[i].Status == 'Sick' || devices[i].Status == 'Dead') $scope.overview.sickDevices += 1;
+            }
+          })
+        }
       });
 
       $scope.overview.rejectRatio = ($scope.overview.totalRejected / $scope.overview.totalAccepted * 100);
