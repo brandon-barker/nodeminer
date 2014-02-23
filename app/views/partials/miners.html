@@ -8,33 +8,33 @@
       <div class="panel panel-default">
         <div class="panel-heading"><strong>Add a Mining Rig</strong></div>
         <div class="panel-body">
-          <form class="form-horizontal" role="form">
+          <form name="addMinerForm" class="form-horizontal" role="form">
             <div class="form-group">
               <label for="name" class="col-lg-3 control-label">Name</label>
 
               <div class="col-lg-9">
-                <input type="text" class="form-control" id="name" placeholder="" ng-model="miner.name">
+                <input type="text" class="form-control" id="name" placeholder="" ng-model="miner.name" required="required">
               </div>
             </div>
             <div class="form-group">
               <label for="ipAddress" class="col-lg-3 control-label">IP Address</label>
 
               <div class="col-lg-9">
-                <input type="text" class="form-control" id="ipAddress" placeholder="" ng-model="miner.host">
+                <input type="text" class="form-control" id="ipAddress" placeholder="" ng-model="miner.host" required="required">
               </div>
             </div>
             <div class="form-group">
               <label for="rpcPort" class="col-lg-3 control-label">RPC Port</label>
 
               <div class="col-lg-9">
-                <input type="text" class="form-control" id="rpcPort" placeholder="" ng-model="miner.port">
+                <input type="text" class="form-control" id="rpcPort" placeholder="" ng-model="miner.port" required="required">
               </div>
             </div>
             <div class="form-group">
               <label for="miner" class="col-lg-3 control-label">Miner</label>
 
               <div class="col-lg-9">
-                <select id="miner" class="form-control" ng-model="miner.miner">
+                <select id="miner" class="form-control" ng-model="miner.miner" required="required">
                   <option>bfgminer</option>
                   <option>cgminer</option>
                 </select>
@@ -42,8 +42,8 @@
             </div>
             <div class="form-group">
               <div class="col-lg-offset-3 col-lg-9">
-                <button type="submit" class="btn btn-success" ng-click="add(miner)">Add Miner</button>
-                <button type="submit" class="btn btn-default">Test Connection</button>
+                <button type="submit" id="add-miner" class="btn btn-success" ng-click="add(miner)">Add Miner</button>
+                <button type="submit" id="test-connection" class="btn btn-default" ng-click="testConnection(miner)">Test Connection</button>
               </div>
             </div>
           </form>

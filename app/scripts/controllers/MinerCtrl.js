@@ -9,23 +9,25 @@ angular.module('nodeminerApp')
     };
 
     $scope.add = function (miner) {
-      var _defaults = {
-        "devices": [],
-        "pool": {},
-        "notifications": {
-          "count": 0,
-          "list": []
-        },
-        "showDetails": false,
-        "allowEdit": false,
-        "collapsed": false,
-        "interval": 5000,
-        "intervalCount": 0,
-        "online": true
-      };
+      if ($scope.addMinerForm.$valid) {
+        var _defaults = {
+          "devices": [],
+          "pool": {},
+          "notifications": {
+            "count": 0,
+            "list": []
+          },
+          "showDetails": false,
+          "allowEdit": false,
+          "collapsed": false,
+          "interval": 5000,
+          "intervalCount": 0,
+          "online": true
+        };
 
-      $scope.miners.push(_.merge(miner, _defaults));
-      $scope.save($scope.miners);
+        $scope.miners.push(_.merge(miner, _defaults));
+        $scope.save($scope.miners);
+      }
     };
 
     $scope.allowEdit = function (miner) {
@@ -48,6 +50,23 @@ angular.module('nodeminerApp')
 
     $scope.delete = function (miner) {
       MinerSvc.delete(miner);
+    };
+
+    $scope.testConnection = function (miner) {
+      if ($scope.addMinerForm.$valid) {
+        $('#test-connection').addClass('disabled');
+        $('#test-connection').html('<i class="fa fa-spin fa-spinner"></i>&nbsp; Testing...');
+
+        MinerSvc.ping(miner).then(function (d) {
+          if (d.online) {
+            $('#test-connection').removeClass('disabled');
+            $('#test-connection').html('<i class="fa fa-check" style="color: green;"></i>&nbsp; Test Connection');
+          } else {
+            $('#test-connection').removeClass('disabled');
+            $('#test-connection').html('<i class="fa fa-warning" style="color: red;"></i>&nbsp; Test Connection');
+          }
+        });
+      }
     };
 
     $scope.$on('$destroy', function (event) {

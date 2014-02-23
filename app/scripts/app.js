@@ -37,7 +37,6 @@ angular.module('nodeminerApp', [
     return {
       restirct: 'A',
       link: function (scope, element, attrs) {
-        console.log(attrs);
         element.popover({
           html: attrs['html'] || true,
           placement: attrs['placement'] || 'right',

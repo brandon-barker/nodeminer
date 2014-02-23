@@ -1,6 +1,6 @@
 'use strict'
 
-angular.module('nodeminerApp').factory('MinerSvc', function ($rootScope, $route, socket) {
+angular.module('nodeminerApp').factory('MinerSvc', function ($rootScope, $route, $http, socket) {
   var MinerSvc = {
     miners: [],
 
@@ -19,6 +19,13 @@ angular.module('nodeminerApp').factory('MinerSvc', function ($rootScope, $route,
       _.remove(MinerSvc.miners, miner);
 
       MinerSvc.save(MinerSvc.miners);
+    },
+    ping: function (miner) {
+      var promise = $http.get('/api/miner/ping/' + miner.host + '/' + miner.port).then(function (result) {
+        return result.data;
+      })
+
+      return promise;
     }
   };
 
