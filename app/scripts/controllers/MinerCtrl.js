@@ -4,6 +4,14 @@ angular.module('nodeminerApp')
   .controller('MinerCtrl', function ($scope, MinerSvc, socket) {
     $scope.miners = [];
 
+    $scope.init = function () {
+      if ($scope.miners.length == 0) $scope.miners = MinerSvc.miners;
+
+      _.each($scope.miners, function (miner) {
+        miner.showDetails = false;
+      });
+    };
+
     $scope.toggleMinerDetails = function (miner) {
       miner.showDetails = !miner.showDetails;
     };
@@ -85,5 +93,5 @@ angular.module('nodeminerApp')
       $scope.miner = {};
     });
 
-    if ($scope.miners.length == 0) $scope.miners = MinerSvc.miners;
+    $scope.init();
   });

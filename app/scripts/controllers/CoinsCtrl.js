@@ -7,6 +7,14 @@ angular.module('nodeminerApp')
     };
     $scope.coins = [];
 
+    $scope.init = function () {
+      if ($scope.coins.length == 0) $scope.coins = CoinsSvc.coins;
+
+      _.each($scope.coins, function (coin) {
+        coin.showDetails = false;
+      });
+    };
+
     $scope.add = function (coin) {
       var _defaults = {
         "allowEdit": false,
@@ -87,5 +95,5 @@ angular.module('nodeminerApp')
       };
     });
 
-    if ($scope.coins.length == 0) $scope.coins = CoinsSvc.coins;
+    $scope.init();
   });

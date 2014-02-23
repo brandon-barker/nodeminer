@@ -4,6 +4,14 @@ angular.module('nodeminerApp')
   .controller('PoolsCtrl', function ($scope, PoolsSvc, socket) {
     $scope.pools = []
 
+    $scope.init = function () {
+      if ($scope.pools.length == 0) $scope.pools = PoolsSvc.pools;
+
+      _.each($scope.pools, function (pool) {
+        pool.showDetails = false;
+      });
+    };
+
     $scope.add = function (pool) {
       var _defaults = {
         "allowEdit": false,
@@ -56,5 +64,5 @@ angular.module('nodeminerApp')
       $scope.pool = {};
     });
 
-    if ($scope.pools.length == 0) $scope.pools = PoolsSvc.pools;
+    $scope.init();
   });
