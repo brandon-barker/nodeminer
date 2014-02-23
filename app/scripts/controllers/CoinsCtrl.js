@@ -16,13 +16,15 @@ angular.module('nodeminerApp')
     };
 
     $scope.add = function (coin) {
-      var _defaults = {
-        "allowEdit": false,
-        "showDetails": false
-      };
+      if ($scope.addCoinForm.$valid) {
+        var _defaults = {
+          "allowEdit": false,
+          "showDetails": false
+        };
 
-      $scope.coins.push(_.merge(coin, _defaults));
-      $scope.save($scope.coins);
+        $scope.coins.push(_.merge(coin, _defaults));
+        $scope.save($scope.coins);
+      }
     };
 
     $scope.addPool = function (coin, pool) {

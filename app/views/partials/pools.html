@@ -8,33 +8,33 @@
       <div class="panel panel-default">
         <div class="panel-heading"><strong>Add a Pool</strong></div>
         <div class="panel-body">
-          <form class="form-horizontal" role="form">
+          <form name="addPoolForm" class="form-horizontal" role="form">
             <div class="form-group">
               <label for="name" class="col-lg-3 control-label">Name</label>
 
               <div class="col-lg-9">
-                <input type="text" class="form-control" id="name" placeholder="" ng-model="pool.name">
+                <input type="text" class="form-control" id="name" placeholder="" ng-model="pool.name" required="required">
               </div>
             </div>
             <div class="form-group">
               <label for="url" class="col-lg-3 control-label">URL</label>
 
               <div class="col-lg-9">
-                <input type="text" class="form-control" id="url" placeholder="" ng-model="pool.url">
+                <input type="text" class="form-control" id="url" placeholder="" ng-model="pool.url" required="required">
               </div>
             </div>
             <div class="form-group">
               <label for="port" class="col-lg-3 control-label">Port</label>
 
               <div class="col-lg-9">
-                <input type="text" class="form-control" id="port" placeholder="" ng-model="pool.port">
+                <input type="text" class="form-control" id="port" placeholder="" ng-model="pool.port" required="required">
               </div>
             </div>
             <div class="form-group">
               <label for="workerName" class="col-lg-3 control-label">Username</label>
 
               <div class="col-lg-9">
-                <input type="text" class="form-control" id="workerName" placeholder="" ng-model="pool.workerName">
+                <input type="text" class="form-control" id="workerName" placeholder="" ng-model="pool.workerName" required="required">
               </div>
             </div>
             <div class="form-group">
@@ -42,7 +42,7 @@
 
               <div class="col-lg-9">
                 <input type="text" class="form-control" id="workerPassword" placeholder=""
-                       ng-model="pool.workerPassword">
+                       ng-model="pool.workerPassword" required="required">
               </div>
             </div>
             <div class="form-group">

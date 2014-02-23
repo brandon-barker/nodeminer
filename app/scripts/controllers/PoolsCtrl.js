@@ -13,13 +13,15 @@ angular.module('nodeminerApp')
     };
 
     $scope.add = function (pool) {
-      var _defaults = {
-        "allowEdit": false,
-        "showDetails": false
-      };
+      if ($scope.addPoolForm.$valid) {
+        var _defaults = {
+          "allowEdit": false,
+          "showDetails": false
+        };
 
-      $scope.pools.push(_.merge(pool, _defaults));
-      $scope.save($scope.pools);
+        $scope.pools.push(_.merge(pool, _defaults));
+        $scope.save($scope.pools);
+      }
     };
 
     $scope.togglePoolDetails = function (pool) {
