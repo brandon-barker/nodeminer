@@ -209,3 +209,19 @@ a.editable-click:hover {
     color: #8cc84b !important;
     border-bottom-color: #8cc84b !important;
 }
+
+.btn-default {
+    border-bottom: 3px solid lightgrey;
+}
+
+.btn-default:hover {
+    border-bottom: 3px solid grey;
+}
+
+.btn-success {
+     border-bottom: 3px solid green;
+ }
+
+.btn-success:hover {
+    border-bottom: 3px solid darkgreen;
+}
