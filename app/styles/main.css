@@ -158,9 +158,17 @@ div .down-arrow {
     }
 }
 
+.table-overview td:nth-child(2) {
+    text-align: left;
+}
+
 @media screen and (max-width: 768px) {
     .table-header-text {
         display: none;
+    }
+
+    .table-overview td:nth-child(2) {
+        text-align: right;
     }
 }
 
@@ -234,10 +242,6 @@ a.editable-click:hover {
 
 .btn-success:hover {
     border-bottom: 3px solid darkgreen;
-}
-
-.table-overview td:nth-child(1) {
-    width: 250px;
 }
 
 .table-container
