@@ -189,12 +189,12 @@
               </a>
             </td>
             <td>
-              <a href="" editable-text="device['GPU Clock']" onbeforesave="updateGpuEngine(miner, device, $data)">
+              <a href="" editable-number="device['GPU Clock']" onbeforesave="updateGpuEngine(miner, device, $data)">
                 {{ device['GPU Clock'] || 0 }} Mhz
               </a>
             </td>
             <td>
-              <a href="" editable-text="device['Memory Clock']" onbeforesave="updateMemoryClock(miner, device, $data)">
+              <a href="" editable-number="device['Memory Clock']" onbeforesave="updateMemoryClock(miner, device, $data)">
                 {{ device['Memory Clock'] || 0 }} Mhz
               </a>
             </td>

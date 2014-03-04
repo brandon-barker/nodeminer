@@ -177,12 +177,14 @@ div .down-arrow {
     color: #ffffff;
     background-color: #8cc84b;
     border-color: #6ba42d;
+    border-bottom: 3px solid #6ba42d;
 }
 
 .btn-primary:hover {
     color: #ffffff;
     background-color: #79bf47;
     border-color: #497d10;
+    border-bottom: 3px solid #6ba42d;
 }
 
 .footer a {
@@ -203,6 +205,10 @@ div .down-arrow {
     font-weight: bold;
     color: white;
     text-shadow: 1px 1px #000000;
+}
+
+.input-sm {
+    width: 80px !important;
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
