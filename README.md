@@ -1,4 +1,4 @@
-nodeminer
+![nodeminer](http://i.imgur.com/G1qrh38.png)
 ============
 
 ## Purpose
