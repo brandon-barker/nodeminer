@@ -31,3 +31,8 @@ Coming soon...
 ## Screenshots
 
 Coming soon...
+
+## Donate ;)
+
+BTC: 1SkNtMs9oqXKMeXokUbNRCmHZCFghJiZL
+LTC: LN2t5RXkTZCJLv7fNsUm77gFZmzob1yHiL
