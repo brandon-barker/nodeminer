@@ -34,5 +34,7 @@ Coming soon...
 
 ## Donate ;)
 
-BTC: 1SkNtMs9oqXKMeXokUbNRCmHZCFghJiZL
-LTC: LN2t5RXkTZCJLv7fNsUm77gFZmzob1yHiL
+Development for nodeminer is done in my spare time, if you appreciate my efforts and would like to donate please see below:
+
+**BTC**: 1SkNtMs9oqXKMeXokUbNRCmHZCFghJiZL
+**LTC**: LN2t5RXkTZCJLv7fNsUm77gFZmzob1yHiL
