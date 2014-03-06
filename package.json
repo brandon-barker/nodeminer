@@ -1,13 +1,13 @@
 {
   "name": "nodeminer",
-  "version": "0.1",
+  "version": "0.1.0",
   "description": "A node.js based Web UI for mining scrypt based cryptocurrencies.",
   "author": "Brandon Barker",
   "dependencies": {
     "express": "~3.4.3",
     "lodash": "~2.4.1",
-    "forever": "~0.10.11",    
-    "socket.io": "~0.9.16"
+    "socket.io": "~0.9.16",
+    "xgminer": "~0.2.1"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
