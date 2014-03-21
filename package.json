@@ -7,7 +7,7 @@
     "express": "~3.4.3",
     "lodash": "~2.4.1",
     "socket.io": "~0.9.16",
-    "xgminer": "~0.2.1"
+    "xgminer": "~0.2.2"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
