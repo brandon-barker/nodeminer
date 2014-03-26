@@ -131,6 +131,13 @@ angular.module('nodeminerApp')
     }
 
     $scope.changePool = function (miner, pool) {
+      if (miner === 'global') {
+        $(MinerSvc.miners).each(function (i, m) {
+           PoolsSvc.changePool(m, pool);
+        });
+        return;
+      }
+
       PoolsSvc.changePool(miner, pool);
     };
 
