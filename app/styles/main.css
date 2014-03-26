@@ -1,6 +1,7 @@
 /* Space out content a bit */
 body, html {
     margin-bottom: 30px;
+    background-color: rgba(225, 225, 225, 0.15) !important;
 }
 
 html, body, .main {
@@ -270,4 +271,18 @@ a.editable-click:hover {
     border-radius: 8px;
     border: 3px solid #fff;
     background-color: rgba(0, 0, 0, .3);
+}
+
+.panel-default > .panel-heading {
+    color: #f5f5f5;
+    background-color: #333;
+    border-bottom: 5px solid #8cc84b;
+}
+
+.panel-default > .panel-footer {
+    padding: 10px 15px;
+    background-color: #333;
+    border-top: 2px solid #8cc84b;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
 }
