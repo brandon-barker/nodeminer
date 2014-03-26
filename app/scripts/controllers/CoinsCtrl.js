@@ -6,12 +6,18 @@ angular.module('nodeminerApp')
       pools: []
     };
     $scope.coins = [];
+    $scope.pools = [];
 
     $scope.init = function () {
       if ($scope.coins.length == 0) $scope.coins = CoinsSvc.coins;
+      if ($scope.pools.length == 0) $scope.pools = PoolsSvc.pools;
 
       _.each($scope.coins, function (coin) {
         coin.showDetails = false;
+      });
+
+      _.each($scope.pools, function (pool) {
+        pool.showDetails = false;
       });
     };
 
