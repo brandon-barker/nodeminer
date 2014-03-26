@@ -204,7 +204,7 @@
           </thead>
           <tbody>
           <tr ng-repeat="device in miner.devices" ng-show="!miner.collapsed">
-            <td>
+            <td ng-class="{'col-gpu-active':device.Enabled == 'Y','col-gpu-disabled':device.Enabled == 'N'}">
                 <span class="fa fa-fw handicon" ng-popover-confirm="toggleGpu({{miner}}, {{device}})"
                       data-title="Really toggle GPU?"
                       ng-class="{'fa-check':device.Enabled == 'Y','fa-times':device.Enabled == 'N'}">

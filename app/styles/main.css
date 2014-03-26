@@ -286,3 +286,13 @@ a.editable-click:hover {
     border-bottom-right-radius: 3px;
     border-bottom-left-radius: 3px;
 }
+
+.col-gpu-active {
+    background-image: linear-gradient(to bottom, #8cc84b, #699539) !important;
+    border: 1px solid darkgreen !important;
+}
+
+.col-gpu-disabled {
+    background-image: linear-gradient(to bottom, #ee5f5b, #bd362f) !important;
+    border: 1px solid #8b0000 !important;
+}
