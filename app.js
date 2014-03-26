@@ -3,6 +3,7 @@
 var http = require('http'),
     express = require('express'),
     socket = require('./lib/socket'),
+    _ = require('lodash'),
     app = express();
 
 /**
@@ -39,9 +40,9 @@ io.set('log level', 1);
 //io.sockets.on('connection', socket);
 
 io.sockets.on('connection', function (socket) {
-  socket.emit('miners:init', MinerService.miners);
-  socket.emit('coins:init', CoinService.coins);
-  socket.emit('pools:init', PoolService.pools);
+  socket.emit('miners:init', _.sortBy(MinerService.miners, 'name'));
+  socket.emit('coins:init', _.sortBy(CoinService.coins, 'name'));
+  socket.emit('pools:init', _.sortBy(PoolService.pools, 'name'));
 
   /*
    *  Socket.IO Event Listeners
