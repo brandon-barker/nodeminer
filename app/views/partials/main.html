@@ -102,7 +102,7 @@
         <ul class="dropdown-menu" role="menu">
           <li ng-repeat="pool in pools"><a href="" ng-click="changePool(miner, pool)">
             <i class="fa" ng-class="{'fa-check':miner.pool['URL'] === (pool.url + ':' + pool.port),'fa-users':miner.pool['URL'] !== (pool.url + ':' + pool.port)}"></i>&nbsp; {{pool.name}}
-            ({{pool.url.replace('stratum+tcp://', '').replace('http://', '').replace('https', '')}})</a>
+            <span class="table-header-text">({{pool.url.replace('stratum+tcp://', '').replace('http://', '').replace('https', '')}})</span></a>
           </li>
         </ul>
       </div>
