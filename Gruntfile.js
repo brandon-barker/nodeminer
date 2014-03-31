@@ -26,17 +26,17 @@ module.exports = function (grunt) {
     },
     express: {
       options: {
-        port: process.env.PORT || 9000
+        port: process.env.PORT || 6895
       },
       dev: {
         options: {
-          script: 'server.js',
+          script: 'app.js',
           debug: true
         }
       },
       prod: {
         options: {
-          script: 'dist/server.js',
+          script: 'dist/app.js',
           node_env: 'production'
         }
       }
@@ -79,7 +79,7 @@ module.exports = function (grunt) {
       },
       express: {
         files: [
-          'server.js',
+          'app.js',
           'lib/**/*.{js,json}'
         ],
         tasks: ['newer:jshint:server', 'express:dev'],
@@ -288,7 +288,7 @@ module.exports = function (grunt) {
           dest: '<%= yeoman.dist %>',
           src: [
             'package.json',
-            'server.js',
+            'app.js',
             'lib/**/*'
           ]
         }]

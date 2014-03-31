@@ -1,0 +1,148 @@
+<div ng-controller="PoolsCtrl">
+  <h2>Pools
+    <small>Configure Your Mining Pools</small>
+  </h2>
+  <hr/>
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="panel panel-default">
+        <div class="panel-heading"><i class="fa fa-plus-square"></i>&nbsp; <strong>Add a Pool</strong></div>
+        <div class="panel-body">
+          <form name="addPoolForm" class="form-horizontal" role="form">
+            <div class="form-group">
+              <label for="name" class="col-lg-3 control-label">Name</label>
+
+              <div class="col-lg-9">
+                <input type="text" class="form-control" id="name" placeholder="" ng-model="pool.name" required="required">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="url" class="col-lg-3 control-label">URL</label>
+
+              <div class="col-lg-9">
+                <input type="text" class="form-control" id="url" placeholder="" ng-model="pool.url" required="required">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="port" class="col-lg-3 control-label">Port</label>
+
+              <div class="col-lg-9">
+                <input type="text" class="form-control" id="port" placeholder="" ng-model="pool.port" required="required">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="workerName" class="col-lg-3 control-label">Username</label>
+
+              <div class="col-lg-9">
+                <input type="text" class="form-control" id="workerName" placeholder="" ng-model="pool.workerName" required="required">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="workerPassword" class="col-lg-3 control-label">Password</label>
+
+              <div class="col-lg-9">
+                <input type="text" class="form-control" id="workerPassword" placeholder=""
+                       ng-model="pool.workerPassword" required="required">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-lg-offset-3 col-lg-9">
+                <button type="submit" class="btn btn-success" ng-click="add(pool)">Add Pool</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <div class="row">
+            <div class="col-lg-9" style="padding-top: 5px !important;"><strong style="padding-top: 15px;"><i class="fa fa-check-square"></i>&nbsp; Existing Pools</strong></div>
+
+            <div class="col-lg-3 pull-right">
+              <div class="input-group input-group-sm">
+                <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                <input type="text" class="form-control" placeholder="Search..." ng-model="search" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="panel-body">
+
+          <div class="panel panel-default" ng-repeat="pool in pools | filter:search">
+            <div class="panel-heading">
+              <span class="handicon" ng-click="togglePoolDetails(pool)"><i class="fa" ng-class="{'fa-chevron-up':pool.showDetails == true, 'fa-chevron-down':pool.showDetails == false}"></i>&nbsp;<strong>{{pool.name}}</strong></span>
+
+              <div class="pull-right">
+                <button class="btn btn-default btn-xs" ng-click="allowEdit(pool)"><i class="fa fa-pencil"></i>&nbsp;Edit
+                </button>
+                <button class="btn btn-default btn-xs" ng-popover-confirm="delete({{pool}})" data-title="Really delete this Pool?" data-placement="left"><i class="fa fa-minus-circle"></i>&nbsp;Delete
+                </button>
+              </div>
+            </div>
+
+            <form class="form-horizontal" role="form">
+              <table class="table table-striped table-hover" ng-show="pool.showDetails">
+                <tbody>
+                <tr>
+                  <td><strong>Name</strong></td>
+                  <td>
+                    <div ng-show="!pool.allowEdit">{{pool.name}}</div>
+                    <div ng-show="pool.allowEdit">
+                      <input type="text" class="form-control" ng-model="pool.name">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>URL</strong></td>
+                  <td>
+                    <div ng-show="!pool.allowEdit">{{pool.url}}</div>
+                    <div ng-show="pool.allowEdit">
+                      <input type="text" class="form-control" ng-model="pool.url">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>Port</strong></td>
+                  <td>
+                    <div ng-show="!pool.allowEdit">{{pool.port}}</div>
+                    <div ng-show="pool.allowEdit">
+                      <input type="text" class="form-control" ng-model="pool.port">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>Username</strong></td>
+                  <td>
+                    <div ng-show="!pool.allowEdit">{{pool.workerName}}</div>
+                    <div ng-show="pool.allowEdit">
+                      <input type="text" class="form-control" ng-model="pool.workerName">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>Password</strong></td>
+                  <td>
+                    <div ng-show="!pool.allowEdit">{{pool.workerPassword}}</div>
+                    <div ng-show="pool.allowEdit">
+                      <input type="text" class="form-control" ng-model="pool.workerPassword">
+                    </div>
+                  </td>
+                </tr>
+                <tr ng-show="pool.allowEdit">
+                  <td></td>
+                  <td>
+                    <button class="btn btn-success btn-sm" ng-click="saveEdit(pool)">Save Changes</button>
+                    <button class="btn btn-default btn-sm" ng-click="disableEdit(pool)">Cancel</button>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
