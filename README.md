@@ -53,8 +53,10 @@ Coming soon...
 
 ## Screenshots
 
+#### Dashboard
 ![Dashboard](http://i.imgur.com/iPLqbR9.png)
 
+#### Dashboard (collapsed)
 ![Dashboard (collapsed)](http://i.imgur.com/Gp23Tf5.png)
 
 ## Donate ;)
