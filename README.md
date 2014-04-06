@@ -28,20 +28,34 @@ See below for current features.
 
 #### Development
 
-Clone the project
+In order to build nodeminer, ensure that you have Git and Node.js installed.
+
+Clone a copy of the nodeminer git repo:
 
 ```
 git clone git@github.com:brandon-barker/nodeminer.git nodeminer
 ```
 
-Install dependencies 
+Change to the nodeminer directory:
+
+```
+cd nodeminer
+```
+
+Install the grunt command-line interface globally:
+
+```
+npm install -g grunt-cli
+```
+
+Install project dependencies 
 
 ```
 npm install
 bower install 
 ```
 
-Run the project 
+Build & run the project
 
 ```
 grunt serve
