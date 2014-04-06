@@ -33,42 +33,44 @@ angular.module('nodeminerApp')
 
     $scope.calculateMinerTotals = function () {
       $(MinerSvc.miners).each(function (index, miner) {
-        miner.totalHashrate = 0;
-        miner.totalAcceptedShares = 0;
-        miner.totalRejectedShares = 0;
-        miner.totalGpuActivity = 0;
-        miner.totalTemperature = 0;
-        miner.totalFanSpeed = 0;
-        miner.totalWorkUtility = 0;
-        miner.totalGpuEngine = 0;
-        miner.totalMemoryClock = 0;
-        miner.totalIntensity = 0;
-        miner.totalVoltage = 0;
-        miner.numberOfDevices = Object.size(miner.devices);
+        miner.stats = {
+          totalHashrate: 0,
+          totalAcceptedShares: 0,
+          totalRejectedShares: 0,
+          totalGpuActivity: 0,
+          totalTemperature: 0,
+          totalFanSpeed: 0,
+          totalWorkUtility: 0,
+          totalGpuEngine: 0,
+          totalMemoryClock: 0,
+          totalIntensity: 0,
+          totalVoltage: 0,
+          numberOfDevices: Object.size(miner.devices)
+        };        
 
         $(miner.devices).each(function (i, devices) {
           for (var i = 0; i < Object.size(devices); i++) {
-            miner.totalHashrate += devices[i]['MHS 5s'];
-            miner.totalAcceptedShares += devices[i]['Accepted'];
-            miner.totalRejectedShares += devices[i]['Rejected'];
-            miner.totalGpuActivity += devices[i]['GPU Activity'];
-            miner.totalTemperature += devices[i]['Temperature'];
-            miner.totalFanSpeed += devices[i]['Fan Percent'];
-            miner.totalWorkUtility += devices[i]['Work Utility'] || devices[i]['Utility'];
-            miner.totalGpuEngine += devices[i]['GPU Clock'];
-            miner.totalMemoryClock += devices[i]['Memory Clock'];
-            miner.totalIntensity += parseInt(devices[i]['Intensity']);
-            miner.totalVoltage += devices[i]['GPU Voltage'];
+            miner.stats.totalHashrate += devices[i]['MHS 5s'];
+            miner.stats.totalAcceptedShares += devices[i]['Accepted'];
+            miner.stats.totalRejectedShares += devices[i]['Rejected'];
+            miner.stats.totalGpuActivity += devices[i]['GPU Activity'];
+            miner.stats.totalTemperature += devices[i]['Temperature'];
+            miner.stats.totalFanSpeed += devices[i]['Fan Percent'];
+            miner.stats.totalWorkUtility += devices[i]['Work Utility'] || devices[i]['Utility'];
+            miner.stats.totalGpuEngine += devices[i]['GPU Clock'];
+            miner.stats.totalMemoryClock += devices[i]['Memory Clock'];
+            miner.stats.totalIntensity += parseInt(devices[i]['Intensity']);
+            miner.stats.totalVoltage += devices[i]['GPU Voltage'];
           }
         });
 
-        miner.averageGpuActivity = (miner.totalGpuActivity / miner.numberOfDevices);
-        miner.averageTemperature = (miner.totalTemperature / miner.numberOfDevices);
-        miner.averageFanSpeed = (miner.totalFanSpeed / miner.numberOfDevices);
-        miner.averageGpuEngine = (miner.totalGpuEngine / miner.numberOfDevices);
-        miner.averageMemoryClock = (miner.totalMemoryClock / miner.numberOfDevices);
-        miner.averageIntensity = (miner.totalIntensity / miner.numberOfDevices);
-        miner.averageVoltage = (miner.totalVoltage / miner.numberOfDevices);
+        miner.stats.averageGpuActivity = (miner.stats.totalGpuActivity / miner.stats.numberOfDevices);
+        miner.stats.averageTemperature = (miner.stats.totalTemperature / miner.stats.numberOfDevices);
+        miner.stats.averageFanSpeed = (miner.stats.totalFanSpeed / miner.stats.numberOfDevices);
+        miner.stats.averageGpuEngine = (miner.stats.totalGpuEngine / miner.stats.numberOfDevices);
+        miner.stats.averageMemoryClock = (miner.stats.totalMemoryClock / miner.stats.numberOfDevices);
+        miner.stats.averageIntensity = (miner.stats.totalIntensity / miner.stats.numberOfDevices);
+        miner.stats.averageVoltage = (miner.stats.totalVoltage / miner.stats.numberOfDevices);
       });
     };
 
