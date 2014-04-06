@@ -14,10 +14,9 @@ angular.module('nodeminerApp')
 
       _.each($scope.coins, function (coin) {
         coin.showDetails = false;
-        console.log(coin);
-        _.each(coin.pools, function (pool) {
 
-          pool.showDetails = true;
+        _.each(coin.pools, function (pool) {
+          pool.showDetails = false;
         });
       });
 
