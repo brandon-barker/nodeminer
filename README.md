@@ -26,15 +26,40 @@ See below for current features.
 
 ## Installation
 
+#### Development
+
+Clone the project
+
+```
+git clone git@github.com:brandon-barker/nodeminer.git nodeminer
+```
+
+Install dependencies 
+
+```
+npm install
+bower install 
+```
+
+Run the project 
+
+```
+grunt serve
+```
+
+#### Production
+
 Coming soon...
 
 ## Screenshots
 
-Coming soon...
+![Dashboard](http://i.imgur.com/iPLqbR9.png)
+
+![Dashboard (collapsed)](http://i.imgur.com/Gp23Tf5.png)
 
 ## Donate ;)
 
 Development for nodeminer is done in my spare time, if you appreciate my efforts and would like to donate please see below:
 
-**BTC**: 1SkNtMs9oqXKMeXokUbNRCmHZCFghJiZL
+**BTC**: 17tQq3mSePUSGZcNzC66ZEK4wkSj2ayM2w
 **LTC**: LN2t5RXkTZCJLv7fNsUm77gFZmzob1yHiL
