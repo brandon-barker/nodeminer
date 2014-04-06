@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('nodeminerApp')
-  .controller('CoinsCtrl', function ($scope, CoinsSvc, PoolsSvc, socket) {
+  .controller('CoinsCtrl', function ($scope, CoinsSvc, PoolsSvc, MinerSvc, socket) {
     $scope.coin = {
       pools: []
     };
