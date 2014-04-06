@@ -16,7 +16,7 @@
           <i class="fa fa-users"></i><span class="table-header-text">&nbsp; Change Pool <span class="caret"></span></span>
         </button>
         <ul class="dropdown-menu" role="menu">
-          <li ng-repeat="pool in pools"><a href="" ng-click="changePool('global', pool)">
+          <li ng-repeat="pool in pools track by pool.name"><a href="" ng-click="changePool('global', pool)">
             <i class="fa fa-users"></i>&nbsp; {{pool.name}}
             <span class="table-header-text">({{pool.url.replace('stratum+tcp://', '').replace('http://', '').replace('https', '')}})</span></a>
           </li>
@@ -183,7 +183,7 @@
       <div class="miner-offline" ng-show="!miner.online && !miner.collapsed">
         Connection timed out when trying to connect to {{miner.name}}!
       </div>
-      <div class="table-container">
+      <div class="table-responsive">
         <table class="table table-striped table-hover" ng-show="miner.online == true">
           <thead>
           <tr>
