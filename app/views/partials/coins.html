@@ -1,141 +1,169 @@
 <div ng-controller="CoinsCtrl">
-  <h2>Coins
-    <small>Setup Custom Coin Configuration</small>
-  </h2>
-  <hr/>
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="panel panel-default">
-        <div class="panel-heading"><i class="fa fa-plus-square"></i>&nbsp; <strong>Add a Coin</strong></div>
-        <div class="panel-body">
-          <form name="addCoinForm" class="form-horizontal" role="form">
-            <div class="form-group">
-              <label for="name" class="col-lg-3 control-label">Name</label>
+<h2>Coins
+  <small>Setup Custom Coin Configuration</small>
+</h2>
+<hr/>
+<div class="row">
+<div class="col-sm-6">
+  <div class="panel panel-default">
+    <div class="panel-heading"><i class="fa fa-plus-square"></i>&nbsp; <strong>Add a Coin</strong></div>
+    <div class="panel-body">
+      <form name="addCoinForm" class="form-horizontal" role="form">
+        <div class="form-group">
+          <label for="name" class="col-lg-3 control-label">Name</label>
 
-              <div class="col-lg-9">
-                <input type="text" class="form-control" id="name"
-                       ng-model="coin.name" required="required">
-              </div>
+          <div class="col-lg-9">
+            <input type="text" class="form-control" id="name"
+                   ng-model="coin.name" required="required">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="symbol" class="col-lg-3 control-label">Symbol</label>
+
+          <div class="col-lg-9">
+            <input type="text" class="form-control" id="symbol"
+                   ng-model="coin.symbol" required="required">
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <strong>Pools</strong>
+
+            <!-- Split button -->
+            <div class="btn-group btn-group-xs pull-right">
+              <button type="button" class="btn btn-success btn-xs dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-plus"></i>&nbsp; Add Pool
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu">
+                <li ng-repeat="pool in pools track by pool.name"><a href="" ng-click="addPool(null, pool)"><i
+                    class="fa fa-users fa-fw"></i>&nbsp; {{pool.name}}
+                  ({{pool.url.replace('stratum+tcp://', '').replace('http://', '')}})</a>
+                </li>
+              </ul>
             </div>
-            <div class="form-group">
-              <label for="symbol" class="col-lg-3 control-label">Symbol</label>
-
-              <div class="col-lg-9">
-                <input type="text" class="form-control" id="symbol"
-                       ng-model="coin.symbol" required="required">
-              </div>
-            </div>
-
-            <div class="panel panel-default">
+          </div>
+          <div class="panel-body">
+            <div class="panel panel-default" ng-repeat="pool in coin.pools track by $index">
               <div class="panel-heading">
-                <strong>Pools</strong>
-
-                <!-- Split button -->
-                <div class="btn-group btn-group-xs pull-right">
-                  <button type="button" class="btn btn-success btn-xs dropdown-toggle" data-toggle="dropdown">
-                    <i class="fa fa-plus"></i>&nbsp; Add Pool
-                    <span class="caret"></span>
-                  </button>
-                  <ul class="dropdown-menu" role="menu">
-                    <li ng-repeat="pool in pools track by pool.name"><a href="" ng-click="addPool(null, pool)"><i
-                        class="fa fa-users fa-fw"></i>&nbsp; {{pool.name}}
-                      ({{pool.url.replace('stratum+tcp://', '').replace('http://', '')}})</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="panel-body">
-                <div class="panel panel-default" ng-repeat="pool in coin.pools track by $index">
-                  <div class="panel-heading">
                     <span class="handicon" ng-click="togglePoolDetails(pool)"><i class="fa"
                                                                                  ng-class="{'fa-chevron-up':pool.showDetails == true, 'fa-chevron-down':pool.showDetails == false}"></i>&nbsp;<strong>{{pool.name}}</strong></span>
 
-                    <div class="pull-right">
-                      <button class="btn btn-default btn-xs" ng-click="deletePool(null, pool)"><i
-                          class="fa fa-minus-circle"></i>&nbsp;Delete
-                      </button>
-                    </div>
-
-
-                  </div>
-
-                  <table class="table table-striped table-hover" ng-show="pool.showDetails">
-                    <tbody>
-                    <tr>
-                      <td><strong>Name</strong></td>
-                      <td>
-                        {{pool.name}}
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><strong>URL</strong></td>
-                      <td>
-                        {{pool.url}}
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><strong>Port</strong></td>
-                      <td>
-                        {{pool.port}}
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><strong>Username</strong></td>
-                      <td>
-                        {{pool.workerName}}
-                      </td>
-                    </tr>
-                    <tr>
-                      <td><strong>Password</strong></td>
-                      <td>
-                        {{pool.workerPassword}}
-                      </td>
-                    </tr>
-                    </tbody>
-                  </table>
+                <div class="pull-right">
+                  <button class="btn btn-default btn-xs" ng-click="deletePool(null, pool)"><i
+                      class="fa fa-minus-circle"></i>&nbsp;Delete
+                  </button>
                 </div>
-              </div>
-            </div>
 
-            <div class="form-group">
-              <div class="col-lg-offset-3 col-lg-9">
-                <button type="submit" class="btn btn-success" ng-click="add(coin)">Add Coin</button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-6">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <div class="row">
-            <div class="col-lg-8" style="padding-top: 5px !important;"><strong style="padding-top: 15px;"><i class="fa fa-check-square"></i>&nbsp; Existing Coins</strong></div>
 
-            <div class="col-lg-4 pull-right">
-              <div class="input-group input-group-sm">
-                <span class="input-group-addon"><i class="fa fa-search"></i></span>
-                <input type="text" class="form-control" placeholder="Search..." ng-model="search" />
               </div>
+
+              <table class="table table-striped table-hover" ng-show="pool.showDetails">
+                <tbody>
+                <tr>
+                  <td><strong>Name</strong></td>
+                  <td>
+                    {{pool.name}}
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>URL</strong></td>
+                  <td>
+                    {{pool.url}}
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>Port</strong></td>
+                  <td>
+                    {{pool.port}}
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>Username</strong></td>
+                  <td>
+                    {{pool.workerName}}
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>Password</strong></td>
+                  <td>
+                    {{pool.workerPassword}}
+                  </td>
+                </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
-        <div class="panel-body">
 
-          <div class="panel panel-default" ng-repeat="coin in coins | filter:search">
-            <div class="panel-heading">
-              <span class="handicon" ng-click="toggleCoinDetails(coin)"><i class="fa" ng-class="{'fa-chevron-up':coin.showDetails == true, 'fa-chevron-down':coin.showDetails == false}"></i>&nbsp;<strong>{{coin.name}}</strong></span>
+        <div class="form-group">
+          <div class="col-lg-offset-3 col-lg-9">
+            <button type="submit" class="btn btn-success" ng-click="add(coin)">Add Coin</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="col-sm-6">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="row">
+        <div class="col-lg-8" style="padding-top: 5px !important;"><strong style="padding-top: 15px;"><i
+            class="fa fa-check-square"></i>&nbsp; Existing Coins</strong></div>
 
-              <div class="pull-right">
-                <button class="btn btn-default btn-xs" ng-click="allowEdit(coin)"><i class="fa fa-pencil"></i>&nbsp;Edit
-                </button>
-                <button class="btn btn-default btn-xs" ng-popover-confirm="delete({{coin}})"
-                        data-title="Really delete this Coin?" data-placement="left"><i class="fa fa-minus-circle"></i>&nbsp;Delete
-                </button>
-              </div>
-            </div>
+        <div class="col-lg-4 pull-right">
+          <div class="input-group input-group-sm">
+            <span class="input-group-addon"><i class="fa fa-search"></i></span>
+            <input type="text" class="form-control" placeholder="Search..." ng-model="search"/>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel-body">
 
-            <table class="table table-striped table-hover" ng-show="coin.showDetails">
+      <div class="panel panel-default" ng-repeat="coin in coins | filter:search">
+        <div class="panel-heading" ng-init="selectedTab = 'details-' + coin.name">
+          <span class="handicon" ng-click="toggleCoinDetails(coin)"><i class="fa"
+                                                                       ng-class="{'fa-chevron-up':coin.showDetails == true, 'fa-chevron-down':coin.showDetails == false}"></i>&nbsp;<strong>{{coin.name}}</strong></span>
+
+
+          <div class="btn-group btn-group-xs pull-right" ng-show="coin.allowEdit">
+            <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-plus"></i>&nbsp; Add Pool
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li ng-repeat="pool in pools track by pool.name"><a href="" ng-click="addPool(coin, pool)"><i
+                  class="fa fa-users fa-fw"></i>&nbsp; {{pool.name}}
+                ({{pool.url.replace('stratum+tcp://', '').replace('http://', '')}})</a>
+              </li>
+            </ul>
+          </div>
+          <button class="btn btn-default btn-xs pull-right" style="margin-right: 4px;" ng-popover-confirm="delete({{coin}})" data-title="Really delete this Coin?" data-placement="left"><i class="fa fa-minus-circle"></i>&nbsp;Delete</button>
+          <button class="btn btn-default btn-xs pull-right" style="margin-right: 4px;" ng-click="allowEdit(coin)"><i class="fa fa-pencil"></i>&nbsp;Edit</button>
+
+
+        </div>
+
+        <div class="panel-body" ng-show="coin.showDetails">
+          <!-- Nav tabs -->
+          <ul class="nav nav-pills">
+            <li ng-class="{active: selectedTab == 'details-{{coin.name}}'}">
+              <a href="" ng-click="selectedTab = 'details-' + coin.name">Details</a>
+            </li>
+            <li ng-class="{active: selectedTab == 'pools-{{coin.name}}'}">
+              <a href="" ng-click="selectedTab = 'pools-' + coin.name">Pools</a>
+            </li>
+          </ul>
+
+        </div>
+
+        <!-- Tab panes -->
+        <div class="tab-content" ng-show="coin.showDetails">
+          <div class="tab-pane" ng-class="{active: selectedTab == 'details-{{coin.name}}'}">
+            <table class="table table-striped table-hover">
               <tbody>
               <tr>
                 <td><strong>Name</strong></td>
@@ -157,87 +185,67 @@
               </tr>
               </tbody>
             </table>
-
-            <div class="panel-body" ng-show="coin.showDetails">
-              <div class="panel panel-default">
+          </div>
+          <div class="tab-pane" ng-class="{active: selectedTab == 'pools-{{coin.name}}'}">
+            <div class="panel-body">
+              <div class="panel panel-default" ng-repeat="pool in coin.pools track by $index">
                 <div class="panel-heading">
-                  <strong>Pools</strong>
-
-                  <!-- Split button -->
-                  <div class="btn-group btn-group-xs pull-right" ng-show="coin.allowEdit">
-                    <button type="button" class="btn btn-success btn-xs"><i class="fa fa-plus"></i>&nbsp; Add Pool
-                    </button>
-                    <button type="button" class="btn btn-success btn-xs dropdown-toggle" data-toggle="dropdown">
-                      <span class="caret"></span>
-                      <span class="sr-only">Toggle Dropdown</span>
-                    </button>
-                    <ul class="dropdown-menu" role="menu">
-                      <li ng-repeat="pool in pools track by pool.name"><a href="" ng-click="addPool(coin, pool)"><i
-                          class="fa fa-users fa-fw"></i>&nbsp; {{pool.name}}
-                        ({{pool.url.replace('stratum+tcp://', '').replace('http://', '')}})</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="panel-body">
-                  <div class="panel panel-default" ng-repeat="pool in coin.pools track by $index">
-                    <div class="panel-heading">
                       <span class="handicon" ng-click="togglePoolDetails(pool)"><i class="fa"
                                                                                    ng-class="{'fa-chevron-up':pool.showDetails == true, 'fa-chevron-down':pool.showDetails == false}"></i>&nbsp;<strong>{{pool.name}}</strong></span>
 
-                      <div class="pull-right" ng-show="coin.allowEdit">
-                        <button class="btn btn-default btn-xs" ng-click="deletePool(coin, pool)"><i
-                            class="fa fa-minus-circle"></i>&nbsp;Delete
-                        </button>
-                      </div>
-                    </div>
-
-                    <table class="table table-striped table-hover" ng-show="pool.showDetails">
-                      <tbody>
-                      <tr>
-                        <td><strong>Name</strong></td>
-                        <td>
-                          {{pool.name}}
-                        </td>
-                      </tr>
-                      <tr>
-                        <td><strong>URL</strong></td>
-                        <td>
-                          {{pool.url}}
-                        </td>
-                      </tr>
-                      <tr>
-                        <td><strong>Port</strong></td>
-                        <td>
-                          {{pool.port}}
-                        </td>
-                      </tr>
-                      <tr>
-                        <td><strong>Username</strong></td>
-                        <td>
-                          {{pool.workerName}}
-                        </td>
-                      </tr>
-                      <tr>
-                        <td><strong>Password</strong></td>
-                        <td>
-                          {{pool.workerPassword}}
-                        </td>
-                      </tr>
-                      </tbody>
-                    </table>
+                  <div class="pull-right" ng-show="coin.allowEdit">
+                    <button class="btn btn-default btn-xs" ng-click="deletePool(coin, pool)"><i
+                        class="fa fa-minus-circle"></i>&nbsp;Delete
+                    </button>
                   </div>
                 </div>
+
+                <table class="table table-striped table-hover" ng-show="pool.showDetails">
+                  <tbody>
+                  <tr>
+                    <td><strong>Name</strong></td>
+                    <td>
+                      {{pool.name}}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>URL</strong></td>
+                    <td>
+                      {{pool.url}}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Port</strong></td>
+                    <td>
+                      {{pool.port}}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Username</strong></td>
+                    <td>
+                      {{pool.workerName}}
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Password</strong></td>
+                    <td>
+                      {{pool.workerPassword}}
+                    </td>
+                  </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
-
-            <div class="panel-footer" ng-show="coin.allowEdit">
-              <button class="btn btn-success btn-sm" ng-click="saveEdit(coin)">Save Changes</button>
-              <button class="btn btn-default btn-sm" ng-click="disableEdit(coin)">Cancel</button>
-            </div>
           </div>
+        </div>
+
+        <div class="panel-footer" ng-show="coin.allowEdit">
+          <button class="btn btn-success btn-sm" ng-click="saveEdit(coin)">Save Changes</button>
+          <button class="btn btn-default btn-sm" ng-click="disableEdit(coin)">Cancel</button>
         </div>
       </div>
     </div>
   </div>
+</div>
+</div>
 </div>
