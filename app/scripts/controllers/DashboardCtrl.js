@@ -17,10 +17,8 @@ angular.module('nodeminerApp')
 
     $scope.toggleGpu = function (miner, device) {
       if (device.Enabled == 'Y') {
-        console.log('Disabling ' + device.Model + ' (' + device.ID + ')');
         socket.emit('gpu:disable', { miner: miner, device: device });
       } else {
-        console.log('Enabling ' + device.Model + ' (' + device.ID + ')');
         socket.emit('gpu:enable', { miner: miner, device: device });
       }
     }
@@ -168,10 +166,11 @@ angular.module('nodeminerApp')
             MinerSvc.miners[index].online = true;
             MinerSvc.miners[index].devices = data.devices;
 
-            if (data.POOLS && data.POOLS.length > 0) {
-              for (var i = 0; i < Object.size(data.POOLS); i++) {
-                if (data.POOLS[i]['Stratum Active']) {
-                  MinerSvc.miners[index].pool = data.POOLS[i];
+            if (data.pools && data.pools.length > 0) {
+              for (var i = 0; i < Object.size(data.pools); i++) {
+                if (data.pools[i].Active) {
+                  MinerSvc.miners[index].pool = data.pools[i];
+                  return;
                 }
               }
             }
