@@ -123,7 +123,7 @@
     </div>
     <div class="panel-body">
 
-      <div class="panel panel-default" ng-repeat="coin in coins | filter:search">
+      <div class="panel panel-default" ng-repeat="coin in coins track by coin.name | filter:search">
         <div class="panel-heading" ng-init="selectedTab = 'details-' + coin.name">
           <span class="handicon" ng-click="toggleCoinDetails(coin)"><i class="fa"
                                                                        ng-class="{'fa-chevron-up':coin.showDetails == true, 'fa-chevron-down':coin.showDetails == false}"></i>&nbsp;<strong>{{coin.name}}</strong></span>
