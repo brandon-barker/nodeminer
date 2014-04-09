@@ -4,7 +4,7 @@ angular.module('nodeminerApp').factory('MinerSvc', function ($rootScope, $route,
   var MinerSvc = {
     miners: [],
 
-    initMiners: function (miners) {
+    init: function (miners) {
       if (MinerSvc.miners.length == 0) {
         MinerSvc.miners = miners;
 
@@ -33,7 +33,7 @@ angular.module('nodeminerApp').factory('MinerSvc', function ($rootScope, $route,
   });
 
   socket.on('miners:init', function (miners) {
-    MinerSvc.initMiners(miners);
+    MinerSvc.init(miners);
   });
 
   socket.on('saved:miners', function () {

@@ -178,14 +178,12 @@ div .down-arrow {
     color: #ffffff;
     background-color: #8cc84b;
     border-color: #6ba42d;
-    border-bottom: 3px solid #6ba42d;
 }
 
 .btn-primary:hover {
     color: #ffffff;
     background-color: #79bf47;
     border-color: #497d10;
-    border-bottom: 3px solid #6ba42d;
 }
 
 .footer a {
@@ -280,4 +278,11 @@ a.editable-click:hover {
 .col-gpu-disabled {
     background-image: linear-gradient(to bottom, #ee5f5b, #bd362f) !important;
     border: 1px solid #8b0000 !important;
+}
+
+.dashboard-notify-error {
+    background-color: #d9534f !important;
+    font-weight: bold;
+    color: white;
+    border: 1px solid #c8534f !important;
 }

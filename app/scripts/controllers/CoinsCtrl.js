@@ -16,7 +16,7 @@ angular.module('nodeminerApp')
         coin.showDetails = false;
 
         _.each(coin.pools, function (pool) {
-          pool.showDetails = false;
+          pool.showDetails = true;
         });
       });
 
