@@ -9,7 +9,7 @@ Object.size = function (obj) {
 };
 
 angular.module('nodeminerApp')
-  .controller('DashboardCtrl', function ($scope, $rootScope, MinerSvc, CoinsSvc, PoolsSvc, socket) {
+  .controller('DashboardCtrl', function ($scope, $rootScope, MinerSvc, CoinsSvc, PoolsSvc, SocketIOSvc) {
     $scope.showSummary = true;
     $scope.coins = [];
     $scope.miners = [];
@@ -17,18 +17,18 @@ angular.module('nodeminerApp')
 
     $scope.toggleGpu = function (miner, device) {
       if (device.Enabled == 'Y') {
-        socket.emit('gpu:disable', { miner: miner, device: device });
+        SocketIOSvc.emit('gpu:disable', { miner: miner, device: device });
       } else {
-        socket.emit('gpu:enable', { miner: miner, device: device });
+        SocketIOSvc.emit('gpu:enable', { miner: miner, device: device });
       }
     }
 
     $scope.zeroMinerStats = function (miner) {
-      socket.emit('zero:miner', miner);
+      SocketIOSvc.emit('zero:miner', miner);
     }
 
     $scope.zeroAllStats = function () {
-      socket.emit('zero:allminers');
+      SocketIOSvc.emit('zero:allminers');
     }
 
     $scope.calculateMinerTotals = function () {
@@ -142,26 +142,26 @@ angular.module('nodeminerApp')
     };
 
     $scope.updateIntensity = function (miner, device, value) {
-      socket.emit('update:intensity', { miner:miner, device:device, value:value });
+      SocketIOSvc.emit('update:intensity', { miner:miner, device:device, value:value });
     };
 
     $scope.updateGpuEngine = function (miner, device, value) {
-      socket.emit('update:gpuengine', { miner:miner, device:device, value:value });
+      SocketIOSvc.emit('update:gpuengine', { miner:miner, device:device, value:value });
     };
 
     $scope.updateMemoryClock = function (miner, device, value) {
-      socket.emit('update:gpumemory', { miner:miner, device:device, value:value });
+      SocketIOSvc.emit('update:gpumemory', { miner:miner, device:device, value:value });
     };
 
     $scope.updateGpuVoltage = function (miner, device, value) {
-      socket.emit('update:gpuvoltage', { miner:miner, device:device, value:value });
+      SocketIOSvc.emit('update:gpuvoltage', { miner:miner, device:device, value:value });
     };
 
-    socket.on('socket:init', function (socketId) {
+    SocketIOSvc.on('socket:init', function (socketId) {
       $scope.socketId = socketId;
     });
 
-    socket.on('miner:config', function (data) {
+    SocketIOSvc.on('miner:config', function (data) {
       if (MinerSvc.miners && MinerSvc.miners.length > 0 && data) {
         $(MinerSvc.miners).each(function (index, miner) {
           if (miner.name == data.name) {
@@ -184,7 +184,7 @@ angular.module('nodeminerApp')
       }
     });
 
-    socket.on('error:miner', function (err) {
+    SocketIOSvc.on('error:miner', function (err) {
       var miner = err.miner;
       var error = err.error;
 
@@ -202,80 +202,80 @@ angular.module('nodeminerApp')
       }
     });
 
-    socket.on('error:gpuenable', function (status) {
+    SocketIOSvc.on('error:gpuenable', function (status) {
       toastr.error('Error enabling GPU: ' + status.Msg);
     });
 
-    socket.on('error:gpudisable', function (status) {
+    SocketIOSvc.on('error:gpudisable', function (status) {
       toastr.error('Error disabling GPU: ' + status.Msg);
     });
 
-    socket.on('error:zerominer', function (data) {
+    SocketIOSvc.on('error:zerominer', function (data) {
       var miner = data.miner;
       var status = data.status;
 
       toastr.error('Error zeroing "' + miner.name + '" stats: ' + status.Msg);
     });
 
-    socket.on('error:intensity', function (data) {
+    SocketIOSvc.on('error:intensity', function (data) {
       var device = data.device;
 
       toastr.error('Error updating GPU Intensity on "' + device.Model + '"');
     });
 
-    socket.on('error:gpuengine', function (data) {
+    SocketIOSvc.on('error:gpuengine', function (data) {
       var device = data.device;
 
       toastr.error('Error updating GPU Engine on "' + device.Model + '"');
     });
 
-    socket.on('error:gpumemory', function (data) {
+    SocketIOSvc.on('error:gpumemory', function (data) {
       var device = data.device;
 
       toastr.error('Error updating Memory Clock on "' + device.Model + '"');
     });
 
-    socket.on('error:gpuvoltage', function (data) {
+    SocketIOSvc.on('error:gpuvoltage', function (data) {
       var device = data.device;
 
       toastr.error('Error updating GPU Voltage on "' + device.Model + '"');
     });
 
-    socket.on('success:intensity', function (device) {
+    SocketIOSvc.on('success:intensity', function (device) {
       toastr.success('Successfully updated GPU Intensity on "' + device.Model + '"');
     });
 
-    socket.on('success:gpuengine', function (device) {
+    SocketIOSvc.on('success:gpuengine', function (device) {
       toastr.success('Successfully updated GPU Engine on "' + device.Model + '"');
     });
 
-    socket.on('success:gpumemory', function (device) {
+    SocketIOSvc.on('success:gpumemory', function (device) {
       toastr.success('Successfully updated Memory Clock on "' + device.Model + '"');
     });
 
-    socket.on('success:gpuvoltage', function (device) {
+    SocketIOSvc.on('success:gpuvoltage', function (device) {
       toastr.success('Successfully updated GPU Voltage on "' + device.Model + '"');
     });
 
-    socket.on('success:gpuenable', function () {
+    SocketIOSvc.on('success:gpuenable', function () {
       toastr.success('Successfully enabled GPU.');
     });
 
-    socket.on('success:gpudisable', function () {
+    SocketIOSvc.on('success:gpudisable', function () {
       toastr.success('Successfully disabled GPU.');
     });
 
-    socket.on('success:zerominer', function (data) {
+    SocketIOSvc.on('success:zerominer', function (data) {
       var miner = data.miner;
 
       toastr.success('Successfully zeroed "' + miner.name + '" statistics.');
     });
 
     $scope.$on('$destroy', function (event) {
-      socket.removeAllListeners('init:miners');
-      socket.removeAllListeners('init:pools');
-      socket.removeAllListeners('init:coins');
-      //socket.emit('destroy:socket', $scope.socketId);
+      SocketIOSvc.removeAllListeners('init:miners');
+      SocketIOSvc.removeAllListeners('init:pools');
+      SocketIOSvc.removeAllListeners('init:coins');
+      //SocketIOSvc.emit('destroy:SocketIOSvc', $scope.SocketIOSvcId);
     });
 
     $scope.$on('init:miners', function () {

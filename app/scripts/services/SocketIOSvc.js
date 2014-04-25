@@ -1,4 +1,4 @@
-angular.module('nodeminerApp').factory('socket', function ($rootScope) {
+angular.module('nodeminerApp').factory('SocketIOSvc', function ($rootScope) {
   var socket = io.connect('http://localhost:6895');
   return {
     on: function (eventName, callback) {

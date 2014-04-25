@@ -1,6 +1,6 @@
 'use strict'
 
-angular.module('nodeminerApp').factory('CoinsSvc', function ($rootScope, $route, socket) {
+angular.module('nodeminerApp').factory('CoinsSvc', function ($rootScope, $route, SocketIOSvc) {
   var CoinsSvc = {
     coins: [],
 
@@ -13,7 +13,7 @@ angular.module('nodeminerApp').factory('CoinsSvc', function ($rootScope, $route,
     },
     save: function (coins) {
       CoinsSvc.coins = coins;
-      socket.emit('save:coins', coins);
+      SocketIOSvc.emit('save:coins', coins);
     },
     delete: function (coin) {
       _.remove(CoinsSvc.coins, coin);
@@ -22,14 +22,14 @@ angular.module('nodeminerApp').factory('CoinsSvc', function ($rootScope, $route,
     }
   };
 
-  socket.on('coins:init', function (coins) {
+  SocketIOSvc.on('coins:init', function (coins) {
     CoinsSvc.init(coins);
   });
 
-  socket.emit('init:coins', function () {
+  SocketIOSvc.emit('init:coins', function () {
   });
 
-  socket.on('saved:coins', function () {
+  SocketIOSvc.on('saved:coins', function () {
     $rootScope.$broadcast('saved:coins');
   });
 

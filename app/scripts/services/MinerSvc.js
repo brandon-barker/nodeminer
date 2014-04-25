@@ -1,6 +1,6 @@
 'use strict'
 
-angular.module('nodeminerApp').factory('MinerSvc', function ($rootScope, $route, $http, socket) {
+angular.module('nodeminerApp').factory('MinerSvc', function ($rootScope, $route, $http, SocketIOSvc) {
   var MinerSvc = {
     miners: [],
 
@@ -13,7 +13,7 @@ angular.module('nodeminerApp').factory('MinerSvc', function ($rootScope, $route,
     },
     save: function (miners) {
       MinerSvc.miners = miners;
-      socket.emit('save:miners', miners);
+      SocketIOSvc.emit('save:miners', miners);
     },
     delete: function (miner) {
       _.remove(MinerSvc.miners, miner);
@@ -29,14 +29,14 @@ angular.module('nodeminerApp').factory('MinerSvc', function ($rootScope, $route,
     }
   };
 
-  socket.emit('init:miners', function () {
+  SocketIOSvc.emit('init:miners', function () {
   });
 
-  socket.on('miners:init', function (miners) {
+  SocketIOSvc.on('miners:init', function (miners) {
     MinerSvc.init(miners);
   });
 
-  socket.on('saved:miners', function () {
+  SocketIOSvc.on('saved:miners', function () {
     $rootScope.$broadcast('saved:miners');
   });
 
