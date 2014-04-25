@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('nodeminerApp')
-  .controller('PoolsCtrl', function ($scope, PoolsSvc, CoinsSvc, MinerSvc, socket) {
+  .controller('PoolsCtrl', function ($scope, PoolsSvc, CoinsSvc, MinerSvc, SocketIOSvc) {
     $scope.pools = []
 
     $scope.init = function () {
@@ -51,7 +51,7 @@ angular.module('nodeminerApp')
     };
 
     $scope.$on('$destroy', function (event) {
-      socket.removeAllListeners('init:pools');
+      SocketIOSvc.removeAllListeners('init:pools');
     });
 
     $scope.$on('init:pools', function (pools) {

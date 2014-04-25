@@ -123,6 +123,13 @@ div .down-arrow {
     margin-bottom: -2px;
 }
 
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+    color: #ffffff;
+    background-color: #8cc84b;
+}
+
 .table-header-text {
     display: inline-block;
 }
@@ -280,7 +287,7 @@ a.editable-click:hover {
     border: 1px solid #8b0000 !important;
 }
 
-.dashboard-notify-error {
+.dashboard-monitoring-error {
     background-color: #d9534f !important;
     font-weight: bold;
     color: white;
