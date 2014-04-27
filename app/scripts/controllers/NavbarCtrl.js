@@ -22,12 +22,12 @@ angular.module('nodeminerApp')
                 'title': 'Pools',
                 'link': '/pools',
                 'icon': 'fa fa-users'
+            },
+            {
+                'title': 'Settings',
+                'link': '/settings',
+                'icon': 'fa fa-gear'
             }
-//            {
-//                'title': 'Settings',
-//                'link': '/settings',
-//                'icon': 'fa fa-gear'
-//            }
         ]
 
         $scope.isActive = function (route) {

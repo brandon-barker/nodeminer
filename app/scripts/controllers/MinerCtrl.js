@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('nodeminerApp')
-  .controller('MinerCtrl', function ($scope, MinerSvc, CoinsSvc, PoolsSvc, SocketIOSvc) {
+  .controller('MinerCtrl', function ($scope, MinerSvc, CoinsSvc, PoolsSvc, SocketIOSvc, SettingsSvc) {
     $scope.miners = [];
 
     $scope.init = function () {

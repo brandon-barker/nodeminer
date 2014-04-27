@@ -25,6 +25,7 @@ require('./lib/routes')(app);
 var server = http.createServer(app).listen(config.port, "0.0.0.0");
 
 // Initialize our services
+var SettingsService = new (require('./lib/services/SettingsService.js'))();
 var MinerService = new (require('./lib/services/MinersService.js'))();
 var CoinService = new (require('./lib/services/CoinsService.js'))();
 var PoolService = new (require('./lib/services/PoolsService.js'))();
@@ -40,6 +41,7 @@ io.sockets.on('connection', function (socket) {
   socket.emit('miners:init', _.sortBy(MinerService.miners, 'name'));
   socket.emit('coins:init', _.sortBy(CoinService.coins, 'name'));
   socket.emit('pools:init', _.sortBy(PoolService.pools, 'name'));
+  socket.emit('settings:init', SettingsService.settings);
 
   /*
    *  Socket.IO Event Listeners
@@ -54,6 +56,10 @@ io.sockets.on('connection', function (socket) {
 
   socket.on('save:pools', function (pools) {
     PoolService.save(pools);
+  });
+
+  socket.on('save:settings', function (settings) {
+    SettingsService.save(settings);
   });
 
   socket.on('gpu:enable', function (data) {
@@ -195,6 +201,14 @@ io.sockets.on('connection', function (socket) {
 
   PoolService.on('saved', function (pools) {
     socket.emit('saved:coins', pools);
+  });
+
+  /**
+   *  Settings Service Event Listeners
+   */
+
+  SettingsService.on('saved', function (settings) {
+    socket.emit('saved:settings', settings);
   });
 });
 

@@ -9,8 +9,9 @@ Object.size = function (obj) {
 };
 
 angular.module('nodeminerApp')
-  .controller('DashboardCtrl', function ($scope, $rootScope, MinerSvc, CoinsSvc, PoolsSvc, SocketIOSvc) {
+  .controller('DashboardCtrl', function ($scope, $rootScope, MinerSvc, CoinsSvc, PoolsSvc, SocketIOSvc, SettingsSvc) {
     $scope.showSummary = true;
+    $scope.userOverrideCollapse = false;
     $scope.coins = [];
     $scope.miners = [];
     $scope.pools = [];
@@ -46,7 +47,7 @@ angular.module('nodeminerApp')
           totalIntensity: 0,
           totalVoltage: 0,
           numberOfDevices: Object.size(miner.devices)
-        };        
+        };
 
         $(miner.devices).each(function (i, devices) {
           for (var i = 0; i < Object.size(devices); i++) {
@@ -128,12 +129,13 @@ angular.module('nodeminerApp')
 
     $scope.toggleMinerSummary = function (miner) {
       miner.collapsed = !miner.collapsed;
+      $scope.userOverrideCollapse = true;
     }
 
     $scope.changePool = function (miner, pool) {
       if (miner === 'global') {
         $(MinerSvc.miners).each(function (i, m) {
-           PoolsSvc.changePool(m, pool);
+          PoolsSvc.changePool(m, pool);
         });
         return;
       }
@@ -142,19 +144,62 @@ angular.module('nodeminerApp')
     };
 
     $scope.updateIntensity = function (miner, device, value) {
-      SocketIOSvc.emit('update:intensity', { miner:miner, device:device, value:value });
+      SocketIOSvc.emit('update:intensity', { miner: miner, device: device, value: value });
     };
 
     $scope.updateGpuEngine = function (miner, device, value) {
-      SocketIOSvc.emit('update:gpuengine', { miner:miner, device:device, value:value });
+      SocketIOSvc.emit('update:gpuengine', { miner: miner, device: device, value: value });
     };
 
     $scope.updateMemoryClock = function (miner, device, value) {
-      SocketIOSvc.emit('update:gpumemory', { miner:miner, device:device, value:value });
+      SocketIOSvc.emit('update:gpumemory', { miner: miner, device: device, value: value });
     };
 
     $scope.updateGpuVoltage = function (miner, device, value) {
-      SocketIOSvc.emit('update:gpuvoltage', { miner:miner, device:device, value:value });
+      SocketIOSvc.emit('update:gpuvoltage', { miner: miner, device: device, value: value });
+    };
+
+    /**
+     * Dashboard Monitoring
+     */
+
+    $scope.hasError = function (device, miner, monitor) {
+      var hasError = false;
+
+      $(MinerSvc.miners).each(function (i, m) {
+        if (miner.name == m.name) {
+          if (!_.isEmpty(SettingsSvc.settings)) {
+            switch (monitor) {
+              case 'load':
+                hasError = device['GPU Activity'] < SettingsSvc.settings['monitoring']['load'];
+                if (hasError) miner.hasError = true;
+                break;
+              case 'temperature':
+                hasError = device['Temperature'] > SettingsSvc.settings['monitoring']['temperature'];
+                if (hasError) miner.hasError = true;
+                break;
+              case 'fan':
+                hasError = device['Fan Percent'] < SettingsSvc.settings['monitoring']['fan'];
+                if (hasError) miner.hasError = true;
+                break;
+              case 'hashrate':
+                hasError = device['MHS 5s'] * 1000 < SettingsSvc.settings['monitoring']['hashrate'];
+                if (hasError) miner.hasError = true;
+                break;
+            }
+
+            if (!miner.hasError && SettingsSvc.settings['dashboard']['collapseMiners'] && !$scope.userOverrideCollapse) {
+              miner.collapsed = true;
+            }
+
+            if (miner.hasError && SettingsSvc.settings['dashboard']['autoExpandMiners'] && !$scope.userOverrideCollapse) {
+              miner.collapsed = false;
+            }
+          }
+        }
+      });
+
+      return hasError;
     };
 
     SocketIOSvc.on('socket:init', function (socketId) {
@@ -288,6 +333,18 @@ angular.module('nodeminerApp')
 
     $scope.$on('init:pools', function () {
       $scope.pools = PoolsSvc.pools;
+    });
+
+    $scope.$on('init:settings', function () {
+      if (SettingsSvc.settings['dashboard']['collapseOverview']) {
+        $scope.showSummary = false;
+      }
+
+      if (SettingsSvc.settings['dashboard']['collapseMiners']) {
+        $(MinerSvc.miners).each(function (index, miner) {
+          miner.collapsed = true;
+        });
+      }
     });
 
     $scope.$on('error:changepool', function (event, data) {

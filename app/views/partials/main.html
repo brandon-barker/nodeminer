@@ -213,10 +213,10 @@
             </td>
             <td>{{device.Model.replace('AMD Radeon', '')}}</td>
             <td>{{miner.pool['Stratum URL']}}</td>
-            <td>{{device['GPU Activity']}}%</td>
-            <td>{{device.Temperature}}ºc</td>
-            <td>{{device['Fan Percent']}}%</td>
-            <td>{{device['MHS 5s'] * 1000 | number:0}} Kh/s ({{device['MHS av'] * 1000 | number:0}} Kh/s)</td>
+            <td ng-class="{'dashboard-monitoring-error' : hasError(device, miner, 'load') }"><span ng-show="hasError(device, miner, 'load')"><i class="fa fa-warning"></i>&nbsp;</span>{{device['GPU Activity']}}%</td>
+            <td ng-class="{'dashboard-monitoring-error' : hasError(device, miner, 'temperature') }"><span ng-show="hasError(device, miner, 'temperature')"><i class="fa fa-warning"></i>&nbsp;</span>{{device.Temperature}}ºc</td>
+            <td ng-class="{'dashboard-monitoring-error' : hasError(device, miner, 'fan') }"><span ng-show="hasError(device, miner, 'fan')"><i class="fa fa-warning"></i>&nbsp;</span>{{device['Fan Percent']}}%</td>
+            <td ng-class="{'dashboard-monitoring-error' : hasError(device, miner, 'hashrate') }"><span ng-show="hasError(device, miner, 'hashrate')"><i class="fa fa-warning"></i>&nbsp;</span>{{device['MHS 5s'] * 1000 | number:0}} Kh/s ({{device['MHS av'] * 1000 | number:0}} Kh/s)</td>
             <td><span class="label label-success">A:{{device.Accepted}}</span> / <span class="label label-danger">R:{{device.Rejected}}</span>
             </td>
             <td>{{device['Work Utility'] || device['Utility']}}</td>

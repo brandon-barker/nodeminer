@@ -17,3 +17,4 @@ express
 /lib/config/coins.json
 /lib/config/miners.json
 /app/images/*.psd
+/lib/config/settings.json
