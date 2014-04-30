@@ -276,7 +276,6 @@ a.editable-click:hover {
     border-bottom-left-radius: 3px;
 }
 
-
 .col-gpu-active {
     background-image: linear-gradient(to bottom, #8cc84b, #699539) !important;
     border: 1px solid darkgreen !important;
@@ -303,4 +302,9 @@ a.editable-click:hover {
     -moz-background-size: 50px 50px !important;
     background-size: 50px 50px !important;
     text-shadow: 1px 1px #000000;
+}
+
+.coin-pools {
+    max-width: 100%;
+    overflow-x: auto;
 }
