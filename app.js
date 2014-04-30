@@ -62,6 +62,13 @@ io.sockets.on('connection', function (socket) {
     SettingsService.save(settings);
   });
 
+  socket.on('reload', function () {
+    socket.emit('miners:init', _.sortBy(MinerService.miners, 'name'));
+    socket.emit('coins:init', _.sortBy(CoinService.coins, 'name'));
+    socket.emit('pools:init', _.sortBy(PoolService.pools, 'name'));
+    socket.emit('settings:init', SettingsService.settings);
+  });
+
   socket.on('gpu:enable', function (data) {
     MinerService.enableGpu(data.miner, data.device);
   });

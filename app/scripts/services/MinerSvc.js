@@ -5,11 +5,8 @@ angular.module('nodeminerApp').factory('MinerSvc', function ($rootScope, $route,
     miners: [],
 
     init: function (miners) {
-      if (MinerSvc.miners.length == 0) {
-        MinerSvc.miners = miners;
-
-        $rootScope.$broadcast('init:miners');
-      }
+      MinerSvc.miners = miners;
+      $rootScope.$broadcast('init:miners');
     },
     save: function (miners) {
       MinerSvc.miners = miners;

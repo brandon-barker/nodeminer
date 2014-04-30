@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('nodeminerApp')
-  .controller('CoinsCtrl', function ($scope, CoinsSvc, PoolsSvc, MinerSvc, SocketIOSvc, SettingsSvc) {
+  .controller('CoinsCtrl', function ($scope, $route, CoinsSvc, PoolsSvc, MinerSvc, SocketIOSvc, SettingsSvc) {
     $scope.coin = {
       pools: []
     };
@@ -70,10 +70,13 @@ angular.module('nodeminerApp')
 
     $scope.disableEdit = function (coin) {
       coin.allowEdit = false;
+
+      SocketIOSvc.emit('reload', function () {
+      });
     };
 
     $scope.saveEdit = function (coin) {
-      $scope.disableEdit(coin);
+      coin.allowEdit = false;
       $scope.save($scope.coins);
     };
 

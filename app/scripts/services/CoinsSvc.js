@@ -5,11 +5,8 @@ angular.module('nodeminerApp').factory('CoinsSvc', function ($rootScope, $route,
     coins: [],
 
     init: function (coins) {
-      if (CoinsSvc.coins.length == 0) {
-        CoinsSvc.coins = coins;
-
-        $rootScope.$broadcast('init:coins');
-      }
+      CoinsSvc.coins = coins;
+      $rootScope.$broadcast('init:coins');
     },
     save: function (coins) {
       CoinsSvc.coins = coins;

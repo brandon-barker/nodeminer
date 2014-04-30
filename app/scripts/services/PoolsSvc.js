@@ -5,14 +5,11 @@ angular.module('nodeminerApp').factory('PoolsSvc', function ($rootScope, $route,
     pools: [],
 
     init: function (pools) {
-      if (PoolsSvc.pools.length == 0) {
-        PoolsSvc.pools = pools;
-
-        $rootScope.$broadcast('init:pools');
-      }
+      PoolsSvc.pools = pools;
+      $rootScope.$broadcast('init:pools');
     },
     changePool: function (miner, pool) {
-      SocketIOSvc.emit('change:pool', { miner:miner, pool:pool });
+      SocketIOSvc.emit('change:pool', { miner: miner, pool: pool });
     },
     save: function (pools) {
       PoolsSvc.pools = pools;

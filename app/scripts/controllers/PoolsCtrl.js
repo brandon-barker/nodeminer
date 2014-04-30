@@ -35,10 +35,13 @@ angular.module('nodeminerApp')
 
     $scope.disableEdit = function (pool) {
       pool.allowEdit = false;
+
+      SocketIOSvc.emit('reload', function () {
+      });
     };
 
     $scope.saveEdit = function (pool) {
-      $scope.disableEdit(pool);
+      pool.allowEdit = false;
       $scope.save($scope.pools);
     };
 
