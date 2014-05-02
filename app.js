@@ -25,10 +25,10 @@ require('./lib/routes')(app);
 var server = http.createServer(app).listen(config.port, "0.0.0.0");
 
 // Initialize our services
-var SettingsService = new (require('./lib/services/SettingsService.js'))();
-var MinerService = new (require('./lib/services/MinersService.js'))();
-var CoinService = new (require('./lib/services/CoinsService.js'))();
-var PoolService = new (require('./lib/services/PoolsService.js'))();
+var settingsService = new (require('./lib/services/settingsService.js'))();
+var minerService = new (require('./lib/services/minersService.js'))();
+var coinService = new (require('./lib/services/coinsService.js'))();
+var poolService = new (require('./lib/services/poolsService.js'))();
 
 // socket.io initialization
 var io = require('socket.io').listen(server);
@@ -38,160 +38,160 @@ io.set('log level', 1);
 
 // Listen to socket.io connection
 io.sockets.on('connection', function (socket) {
-  socket.emit('miners:init', _.sortBy(MinerService.miners, 'name'));
-  socket.emit('coins:init', _.sortBy(CoinService.coins, 'name'));
-  socket.emit('pools:init', _.sortBy(PoolService.pools, 'name'));
-  socket.emit('settings:init', SettingsService.settings);
+  socket.emit('miners:init', _.sortBy(minerService.miners, 'name'));
+  socket.emit('coins:init', _.sortBy(coinService.coins, 'name'));
+  socket.emit('pools:init', _.sortBy(poolService.pools, 'name'));
+  socket.emit('settings:init', settingsService.settings);
 
   /*
    *  Socket.IO Event Listeners
    */
   socket.on('save:miners', function (miners) {
-    MinerService.save(miners);
+    minerService.save(miners);
   });
 
   socket.on('save:coins', function (coins) {
-    CoinService.save(coins);
+    coinService.save(coins);
   });
 
   socket.on('save:pools', function (pools) {
-    PoolService.save(pools);
+    poolService.save(pools);
   });
 
   socket.on('save:settings', function (settings) {
-    SettingsService.save(settings);
+    settingsService.save(settings);
   });
 
   socket.on('reload', function () {
-    socket.emit('miners:init', _.sortBy(MinerService.miners, 'name'));
-    socket.emit('coins:init', _.sortBy(CoinService.coins, 'name'));
-    socket.emit('pools:init', _.sortBy(PoolService.pools, 'name'));
-    socket.emit('settings:init', SettingsService.settings);
+    socket.emit('miners:init', _.sortBy(minerService.miners, 'name'));
+    socket.emit('coins:init', _.sortBy(coinService.coins, 'name'));
+    socket.emit('pools:init', _.sortBy(poolService.pools, 'name'));
+    socket.emit('settings:init', settingsService.settings);
   });
 
   socket.on('gpu:enable', function (data) {
-    MinerService.enableGpu(data.miner, data.device);
+    minerService.enableGpu(data.miner, data.device);
   });
 
   socket.on('gpu:disable', function (data) {
-    MinerService.disableGpu(data.miner, data.device);
+    minerService.disableGpu(data.miner, data.device);
   });
 
   socket.on('update:intensity', function (data) {
-    MinerService.updateIntensity(data.miner, data.device, data.value);
+    minerService.updateIntensity(data.miner, data.device, data.value);
   });
 
   socket.on('update:gpuengine', function (data) {
-    MinerService.updateGpuEngine(data.miner, data.device, data.value);
+    minerService.updateGpuEngine(data.miner, data.device, data.value);
   });
 
   socket.on('update:gpumemory', function (data) {
-    MinerService.updateGpuMemory (data.miner, data.device, data.value);
+    minerService.updateGpuMemory (data.miner, data.device, data.value);
   });
 
   socket.on('update:gpuvoltage', function (data) {
-    MinerService.updateGpuVoltage (data.miner, data.device, data.value);
+    minerService.updateGpuVoltage (data.miner, data.device, data.value);
   });
 
   socket.on('zero:miner', function (miner) {
-    MinerService.zeroMiner(miner);
+    minerService.zeroMiner(miner);
   });
 
   socket.on('zero:allminers', function () {
-    MinerService.miners.forEach(function (miner) {
-      MinerService.zeroMiner(miner);
+    minerService.miners.forEach(function (miner) {
+      minerService.zeroMiner(miner);
     });
   });
 
   socket.on('change:pool', function (data) {
-    MinerService.changePool(data.miner, data.pool);
+    minerService.changePool(data.miner, data.pool);
   });
 
   /*
    *  Miner Service Event Listeners
    */
-  MinerService.on('update', function (miner) {
+  minerService.on('update', function (miner) {
     socket.emit('miner:config', miner);
   });
 
-  MinerService.on('saved', function (miners) {
+  minerService.on('saved', function (miners) {
     socket.emit('saved:miners', miners);
-    socket.emit('miners:init', _.sortBy(MinerService.miners, 'name'));
+    socket.emit('miners:init', _.sortBy(minerService.miners, 'name'));
   });
 
-  MinerService.on('loaded', function (miners) {
+  minerService.on('loaded', function (miners) {
     socket.emit('miners:init', miners);
   });
 
-  MinerService.on('error:miner', function (data) {
+  minerService.on('error:miner', function (data) {
     socket.emit('error:miner', { miner: data.miner, error: data.error });
   });
 
-  MinerService.on('fileError', function (msg, data) {
+  minerService.on('fileError', function (msg, data) {
     socket.emit('error:file', { msg: msg, data: data });
   });
 
-  MinerService.on('success:gpuenable', function (data) {
+  minerService.on('success:gpuenable', function (data) {
     socket.emit('success:gpuenable', data);
   });
 
-  MinerService.on('success:gpudisable', function (data) {
+  minerService.on('success:gpudisable', function (data) {
     socket.emit('success:gpudisable', data);
   });
 
-  MinerService.on('error:gpuenable', function (data) {
+  minerService.on('error:gpuenable', function (data) {
     socket.emit('error:gpuenable', data);
   });
 
-  MinerService.on('error:gpudisable', function (data) {
+  minerService.on('error:gpudisable', function (data) {
     socket.emit('error:gpudisable', data);
   });
 
-  MinerService.on('success:intensity', function (data) {
+  minerService.on('success:intensity', function (data) {
     socket.emit('success:intensity', data);
   });
 
-  MinerService.on('error:intensity', function (data) {
+  minerService.on('error:intensity', function (data) {
     socket.emit('error:intensity', data);
   });
 
-  MinerService.on('success:gpuengine', function (data) {
+  minerService.on('success:gpuengine', function (data) {
     socket.emit('success:gpuengine', data);
   });
 
-  MinerService.on('error:gpuengine', function (data) {
+  minerService.on('error:gpuengine', function (data) {
     socket.emit('error:gpuengine', data);
   });
 
-  MinerService.on('success:gpumemory', function (data) {
+  minerService.on('success:gpumemory', function (data) {
     socket.emit('success:gpumemory', data);
   });
 
-  MinerService.on('error:gpumemory', function (data) {
+  minerService.on('error:gpumemory', function (data) {
     socket.emit('error:gpumemory', data);
   });
 
-  MinerService.on('success:gpuvoltage', function (data) {
+  minerService.on('success:gpuvoltage', function (data) {
     socket.emit('success:gpuvoltage', data);
   });
 
-  MinerService.on('error:gpuvoltage', function (data) {
+  minerService.on('error:gpuvoltage', function (data) {
     socket.emit('error:gpuvoltage', data);
   });
 
-  MinerService.on('success:zerominer', function (data) {
+  minerService.on('success:zerominer', function (data) {
     socket.emit('success:zerominer', { miner:data.miner, status:data.status });
   });
 
-  MinerService.on('error:zerominer', function (data) {
+  minerService.on('error:zerominer', function (data) {
     socket.emit('error:zerominer', { miner:data.miner, status:data.status });
   });
 
-  MinerService.on('success:changepool', function (data) {
+  minerService.on('success:changepool', function (data) {
     socket.emit('success:changepool', { miner: data.miner, pool: data.pool, status: data.status });
   });
 
-  MinerService.on('error:changepool', function (data) {
+  minerService.on('error:changepool', function (data) {
     socket.emit('error:changepool', { miner: data.miner, pool: data.pool, status: data.status });
   });
 
@@ -199,27 +199,27 @@ io.sockets.on('connection', function (socket) {
    *  Coins Service Event Listeners
    */
 
-  CoinService.on('saved', function (coins) {
+  coinService.on('saved', function (coins) {
     socket.emit('saved:coins', coins);
-    socket.emit('coins:init', _.sortBy(CoinService.coins, 'name'));
+    socket.emit('coins:init', _.sortBy(coinService.coins, 'name'));
   });
 
   /**
    *  Pool Service Event Listeners
    */
 
-  PoolService.on('saved', function (pools) {
+  poolService.on('saved', function (pools) {
     socket.emit('saved:pools', pools);
-    socket.emit('pools:init', _.sortBy(PoolService.pools, 'name'));
+    socket.emit('pools:init', _.sortBy(poolService.pools, 'name'));
   });
 
   /**
    *  Settings Service Event Listeners
    */
 
-  SettingsService.on('saved', function (settings) {
+  settingsService.on('saved', function (settings) {
     socket.emit('saved:settings', settings);
-    socket.emit('settings:init', SettingsService.settings);
+    socket.emit('settings:init', settingsService.settings);
   });
 });
 
