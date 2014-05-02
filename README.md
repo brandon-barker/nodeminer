@@ -26,15 +26,56 @@ See below for current features.
 
 ## Installation
 
+#### Development
+
+In order to build nodeminer, ensure that you have Git and Node.js installed.
+
+Clone a copy of the nodeminer git repo:
+
+```
+git clone git@github.com:brandon-barker/nodeminer.git nodeminer
+```
+
+Change to the nodeminer directory:
+
+```
+cd nodeminer
+```
+
+Install the grunt command-line interface globally:
+
+```
+npm install -g grunt-cli
+```
+
+Install project dependencies 
+
+```
+npm install
+bower install 
+```
+
+Build & run the project
+
+```
+grunt serve
+```
+
+#### Production
+
 Coming soon...
 
 ## Screenshots
 
-Coming soon...
+#### Dashboard
+![Dashboard](http://i.imgur.com/iPLqbR9.png)
+
+#### Dashboard (collapsed)
+![Dashboard (collapsed)](http://i.imgur.com/Gp23Tf5.png)
 
 ## Donate ;)
 
 Development for nodeminer is done in my spare time, if you appreciate my efforts and would like to donate please see below:
 
-**BTC**: 1SkNtMs9oqXKMeXokUbNRCmHZCFghJiZL
+**BTC**: 17tQq3mSePUSGZcNzC66ZEK4wkSj2ayM2w
 **LTC**: LN2t5RXkTZCJLv7fNsUm77gFZmzob1yHiL

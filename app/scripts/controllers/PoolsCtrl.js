@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('nodeminerApp')
-  .controller('PoolsCtrl', function ($scope, PoolsSvc, socket) {
+  .controller('PoolsCtrl', function ($scope, PoolsSvc, CoinsSvc, MinerSvc, SocketIOSvc, SettingsSvc) {
     $scope.pools = []
 
     $scope.init = function () {
@@ -35,10 +35,13 @@ angular.module('nodeminerApp')
 
     $scope.disableEdit = function (pool) {
       pool.allowEdit = false;
+
+      SocketIOSvc.emit('reload', function () {
+      });
     };
 
     $scope.saveEdit = function (pool) {
-      $scope.disableEdit(pool);
+      pool.allowEdit = false;
       $scope.save($scope.pools);
     };
 
@@ -51,7 +54,7 @@ angular.module('nodeminerApp')
     };
 
     $scope.$on('$destroy', function (event) {
-      socket.removeAllListeners('init:pools');
+      SocketIOSvc.removeAllListeners('init:pools');
     });
 
     $scope.$on('init:pools', function (pools) {

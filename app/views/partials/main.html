@@ -16,7 +16,7 @@
           <i class="fa fa-users"></i><span class="table-header-text">&nbsp; Change Pool <span class="caret"></span></span>
         </button>
         <ul class="dropdown-menu" role="menu">
-          <li ng-repeat="pool in pools"><a href="" ng-click="changePool('global', pool)">
+          <li ng-repeat="pool in pools track by pool.name"><a href="" ng-click="changePool('global', pool)">
             <i class="fa fa-users"></i>&nbsp; {{pool.name}}
             <span class="table-header-text">({{pool.url.replace('stratum+tcp://', '').replace('http://', '').replace('https', '')}})</span></a>
           </li>
@@ -39,12 +39,12 @@
           <i class="fa fa-wrench"></i><span class="table-header-text">&nbsp; Actions <span class="caret"></span></span>
         </button>
         <ul class="dropdown-menu" role="menu">
-          <li class="disabled"><a href="" ng-click="startMining(miner)"><i class="fa fa-play fa-fw"></i>&nbsp;Start
-            Mining</a></li>
-          <li class="disabled"><a href="" ng-click="stopMining(miner)"><i class="fa fa-minus-circle fa-fw"></i>&nbsp;Stop
-            Mining</a></li>
-          <li class="disabled"><a href="" ng-click="restartMining(miner)"><i class="fa fa-undo fa-fw"></i>&nbsp;Restart
-            Mining</a></li>
+          <!--<li class="disabled"><a href="" ng-click="startMining(miner)"><i class="fa fa-play fa-fw"></i>&nbsp;Start-->
+            <!--Mining</a></li>-->
+          <!--<li class="disabled"><a href="" ng-click="stopMining(miner)"><i class="fa fa-minus-circle fa-fw"></i>&nbsp;Stop-->
+            <!--Mining</a></li>-->
+          <!--<li class="disabled"><a href="" ng-click="restartMining(miner)"><i class="fa fa-undo fa-fw"></i>&nbsp;Restart-->
+            <!--Mining</a></li>-->
           <li><a href="" ng-click="zeroAllStats()"><i class="fa fa-refresh fa-fw"></i>&nbsp;Zero Stats</a></li>
         </ul>
       </div>
@@ -136,7 +136,7 @@
           <i class="fa fa-users"></i><span class="table-header-text">&nbsp; Change Pool <span class="caret"></span></span>
         </button>
         <ul class="dropdown-menu" role="menu">
-          <li ng-repeat="pool in pools"><a href="" ng-click="changePool(miner, pool)">
+          <li ng-repeat="pool in pools track by pool.name"><a href="" ng-click="changePool(miner, pool)">
             <i class="fa" ng-class="{'fa-check':miner.pool['URL'] === (pool.url + ':' + pool.port),'fa-users':miner.pool['URL'] !== (pool.url + ':' + pool.port)}"></i>&nbsp; {{pool.name}}
             <span class="table-header-text">({{pool.url.replace('stratum+tcp://', '').replace('http://', '').replace('https', '')}})</span></a>
           </li>
@@ -159,23 +159,23 @@
           <i class="fa fa-wrench"></i><span class="table-header-text">&nbsp; Actions <span class="caret"></span></span>
         </button>
         <ul class="dropdown-menu" role="menu">
-          <li class="disabled"><a href="" ng-click="startMining(miner)"><i class="fa fa-play fa-fw"></i>&nbsp;Start
-            Mining</a></li>
-          <li class="disabled"><a href="" ng-click="stopMining(miner)"><i class="fa fa-minus-circle fa-fw"></i>&nbsp;Stop
-            Mining</a></li>
-          <li class="disabled"><a href="" ng-click="restartMining(miner)"><i class="fa fa-undo fa-fw"></i>&nbsp;Restart
-            Mining</a></li>
+          <!--<li class="disabled"><a href="" ng-click="startMining(miner)"><i class="fa fa-play fa-fw"></i>&nbsp;Start-->
+            <!--Mining</a></li>-->
+          <!--<li class="disabled"><a href="" ng-click="stopMining(miner)"><i class="fa fa-minus-circle fa-fw"></i>&nbsp;Stop-->
+            <!--Mining</a></li>-->
+          <!--<li class="disabled"><a href="" ng-click="restartMining(miner)"><i class="fa fa-undo fa-fw"></i>&nbsp;Restart-->
+            <!--Mining</a></li>-->
           <li><a href="" ng-click="zeroMinerStats(miner)"><i class="fa fa-refresh fa-fw"></i>&nbsp;Zero Stats</a></li>
-          <li class="divider"></li>
-          <li class="disabled"><a href="" ng-click="editMiner(miner)"><i class="fa fa-edit fa-fw"></i>&nbsp;Edit
-            Miner</a></li>
-          <li class="disabled"><a href="" ng-click="deleteMiner(miner)"><i class="fa fa-trash-o fa-fw"></i>&nbsp;Delete
-            Miner</a></li>
-          <li class="divider"></li>
-          <li class="disabled"><a href="" ng-click="restartMiner(miner)"><i class="fa fa-repeat fa-fw"></i>&nbsp;Restart</a>
-          </li>
-          <li class="disabled"><a href="" ng-click="shutdownMiner(miner)"><i class="fa fa-power-off fa-fw"></i>&nbsp;Shutdown</a>
-          </li>
+          <!--<li class="divider"></li>-->
+          <!--<li class="disabled"><a href="" ng-click="editMiner(miner)"><i class="fa fa-edit fa-fw"></i>&nbsp;Edit-->
+            <!--Miner</a></li>-->
+          <!--<li class="disabled"><a href="" ng-click="deleteMiner(miner)"><i class="fa fa-trash-o fa-fw"></i>&nbsp;Delete-->
+            <!--Miner</a></li>-->
+          <!--<li class="divider"></li>-->
+          <!--<li class="disabled"><a href="" ng-click="restartMiner(miner)"><i class="fa fa-repeat fa-fw"></i>&nbsp;Restart</a>-->
+          <!--</li>-->
+          <!--<li class="disabled"><a href="" ng-click="shutdownMiner(miner)"><i class="fa fa-power-off fa-fw"></i>&nbsp;Shutdown</a>-->
+          <!--</li>-->
         </ul>
       </div>
     </div>
@@ -183,23 +183,23 @@
       <div class="miner-offline" ng-show="!miner.online && !miner.collapsed">
         Connection timed out when trying to connect to {{miner.name}}!
       </div>
-      <div class="table-container">
+      <div class="table-responsive">
         <table class="table table-striped table-hover" ng-show="miner.online == true">
           <thead>
           <tr>
             <th width="25px"></th>
-            <th><i class="fa fa-tag"></i><span class="table-header-text">&nbsp;Name</span></th>
-            <th><i class="fa fa-users"></i><span class="table-header-text">&nbsp;Pool</span></th>
-            <th><i class="fa fa-signal"></i><span class="table-header-text">&nbsp;Load</span></th>
-            <th><i class="fa fa-fire-extinguisher"></i><span class="table-header-text">&nbsp;Temp</span></th>
-            <th><i class="fa fa-rss"></i><span class="table-header-text">&nbsp;Fan</span></th>
-            <th><i class="fa fa-bar-chart-o"></i><span class="table-header-text">&nbsp;Hashrate (avg)</span></th>
-            <th><i class="fa fa-exchange"></i><span class="table-header-text">&nbsp;Shares</span></th>
-            <th><i class="fa fa-coffee"></i><span class="table-header-text">&nbsp;Utility</span></th>
-            <th><i class="fa fa-fire"></i><span class="table-header-text">&nbsp;Intensity</span></th>
-            <th><i class="fa fa-clock-o"></i><span class="table-header-text">&nbsp;GPU Clock</span></th>
-            <th><i class="fa fa-clock-o"></i><span class="table-header-text">&nbsp;Memory Clock</span></th>
-            <th><i class="fa fa-flash"></i><span class="table-header-text">&nbsp;Voltage</span></th>
+            <th><i class="fa fa-tag"></i>&nbsp;Name</th>
+            <th><i class="fa fa-users"></i>&nbsp;Pool</th>
+            <th><i class="fa fa-signal"></i>&nbsp;Load</th>
+            <th><i class="fa fa-fire-extinguisher"></i>&nbsp;Temp</th>
+            <th><i class="fa fa-rss"></i>&nbsp;Fan</th>
+            <th><i class="fa fa-bar-chart-o"></i>&nbsp;Hashrate (avg)</th>
+            <th><i class="fa fa-exchange"></i>&nbsp;Shares</th>
+            <th><i class="fa fa-coffee"></i>&nbsp;Utility</th>
+            <th><i class="fa fa-fire"></i>&nbsp;Intensity</th>
+            <th><i class="fa fa-clock-o"></i>&nbsp;GPU Clock</th>
+            <th><i class="fa fa-clock-o"></i>&nbsp;Memory Clock</th>
+            <th><i class="fa fa-flash"></i>&nbsp;Voltage</th>
           </tr>
           </thead>
           <tbody>
@@ -213,10 +213,10 @@
             </td>
             <td>{{device.Model.replace('AMD Radeon', '')}}</td>
             <td>{{miner.pool['Stratum URL']}}</td>
-            <td>{{device['GPU Activity']}}%</td>
-            <td>{{device.Temperature}}ºc</td>
-            <td>{{device['Fan Percent']}}%</td>
-            <td>{{device['MHS 5s'] * 1000 | number:0}} Kh/s ({{device['MHS av'] * 1000 | number:0}} Kh/s)</td>
+            <td ng-class="{'dashboard-monitoring-error' : hasError(device, miner, 'load') }"><span ng-show="hasError(device, miner, 'load')"><i class="fa fa-warning"></i>&nbsp;</span>{{device['GPU Activity']}}%</td>
+            <td ng-class="{'dashboard-monitoring-error' : hasError(device, miner, 'temperature') }"><span ng-show="hasError(device, miner, 'temperature')"><i class="fa fa-warning"></i>&nbsp;</span>{{device.Temperature}}ºc</td>
+            <td ng-class="{'dashboard-monitoring-error' : hasError(device, miner, 'fan') }"><span ng-show="hasError(device, miner, 'fan')"><i class="fa fa-warning"></i>&nbsp;</span>{{device['Fan Percent']}}%</td>
+            <td ng-class="{'dashboard-monitoring-error' : hasError(device, miner, 'hashrate') }"><span ng-show="hasError(device, miner, 'hashrate')"><i class="fa fa-warning"></i>&nbsp;</span>{{device['MHS 5s'] * 1000 | number:0}} Kh/s ({{device['MHS av'] * 1000 | number:0}} Kh/s)</td>
             <td><span class="label label-success">A:{{device.Accepted}}</span> / <span class="label label-danger">R:{{device.Rejected}}</span>
             </td>
             <td>{{device['Work Utility'] || device['Utility']}}</td>
@@ -243,20 +243,20 @@
           </tr>
           <tr ng-show="miner.collapsed">
             <td></td>
-            <td>{{miner.numberOfDevices | number:0}} device(s)</td>
+            <td>{{miner.stats.numberOfDevices | number:0}} device(s)</td>
             <td>{{miners[0].pool['Stratum URL']}}</td>
-            <td>{{miner.averageGpuActivity | number:0}}%</td>
-            <td>{{miner.averageTemperature | number:0}}ºc</td>
-            <td>{{miner.averageFanSpeed | number:0}}%</td>
-            <td>{{miner.totalHashrate | number:2}} Mh/s</td>
-            <td><span class="label label-success">A:{{miner.totalAcceptedShares}}</span> / <span
-                class="label label-danger">R:{{miner.totalRejectedShares}}</span>
+            <td>{{miner.stats.averageGpuActivity | number:0}}%</td>
+            <td>{{miner.stats.averageTemperature | number:0}}ºc</td>
+            <td>{{miner.stats.averageFanSpeed | number:0}}%</td>
+            <td>{{miner.stats.totalHashrate | number:2}} Mh/s</td>
+            <td><span class="label label-success">A:{{miner.stats.totalAcceptedShares}}</span> / <span
+                class="label label-danger">R:{{miner.stats.totalRejectedShares}}</span>
             </td>
-            <td>{{miner.totalWorkUtility | number:2}}</td>
-            <td>{{miner.averageIntensity | number:0}}</td>
-            <td>{{miner.averageGpuEngine | number:0}} Mhz</td>
-            <td>{{miner.averageMemoryClock | number:0}} Mhz</td>
-            <td>{{miner.averageVoltage | number:2}}v</td>
+            <td>{{miner.stats.totalWorkUtility | number:2}}</td>
+            <td>{{miner.stats.averageIntensity | number:0}}</td>
+            <td>{{miner.stats.averageGpuEngine | number:0}} Mhz</td>
+            <td>{{miner.stats.averageMemoryClock | number:0}} Mhz</td>
+            <td>{{miner.stats.averageVoltage | number:2}}v</td>
           </tr>
           </tbody>
         </table>

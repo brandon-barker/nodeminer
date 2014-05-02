@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('nodeminerApp')
-  .controller('CoinsCtrl', function ($scope, CoinsSvc, PoolsSvc, socket) {
+  .controller('CoinsCtrl', function ($scope, $route, CoinsSvc, PoolsSvc, MinerSvc, SocketIOSvc, SettingsSvc) {
     $scope.coin = {
       pools: []
     };
@@ -14,6 +14,10 @@ angular.module('nodeminerApp')
 
       _.each($scope.coins, function (coin) {
         coin.showDetails = false;
+
+        _.each(coin.pools, function (pool) {
+          pool.showDetails = true;
+        });
       });
 
       _.each($scope.pools, function (pool) {
@@ -66,10 +70,13 @@ angular.module('nodeminerApp')
 
     $scope.disableEdit = function (coin) {
       coin.allowEdit = false;
+
+      SocketIOSvc.emit('reload', function () {
+      });
     };
 
     $scope.saveEdit = function (coin) {
-      $scope.disableEdit(coin);
+      coin.allowEdit = false;
       $scope.save($scope.coins);
     };
 
@@ -82,7 +89,7 @@ angular.module('nodeminerApp')
     };
 
     $scope.$on('$destroy', function (event) {
-      socket.removeAllListeners('init:coins');
+      SocketIOSvc.removeAllListeners('init:coins');
     });
 
     $scope.$on('init:coins', function (coins) {

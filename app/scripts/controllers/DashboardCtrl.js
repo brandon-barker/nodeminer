@@ -9,68 +9,69 @@ Object.size = function (obj) {
 };
 
 angular.module('nodeminerApp')
-  .controller('DashboardCtrl', function ($scope, $rootScope, MinerSvc, CoinsSvc, PoolsSvc, socket) {
+  .controller('DashboardCtrl', function ($scope, $rootScope, MinerSvc, CoinsSvc, PoolsSvc, SocketIOSvc, SettingsSvc) {
     $scope.showSummary = true;
+    $scope.userOverrideCollapse = false;
     $scope.coins = [];
     $scope.miners = [];
     $scope.pools = [];
 
     $scope.toggleGpu = function (miner, device) {
       if (device.Enabled == 'Y') {
-        console.log('Disabling ' + device.Model + ' (' + device.ID + ')');
-        socket.emit('gpu:disable', { miner: miner, device: device });
+        SocketIOSvc.emit('gpu:disable', { miner: miner, device: device });
       } else {
-        console.log('Enabling ' + device.Model + ' (' + device.ID + ')');
-        socket.emit('gpu:enable', { miner: miner, device: device });
+        SocketIOSvc.emit('gpu:enable', { miner: miner, device: device });
       }
     }
 
     $scope.zeroMinerStats = function (miner) {
-      socket.emit('zero:miner', miner);
+      SocketIOSvc.emit('zero:miner', miner);
     }
 
     $scope.zeroAllStats = function () {
-      socket.emit('zero:allminers');
+      SocketIOSvc.emit('zero:allminers');
     }
 
     $scope.calculateMinerTotals = function () {
       $(MinerSvc.miners).each(function (index, miner) {
-        miner.totalHashrate = 0;
-        miner.totalAcceptedShares = 0;
-        miner.totalRejectedShares = 0;
-        miner.totalGpuActivity = 0;
-        miner.totalTemperature = 0;
-        miner.totalFanSpeed = 0;
-        miner.totalWorkUtility = 0;
-        miner.totalGpuEngine = 0;
-        miner.totalMemoryClock = 0;
-        miner.totalIntensity = 0;
-        miner.totalVoltage = 0;
-        miner.numberOfDevices = Object.size(miner.devices);
+        miner.stats = {
+          totalHashrate: 0,
+          totalAcceptedShares: 0,
+          totalRejectedShares: 0,
+          totalGpuActivity: 0,
+          totalTemperature: 0,
+          totalFanSpeed: 0,
+          totalWorkUtility: 0,
+          totalGpuEngine: 0,
+          totalMemoryClock: 0,
+          totalIntensity: 0,
+          totalVoltage: 0,
+          numberOfDevices: Object.size(miner.devices)
+        };
 
         $(miner.devices).each(function (i, devices) {
           for (var i = 0; i < Object.size(devices); i++) {
-            miner.totalHashrate += devices[i]['MHS 5s'];
-            miner.totalAcceptedShares += devices[i]['Accepted'];
-            miner.totalRejectedShares += devices[i]['Rejected'];
-            miner.totalGpuActivity += devices[i]['GPU Activity'];
-            miner.totalTemperature += devices[i]['Temperature'];
-            miner.totalFanSpeed += devices[i]['Fan Percent'];
-            miner.totalWorkUtility += devices[i]['Work Utility'] || devices[i]['Utility'];
-            miner.totalGpuEngine += devices[i]['GPU Clock'];
-            miner.totalMemoryClock += devices[i]['Memory Clock'];
-            miner.totalIntensity += parseInt(devices[i]['Intensity']);
-            miner.totalVoltage += devices[i]['GPU Voltage'];
+            miner.stats.totalHashrate += devices[i]['MHS 5s'];
+            miner.stats.totalAcceptedShares += devices[i]['Accepted'];
+            miner.stats.totalRejectedShares += devices[i]['Rejected'];
+            miner.stats.totalGpuActivity += devices[i]['GPU Activity'];
+            miner.stats.totalTemperature += devices[i]['Temperature'];
+            miner.stats.totalFanSpeed += devices[i]['Fan Percent'];
+            miner.stats.totalWorkUtility += devices[i]['Work Utility'] || devices[i]['Utility'];
+            miner.stats.totalGpuEngine += devices[i]['GPU Clock'];
+            miner.stats.totalMemoryClock += devices[i]['Memory Clock'];
+            miner.stats.totalIntensity += parseInt(devices[i]['Intensity']);
+            miner.stats.totalVoltage += devices[i]['GPU Voltage'];
           }
         });
 
-        miner.averageGpuActivity = (miner.totalGpuActivity / miner.numberOfDevices);
-        miner.averageTemperature = (miner.totalTemperature / miner.numberOfDevices);
-        miner.averageFanSpeed = (miner.totalFanSpeed / miner.numberOfDevices);
-        miner.averageGpuEngine = (miner.totalGpuEngine / miner.numberOfDevices);
-        miner.averageMemoryClock = (miner.totalMemoryClock / miner.numberOfDevices);
-        miner.averageIntensity = (miner.totalIntensity / miner.numberOfDevices);
-        miner.averageVoltage = (miner.totalVoltage / miner.numberOfDevices);
+        miner.stats.averageGpuActivity = (miner.stats.totalGpuActivity / miner.stats.numberOfDevices);
+        miner.stats.averageTemperature = (miner.stats.totalTemperature / miner.stats.numberOfDevices);
+        miner.stats.averageFanSpeed = (miner.stats.totalFanSpeed / miner.stats.numberOfDevices);
+        miner.stats.averageGpuEngine = (miner.stats.totalGpuEngine / miner.stats.numberOfDevices);
+        miner.stats.averageMemoryClock = (miner.stats.totalMemoryClock / miner.stats.numberOfDevices);
+        miner.stats.averageIntensity = (miner.stats.totalIntensity / miner.stats.numberOfDevices);
+        miner.stats.averageVoltage = (miner.stats.totalVoltage / miner.stats.numberOfDevices);
       });
     };
 
@@ -128,12 +129,13 @@ angular.module('nodeminerApp')
 
     $scope.toggleMinerSummary = function (miner) {
       miner.collapsed = !miner.collapsed;
+      $scope.userOverrideCollapse = true;
     }
 
     $scope.changePool = function (miner, pool) {
       if (miner === 'global') {
         $(MinerSvc.miners).each(function (i, m) {
-           PoolsSvc.changePool(m, pool);
+          PoolsSvc.changePool(m, pool);
         });
         return;
       }
@@ -142,36 +144,80 @@ angular.module('nodeminerApp')
     };
 
     $scope.updateIntensity = function (miner, device, value) {
-      socket.emit('update:intensity', { miner:miner, device:device, value:value });
+      SocketIOSvc.emit('update:intensity', { miner: miner, device: device, value: value });
     };
 
     $scope.updateGpuEngine = function (miner, device, value) {
-      socket.emit('update:gpuengine', { miner:miner, device:device, value:value });
+      SocketIOSvc.emit('update:gpuengine', { miner: miner, device: device, value: value });
     };
 
     $scope.updateMemoryClock = function (miner, device, value) {
-      socket.emit('update:gpumemory', { miner:miner, device:device, value:value });
+      SocketIOSvc.emit('update:gpumemory', { miner: miner, device: device, value: value });
     };
 
     $scope.updateGpuVoltage = function (miner, device, value) {
-      socket.emit('update:gpuvoltage', { miner:miner, device:device, value:value });
+      SocketIOSvc.emit('update:gpuvoltage', { miner: miner, device: device, value: value });
     };
 
-    socket.on('socket:init', function (socketId) {
+    /**
+     * Dashboard Monitoring
+     */
+
+    $scope.hasError = function (device, miner, monitor) {
+      var hasError = false;
+
+      $(MinerSvc.miners).each(function (i, m) {
+        if (miner.name == m.name) {
+          if (!_.isEmpty(SettingsSvc.settings)) {
+            switch (monitor) {
+              case 'load':
+                hasError = device['GPU Activity'] < SettingsSvc.settings['monitoring']['load'];
+                if (hasError) miner.hasError = true;
+                break;
+              case 'temperature':
+                hasError = device['Temperature'] > SettingsSvc.settings['monitoring']['temperature'];
+                if (hasError) miner.hasError = true;
+                break;
+              case 'fan':
+                hasError = device['Fan Percent'] < SettingsSvc.settings['monitoring']['fan'];
+                if (hasError) miner.hasError = true;
+                break;
+              case 'hashrate':
+                hasError = device['MHS 5s'] * 1000 < SettingsSvc.settings['monitoring']['hashrate'];
+                if (hasError) miner.hasError = true;
+                break;
+            }
+
+            if (!miner.hasError && SettingsSvc.settings['dashboard']['collapseMiners'] && !$scope.userOverrideCollapse) {
+              miner.collapsed = true;
+            }
+
+            if (miner.hasError && SettingsSvc.settings['dashboard']['autoExpandMiners'] && !$scope.userOverrideCollapse) {
+              miner.collapsed = false;
+            }
+          }
+        }
+      });
+
+      return hasError;
+    };
+
+    SocketIOSvc.on('socket:init', function (socketId) {
       $scope.socketId = socketId;
     });
 
-    socket.on('miner:config', function (data) {
+    SocketIOSvc.on('miner:config', function (data) {
       if (MinerSvc.miners && MinerSvc.miners.length > 0 && data) {
         $(MinerSvc.miners).each(function (index, miner) {
           if (miner.name == data.name) {
             MinerSvc.miners[index].online = true;
             MinerSvc.miners[index].devices = data.devices;
 
-            if (data.POOLS && data.POOLS.length > 0) {
-              for (var i = 0; i < Object.size(data.POOLS); i++) {
-                if (data.POOLS[i]['Stratum Active']) {
-                  MinerSvc.miners[index].pool = data.POOLS[i];
+            if (data.pools && data.pools.length > 0) {
+              for (var i = 0; i < Object.size(data.pools); i++) {
+                if (data.pools[i].Active) {
+                  MinerSvc.miners[index].pool = data.pools[i];
+                  return;
                 }
               }
             }
@@ -183,7 +229,7 @@ angular.module('nodeminerApp')
       }
     });
 
-    socket.on('error:miner', function (err) {
+    SocketIOSvc.on('error:miner', function (err) {
       var miner = err.miner;
       var error = err.error;
 
@@ -201,80 +247,80 @@ angular.module('nodeminerApp')
       }
     });
 
-    socket.on('error:gpuenable', function (status) {
+    SocketIOSvc.on('error:gpuenable', function (status) {
       toastr.error('Error enabling GPU: ' + status.Msg);
     });
 
-    socket.on('error:gpudisable', function (status) {
+    SocketIOSvc.on('error:gpudisable', function (status) {
       toastr.error('Error disabling GPU: ' + status.Msg);
     });
 
-    socket.on('error:zerominer', function (data) {
+    SocketIOSvc.on('error:zerominer', function (data) {
       var miner = data.miner;
       var status = data.status;
 
       toastr.error('Error zeroing "' + miner.name + '" stats: ' + status.Msg);
     });
 
-    socket.on('error:intensity', function (data) {
+    SocketIOSvc.on('error:intensity', function (data) {
       var device = data.device;
 
       toastr.error('Error updating GPU Intensity on "' + device.Model + '"');
     });
 
-    socket.on('error:gpuengine', function (data) {
+    SocketIOSvc.on('error:gpuengine', function (data) {
       var device = data.device;
 
       toastr.error('Error updating GPU Engine on "' + device.Model + '"');
     });
 
-    socket.on('error:gpumemory', function (data) {
+    SocketIOSvc.on('error:gpumemory', function (data) {
       var device = data.device;
 
       toastr.error('Error updating Memory Clock on "' + device.Model + '"');
     });
 
-    socket.on('error:gpuvoltage', function (data) {
+    SocketIOSvc.on('error:gpuvoltage', function (data) {
       var device = data.device;
 
       toastr.error('Error updating GPU Voltage on "' + device.Model + '"');
     });
 
-    socket.on('success:intensity', function (device) {
+    SocketIOSvc.on('success:intensity', function (device) {
       toastr.success('Successfully updated GPU Intensity on "' + device.Model + '"');
     });
 
-    socket.on('success:gpuengine', function (device) {
+    SocketIOSvc.on('success:gpuengine', function (device) {
       toastr.success('Successfully updated GPU Engine on "' + device.Model + '"');
     });
 
-    socket.on('success:gpumemory', function (device) {
+    SocketIOSvc.on('success:gpumemory', function (device) {
       toastr.success('Successfully updated Memory Clock on "' + device.Model + '"');
     });
 
-    socket.on('success:gpuvoltage', function (device) {
+    SocketIOSvc.on('success:gpuvoltage', function (device) {
       toastr.success('Successfully updated GPU Voltage on "' + device.Model + '"');
     });
 
-    socket.on('success:gpuenable', function () {
+    SocketIOSvc.on('success:gpuenable', function () {
       toastr.success('Successfully enabled GPU.');
     });
 
-    socket.on('success:gpudisable', function () {
+    SocketIOSvc.on('success:gpudisable', function () {
       toastr.success('Successfully disabled GPU.');
     });
 
-    socket.on('success:zerominer', function (data) {
+    SocketIOSvc.on('success:zerominer', function (data) {
       var miner = data.miner;
 
       toastr.success('Successfully zeroed "' + miner.name + '" statistics.');
     });
 
     $scope.$on('$destroy', function (event) {
-      socket.removeAllListeners('init:miners');
-      socket.removeAllListeners('init:pools');
-      socket.removeAllListeners('init:coins');
-      //socket.emit('destroy:socket', $scope.socketId);
+      SocketIOSvc.removeAllListeners('init:miners');
+      SocketIOSvc.removeAllListeners('init:pools');
+      SocketIOSvc.removeAllListeners('init:coins');
+      //SocketIOSvc.emit('destroy:SocketIOSvc', $scope.SocketIOSvcId);
     });
 
     $scope.$on('init:miners', function () {
@@ -287,6 +333,18 @@ angular.module('nodeminerApp')
 
     $scope.$on('init:pools', function () {
       $scope.pools = PoolsSvc.pools;
+    });
+
+    $scope.$on('init:settings', function () {
+      if (SettingsSvc.settings['dashboard']['collapseOverview']) {
+        $scope.showSummary = false;
+      }
+
+      if (SettingsSvc.settings['dashboard']['collapseMiners']) {
+        $(MinerSvc.miners).each(function (index, miner) {
+          miner.collapsed = true;
+        });
+      }
     });
 
     $scope.$on('error:changepool', function (event, data) {
