@@ -116,6 +116,7 @@ io.sockets.on('connection', function (socket) {
 
   MinerService.on('saved', function (miners) {
     socket.emit('saved:miners', miners);
+    socket.emit('miners:init', _.sortBy(MinerService.miners, 'name'));
   });
 
   MinerService.on('loaded', function (miners) {
@@ -200,6 +201,7 @@ io.sockets.on('connection', function (socket) {
 
   CoinService.on('saved', function (coins) {
     socket.emit('saved:coins', coins);
+    socket.emit('coins:init', _.sortBy(CoinService.coins, 'name'));
   });
 
   /**
@@ -207,7 +209,8 @@ io.sockets.on('connection', function (socket) {
    */
 
   PoolService.on('saved', function (pools) {
-    socket.emit('saved:coins', pools);
+    socket.emit('saved:pools', pools);
+    socket.emit('pools:init', _.sortBy(PoolService.pools, 'name'));
   });
 
   /**
@@ -216,6 +219,7 @@ io.sockets.on('connection', function (socket) {
 
   SettingsService.on('saved', function (settings) {
     socket.emit('saved:settings', settings);
+    socket.emit('settings:init', SettingsService.settings);
   });
 });
 
