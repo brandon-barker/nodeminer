@@ -172,19 +172,31 @@ angular.module('nodeminerApp')
             switch (monitor) {
               case 'load':
                 hasError = device['GPU Activity'] < SettingsSvc.settings['monitoring']['load'];
-                if (hasError) miner.hasError = true;
+                if (hasError) {
+                  miner.hasError = true;
+                  $scope.showWebNotification('GPU Activity has fallen below the threshold on GPU ' + device.ID + ' (' + miner.name + ')');
+                }
                 break;
               case 'temperature':
                 hasError = device['Temperature'] > SettingsSvc.settings['monitoring']['temperature'];
-                if (hasError) miner.hasError = true;
+                if (hasError) {
+                  miner.hasError = true;
+                  $scope.showWebNotification('Temperature has exceeded the threshold on GPU ' + device.ID + ' (' + miner.name + ')');
+                }
                 break;
               case 'fan':
                 hasError = device['Fan Percent'] < SettingsSvc.settings['monitoring']['fan'];
-                if (hasError) miner.hasError = true;
+                if (hasError) {
+                  miner.hasError = true;
+                  $scope.showWebNotification('GPU Fan has fallen below the threshold on GPU ' + device.ID + ' (' + miner.name + ')');
+                }
                 break;
               case 'hashrate':
                 hasError = device['MHS 5s'] * 1000 < SettingsSvc.settings['monitoring']['hashrate'];
-                if (hasError) miner.hasError = true;
+                if (hasError) {
+                  miner.hasError = true;
+                  $scope.showWebNotification('Hashrate has fallen below the threshold on GPU ' + device.ID + ' (' + miner.name + ')');
+                }
                 break;
             }
 
@@ -192,7 +204,7 @@ angular.module('nodeminerApp')
               miner.collapsed = true;
             }
 
-            if (miner.hasError && SettingsSvc.settings['dashboard']['autoExpandMiners'] && !$scope.userOverrideCollapse) {
+            if (hasError && SettingsSvc.settings['dashboard']['autoExpandMiners'] && !$scope.userOverrideCollapse) {
               miner.collapsed = false;
             }
           }
@@ -200,6 +212,18 @@ angular.module('nodeminerApp')
       });
 
       return hasError;
+    };
+
+    $scope.showWebNotification = function (message) {
+      if (SettingsSvc.settings.notifications.enabled && !Notify.needsPermission()) {
+        var notification = new Notify('nodeminer', {
+          body: message,
+          tag: message,
+          icon: '/images/yeoman.png'
+        });
+
+        //notification.show();
+      }
     };
 
     SocketIOSvc.on('socket:init', function (socketId) {

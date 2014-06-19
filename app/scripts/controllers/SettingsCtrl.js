@@ -16,6 +16,22 @@ angular.module('nodeminerApp')
       SettingsSvc.save(settings);
     };
 
+    $scope.checkNotificationPermissions = function () {
+      if (!$scope.settings.notifications) {
+        $scope.settings.notifications = {
+          enabled: true
+        };
+      }
+
+      if (Notify.needsPermission() && $scope.settings.notifications.enabled) {
+       Notify.requestPermission(function () {
+         toastr.success('Permission to display Web Notifications granted!');
+       }, function () {
+         toastr.error('Permission to enable Web Notifications has been denied.');
+       })
+      }
+    };
+
     $scope.$on('$destroy', function (event) {
       SocketIOSvc.removeAllListeners('init:settings');
     });

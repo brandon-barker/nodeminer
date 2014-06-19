@@ -6,16 +6,18 @@
   <div class="row">
     <div class="col-lg-6">
       <div class="panel panel-default">
-        <div class="panel-heading"><strong>Dashboard Settings</strong></div>
+        <div class="panel-heading"><strong>Dashboard</strong></div>
 
         <div class="panel-body">
 
           <form name="generalSettingsForm" class="form-horizontal" role="form">
             <div class="form-group">
-              <label for="interval" class="col-lg-4 control-label">Polling Interval (ms) <span class="label label-danger"><i class="fa fa-warning"></i></span></label>
+              <label for="interval" class="col-lg-4 control-label">Polling Interval (ms) <span
+                  class="label label-danger"><i class="fa fa-warning"></i></span></label>
 
               <div class="col-lg-8">
-                <input type="number" class="form-control" id="interval" placeholder="" ng-model="settings.dashboard.pollInterval" required="required">
+                <input type="number" class="form-control" id="interval" placeholder=""
+                       ng-model="settings.dashboard.pollInterval" required="required">
               </div>
             </div>
 
@@ -23,7 +25,8 @@
               <label for="collapse-overview" class="col-lg-4 control-label">Collapse Overview by Default?</label>
 
               <div class="col-lg-8">
-                <input type="checkbox" id="collapse-overview" placeholder="" ng-model="settings.dashboard.collapseOverview">
+                <input type="checkbox" id="collapse-overview" placeholder=""
+                       ng-model="settings.dashboard.collapseOverview">
               </div>
             </div>
 
@@ -39,7 +42,48 @@
               <label for="auto-expand-miners" class="col-lg-4 control-label">Auto Expand Miners on Error?</label>
 
               <div class="col-lg-8">
-                <input type="checkbox" id="auto-expand-miners" placeholder="" ng-model="settings.dashboard.autoExpandMiners">
+                <input type="checkbox" id="auto-expand-miners" placeholder=""
+                       ng-model="settings.dashboard.autoExpandMiners">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="gpuActivity" class="col-lg-4 control-label">GPU Activity (Load %) <span
+                  class="label label-danger"><i class="fa fa-angle-double-down"></i></span></label>
+
+              <div class="col-lg-8">
+                <input type="number" class="form-control" id="gpuActivity" placeholder=""
+                       ng-model="settings.monitoring.load" required="required">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="temperature" class="col-lg-4 control-label">Temperature (ºc) <span class="label label-danger"><i
+                  class="fa fa-angle-double-up"></i></span></label>
+
+              <div class="col-lg-8">
+                <input type="number" class="form-control" id="temperature" placeholder=""
+                       ng-model="settings.monitoring.temperature" required="required">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="fan" class="col-lg-4 control-label">Fan Speed (%) <span class="label label-danger"><i
+                  class="fa fa-angle-double-down"></i></span></label>
+
+              <div class="col-lg-8">
+                <input type="number" class="form-control" id="fan" placeholder="" ng-model="settings.monitoring.fan"
+                       required="required">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="hashrate" class="col-lg-4 control-label">Hashrate (KH/s) <span class="label label-danger"><i
+                  class="fa fa-angle-double-down"></i></span></label>
+
+              <div class="col-lg-8">
+                <input type="number" class="form-control" id="hashrate" placeholder=""
+                       ng-model="settings.monitoring.hashrate" required="required">
               </div>
             </div>
 
@@ -50,57 +94,33 @@
             </div>
           </form>
 
-          <br />
-          <p><span class="label label-danger"><i class="fa fa-warning"></i></span>&nbsp; Requires <strong>nodeminer</strong> to be restarted for changes to have effect.</p>
+          <br/>
+
+          <p><span class="label label-danger"><i class="fa fa-warning"></i></span>&nbsp; Requires
+            <strong>nodeminer</strong> to be restarted for changes to have effect.</p>
+
+          <p><span class="label label-danger"><i class="fa fa-angle-double-up"></i></span>&nbsp; Any value <strong><i>above</i></strong>
+            the threshold will trigger a warning on the Dashboard.</p>
+
+          <p><span class="label label-danger"><i class="fa fa-angle-double-down"></i></span>&nbsp; Any value <strong><i>below</i></strong>
+            the threshold will trigger a warning on the Dashboard.</p>
         </div>
       </div>
     </div>
+
     <div class="col-lg-6">
       <div class="panel panel-default">
-        <div class="panel-heading"><strong>Monitoring Settings</strong></div>
+        <div class="panel-heading"><strong>Notifications</strong></div>
 
         <div class="panel-body">
-          <!--<div class="alert alert-info">-->
-            <!--<p><strong><i class="fa fa-info-circle"></i>&nbsp;Monitoring</strong></p>-->
-            <!--<br />-->
-            <!--<p>Define values below to determine how the Dashboard will visually notify you of any issues, see below for reference.</p>-->
-            <!--<hr />-->
-            <!--<p><strong>GPU Activity (Load %):</strong> Any value <strong><i>below</i></strong> the specified value will trigger a warning.</p>-->
-            <!--<p><strong>Temperature (ºc):</strong> Any value <strong><i>above</i></strong> the specified value will trigger a warning.</p>-->
-            <!--<p><strong>Fan Speed (%):</strong> Any value <strong><i>below</i></strong> the specified value will trigger a warning.</p>-->
-            <!--<p><strong>Hashrate (KH/s):</strong> Any value <strong><i>below</i></strong> the specified value will trigger a warning.</p>-->
-          <!--</div>-->
-
-          <form name="monitoringForm" class="form-horizontal" role="form">
+          <div class="alert alert-info">Enabling Web Notifications will allow <strong>nodeminer</strong> to push alerts from the Dashboard through your desktop browser.</div>
+          <form name="notificationsForm" class="form-horizontal" role="form">
             <div class="form-group">
-              <label for="gpuActivity" class="col-lg-4 control-label">GPU Activity (Load %) <span class="label label-danger"><i class="fa fa-angle-double-down"></i></span></label>
+              <label for="enableNotifications" class="col-lg-4 control-label">Enable Web Notifications</label>
 
               <div class="col-lg-8">
-                <input type="number" class="form-control" id="gpuActivity" placeholder="" ng-model="settings.monitoring.load" required="required">
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="temperature" class="col-lg-4 control-label">Temperature (ºc) <span class="label label-danger"><i class="fa fa-angle-double-up"></i></span></label>
-
-              <div class="col-lg-8">
-                <input type="number" class="form-control" id="temperature" placeholder="" ng-model="settings.monitoring.temperature" required="required">
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="fan" class="col-lg-4 control-label">Fan Speed (%) <span class="label label-danger"><i class="fa fa-angle-double-down"></i></span></label>
-
-              <div class="col-lg-8">
-                <input type="number" class="form-control" id="fan" placeholder="" ng-model="settings.monitoring.fan" required="required">
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="hashrate" class="col-lg-4 control-label">Hashrate (KH/s) <span class="label label-danger"><i class="fa fa-angle-double-down"></i></span></label>
-
-              <div class="col-lg-8">
-                <input type="number" class="form-control" id="hashrate" placeholder="" ng-model="settings.monitoring.hashrate" required="required">
+                <input type="checkbox" id="enableNotifications" ng-click="checkNotificationPermissions()"
+                       ng-model="settings.notifications.enabled">
               </div>
             </div>
 
@@ -110,11 +130,6 @@
               </div>
             </div>
           </form>
-
-          <br />
-
-          <p><span class="label label-danger"><i class="fa fa-angle-double-up"></i></span>&nbsp; Any value <strong><i>above</i></strong> the threshold will trigger a warning on the Dashboard.</p>
-          <p><span class="label label-danger"><i class="fa fa-angle-double-down"></i></span>&nbsp; Any value <strong><i>below</i></strong> the threshold will trigger a warning on the Dashboard.</p>
         </div>
       </div>
     </div>
