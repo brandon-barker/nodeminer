@@ -61,6 +61,20 @@ Build & run the project
 grunt serve
 ```
 
+##### Accessing **nodeminer** outside of localhost
+
+If you are hosting nodeminer on a box other than your local machine you will need to change line 2 in ```app/scripts/services/SocketIOSvc.js``` from 
+
+```
+var socket = io.connect('http://localhost:6895');
+```
+
+to 
+
+```
+var socket = io.connect('http://<your ip address>:6895');
+```
+
 #### Production
 
 Coming soon...
