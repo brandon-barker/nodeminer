@@ -25,10 +25,10 @@ require('./lib/routes')(app);
 var server = http.createServer(app).listen(config.port, "0.0.0.0");
 
 // Initialize our services
-var settingsService = require('./lib/services/settingsService.js');
-var minerService = require('./lib/services/minersService.js');
-var coinService = require('./lib/services/coinsService.js');
-var poolService = require('./lib/services/poolsService.js');
+var settingsService = require('./lib/services/SettingsService.js');
+var minerService = require('./lib/services/MinersService.js');
+var coinService = require('./lib/services/CoinsService.js');
+var poolService = require('./lib/services/PoolsService.js');
 
 // socket.io initialization
 var io = require('socket.io').listen(server);
