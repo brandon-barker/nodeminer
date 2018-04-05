@@ -33,7 +33,7 @@ In order to build nodeminer, ensure that you have Git and Node.js installed.
 Clone a copy of the nodeminer git repo:
 
 ```
-git clone git@github.com:brandon-barker/nodeminer.git nodeminer
+git clone https://github.com/brandon-barker/nodeminer.git
 ```
 
 Change to the nodeminer directory:
@@ -86,10 +86,3 @@ Coming soon...
 
 #### Dashboard (collapsed)
 ![Dashboard (collapsed)](http://i.imgur.com/Gp23Tf5.png)
-
-## Donate ;)
-
-Development for nodeminer is done in my spare time, if you appreciate my efforts and would like to donate please see below:
-
-**BTC**: 17tQq3mSePUSGZcNzC66ZEK4wkSj2ayM2w
-**LTC**: LN2t5RXkTZCJLv7fNsUm77gFZmzob1yHiL
